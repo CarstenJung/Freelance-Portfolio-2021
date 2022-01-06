@@ -1,0 +1,88 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: darkgray;
+}
+body .wrapper {
+  background: transparent linear-gradient(119deg, #1D1D1D 0%, #292929 100%) 0% 0% no-repeat padding-box;
+  /* NAVIGATION */
+  /* SECTION ONE */
+}
+body .wrapper nav .logoContainer img {
+  height: 80px;
+  margin: 2em 0 0 3em;
+}
+body .wrapper nav .logoContainer .logoLine {
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  transform: rotate(90deg);
+  position: relative;
+  top: 55px;
+  left: 44px;
+}
+body .wrapper nav .logoContainer .logoLine span {
+  position: relative;
+  display: block;
+  left: 110px;
+  bottom: 8px;
+  color: #fff;
+  transform: rotate(180deg);
+}
+body .wrapper nav .ctaBtn button {
+  position: absolute;
+  right: 12em;
+  top: 4.5em;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+body .wrapper nav .ctaBtn .ctaLine {
+  position: absolute;
+  right: 10.2em;
+  top: 5em;
+  width: 5em;
+  height: 1px;
+  background-color: #fff;
+}
+body .wrapper nav .burger {
+  position: absolute;
+  right: 3em;
+  top: 3em;
+  transform: rotate(180deg);
+}
+body .wrapper nav .burger .line {
+  height: 1px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin: 0.4em;
+}
+body .wrapper nav .burger .line1 {
+  width: 20px;
+}
+body .wrapper nav .burger .line2 {
+  width: 30px;
+}
+body .wrapper nav .burger .line3 {
+  width: 40px;
+}
+body .wrapper .section1 {
+  width: 100%;
+  height: 100vh;
+}
+body .wrapper .section1 .socialsContainer {
+  position: absolute;
+  bottom: 3em;
+  left: 5.5em;
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .section1 .socialsContainer .socials {
+  padding-bottom: 1.5em;
+  width: 20%;
+}
+/*# sourceMappingURL=index.603968dc.css.map */

@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-2022-cj-development",
+  "version": "1.0.0",
+  "description": "Portfolio Website - CJ Development",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarstenJung/Portfolio-2022-CJ-Development.git"
+  },
+  "author": "Carsten Jung - CJ Development",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarstenJung/Portfolio-2022-CJ-Development/issues"
+  },
+  "homepage": "https://github.com/CarstenJung/Portfolio-2022-CJ-Development#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.1.0",
+    "parcel": "^2.1.0"
+  }
+}
