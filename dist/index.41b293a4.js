@@ -520,7 +520,17 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"iWSTb":[function(require,module,exports) {
 var _mainScss = require("./../scss/main.scss");
+var _burgerMenu = require("./burgerMenu");
 
-},{"./../scss/main.scss":"5b6JI"}],"5b6JI":[function() {},{}]},["lcWGR","iWSTb"], "iWSTb", "parcelRequire3355")
+},{"./../scss/main.scss":"5b6JI","./burgerMenu":"2ziNo"}],"5b6JI":[function() {},{}],"2ziNo":[function(require,module,exports) {
+(function() {
+    /* BURGER MENU ANIMATION  */ let menuElement = document.querySelector(".burger");
+    menuElement.addEventListener("click", ()=>{
+        if (menuElement.classList.contains('open')) menuElement.classList.remove('open');
+        else menuElement.classList.add('open');
+    });
+})();
+
+},{}]},["lcWGR","iWSTb"], "iWSTb", "parcelRequire3355")
 
 //# sourceMappingURL=index.41b293a4.js.map
