@@ -1,12 +1,16 @@
 (function () {
-    /* BURGER MENU ANIMATION  */
-  let menuElement = document.querySelector(".burger");
+  document.querySelectorAll('.burgerMenu').forEach(btn => {
+    btn.addEventListener('click', e => {
+      btn.classList.toggle('active');
 
-  menuElement.addEventListener("click", () => {
-    if(menuElement.classList.contains('open')) {
-        menuElement.classList.remove('open')
-    } else {
-        menuElement.classList.add('open')
-    }
+      setTimeout(() => {
+        const pathId = document.querySelector('.pathSVG')
+        if (btn.classList.contains('active')) {
+          pathId.style.transform = 'translateY(0px)'
+        } else {
+          pathId.style.transform = 'translateY(-4px) translateX(23px) scaleX(50%)'
+        }
+      }, 150);
+    });
   });
 })();

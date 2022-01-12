@@ -524,10 +524,15 @@ var _burgerMenu = require("./burgerMenu");
 
 },{"./../scss/main.scss":"5b6JI","./burgerMenu":"2ziNo"}],"5b6JI":[function() {},{}],"2ziNo":[function(require,module,exports) {
 (function() {
-    /* BURGER MENU ANIMATION  */ let menuElement = document.querySelector(".burger");
-    menuElement.addEventListener("click", ()=>{
-        if (menuElement.classList.contains('open')) menuElement.classList.remove('open');
-        else menuElement.classList.add('open');
+    document.querySelectorAll('.burgerMenu').forEach((btn)=>{
+        btn.addEventListener('click', (e)=>{
+            btn.classList.toggle('active');
+            setTimeout(()=>{
+                const pathId = document.querySelector('.pathSVG');
+                if (btn.classList.contains('active')) pathId.style.transform = 'translateY(0px)';
+                else pathId.style.transform = 'translateY(-4px) translateX(23px) scaleX(50%)';
+            }, 150);
+        });
     });
 })();
 
