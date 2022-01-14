@@ -18,7 +18,7 @@ body {
         .menuSlideOne {
             width: 50%;
             height: 100%;
-            background: black;
+            background: rgb(17, 17, 17);
 
             img {
                 position: absolute;
@@ -65,7 +65,7 @@ body {
         .menuSlideTwo {
             width: 50%;
             height: 100%;
-            background: #101010;
+            background: #1f1a0e;
             position: relative;
 
             .officeFlexContainer {
@@ -95,7 +95,7 @@ body {
 
     /** NEW END **/
     .wrapper {
-        background-color: rgb(20, 20, 20);
+        background: transparent linear-gradient(119deg, #1D1D1D 0%, #292929 100%) 0% 0% no-repeat padding-box;
 
         /* NAVIGATION */
         nav {
@@ -115,10 +115,13 @@ body {
                     left: 44px;
 
                     span {
+                        font-weight: 400;
+                        font-size: .7em;
                         position: relative;
                         display: block;
-                        left: 110px;
-                        bottom: 8px;
+                        left: 70px;
+                        bottom: 6px;
+                        width: 130px;
                         color: #fff;
                         transform: rotate(180deg);
                     }
@@ -299,6 +302,43 @@ body {
                         &:hover:before {
                             height: 110%;
                         }
+                    }
+                }
+            }
+        }
+
+        .section2 {
+            max-width: 1300px;
+            margin: auto 9em auto 9em;
+
+            .headline {
+                position: relative;
+
+                h1 {
+                    font-size: 3vw;
+                    color: white;
+                    font-weight: bold;
+                    margin-left: .5em;
+                }
+
+                .line {
+                    position: relative;
+                    height: 500px;
+                    width: 3px;
+                    background: #F1B24A;
+                    top: -100px;
+                    right: 20px;
+
+                    span {
+                        position: absolute;
+                        transform: rotate(270deg);
+                        font-size: 1.3em;
+                        width: 500px;
+                        left: -270px;
+                        top: 40%;
+                        color: white;
+                        font-weight: 100;
+                        opacity: .6;
                     }
                 }
             }

@@ -18,7 +18,7 @@ body .menuOverlay {
 body .menuOverlay .menuSlideOne {
   width: 50%;
   height: 100%;
-  background: black;
+  background: #111111;
 }
 body .menuOverlay .menuSlideOne img {
   position: absolute;
@@ -58,7 +58,7 @@ body .menuOverlay .menuSlideOne .menuFlexContainer ul span {
 body .menuOverlay .menuSlideTwo {
   width: 50%;
   height: 100%;
-  background: #101010;
+  background: #1f1a0e;
   position: relative;
 }
 body .menuOverlay .menuSlideTwo .officeFlexContainer {
@@ -82,7 +82,7 @@ body .menuOverlay .menuSlideTwo .officeFlexContainer .menuProjectsSlider {
   max-width: 24vw;
 }
 body .wrapper {
-  background-color: #141414;
+  background: transparent linear-gradient(119deg, #1D1D1D 0%, #292929 100%) 0% 0% no-repeat padding-box;
   /* NAVIGATION */
   /* SECTION ONE */
 }
@@ -100,10 +100,13 @@ body .wrapper nav .logoContainer .logoLine {
   left: 44px;
 }
 body .wrapper nav .logoContainer .logoLine span {
+  font-weight: 400;
+  font-size: 0.7em;
   position: relative;
   display: block;
-  left: 110px;
-  bottom: 8px;
+  left: 70px;
+  bottom: 6px;
+  width: 130px;
   color: #fff;
   transform: rotate(180deg);
 }
@@ -251,5 +254,37 @@ body .wrapper .section1 .socialsContainer ul li:nth-child(3)::before {
 }
 body .wrapper .section1 .socialsContainer ul li:hover:before {
   height: 110%;
+}
+body .wrapper .section2 {
+  max-width: 1300px;
+  margin: auto 9em auto 9em;
+}
+body .wrapper .section2 .headline {
+  position: relative;
+}
+body .wrapper .section2 .headline h1 {
+  font-size: 3vw;
+  color: white;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+body .wrapper .section2 .headline .line {
+  position: relative;
+  height: 500px;
+  width: 3px;
+  background: #F1B24A;
+  top: -100px;
+  right: 20px;
+}
+body .wrapper .section2 .headline .line span {
+  position: absolute;
+  transform: rotate(270deg);
+  font-size: 1.3em;
+  width: 500px;
+  left: -270px;
+  top: 40%;
+  color: white;
+  font-weight: 100;
+  opacity: 0.6;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
