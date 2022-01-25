@@ -2,10 +2,9 @@
   "name": "portfolio-2022-cj-development",
   "version": "1.0.0",
   "description": "Portfolio Website - CJ Development",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --public-url ./"
   },
   "repository": {
     "type": "git",

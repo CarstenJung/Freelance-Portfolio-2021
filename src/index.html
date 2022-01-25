@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@100;400;700&display=swap"
         rel="stylesheet">
-    <script src="./js/main.js" type="module" defer></script>
+    <script src="js/main.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/a9276a43c6.js" crossorigin="anonymous"></script>
     <title>CJ Development</title>
 </head>
@@ -18,7 +18,7 @@
     <!--NEW START-->
     <div class="menuOverlay">
         <div class="menuSlideOne">
-            <img src="/src/assets/logo/logoLight.png" alt="CJ Development Logo">
+            <img src="assets/logo/logoLight.png" alt="CJ Development Logo">
             <div class="menuFlexContainer">
                 <h1>NAVIGATION</h1>
                 <ul>
@@ -34,17 +34,27 @@
             <div class="officeFlexContainer">
                 <h1>PROJEKTE</h1>
                 <a href="https://kreatifabrik.de" target="_blank">
-                    <img class="menuProjectsSlider" id="menuProjectsItem1" src="/src/assets/portfolio/menu/kreatiLogo.png"
+                    <img class="menuProjectsSlider" id="menuProjectsItem1" src="assets/portfolio/menu/kreatiLogo.png"
                         alt="Logo KreatiFabrik" />
                 </a>
                 <a href="https://petersen-vs.de" target="_blank">
-                    <img class="menuProjectsSlider" id="menuProjectsItem2" src="/src/assets/portfolio/menu/petersenLogo.png"
+                    <img class="menuProjectsSlider" id="menuProjectsItem2" src="assets/portfolio/menu/petersenLogo.png"
                         alt="Logo Petersen" /></a>
                 <a href="https://kurse.goodgrade.de" target="_blank">
-                    <img class="menuProjectsSlider" id="menuProjectsItem3" src="/src/assets/portfolio/menu/goodgrade.png"
+                    <img class="menuProjectsSlider" id="menuProjectsItem3" src="assets/portfolio/menu/goodgrade.png"
                         alt="Logo Goodgrade" /></a>
             </div>
         </div>
+    </div>
+    <!--BURGER MENU-->
+    <div class="burgerMenuWrapper">
+        <button class="burgerMenu">
+            <svg viewBox="0 0 64 48">
+                <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+                <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                <path class="pathSVG" d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+            </svg>
+        </button>
     </div>
     <!--NEW END-->
     <div class="wrapper">
@@ -52,7 +62,7 @@
         <header>
             <nav>
                 <div class="logoContainer">
-                    <img src="/src/assets/logo/logo.png" alt="Logo CJ-Development" class="logo">
+                    <img src="assets/logo/logo.png" alt="Logo CJ-Development" class="logo">
                     <div class="logoLine">
                         <span>Web Developer</span>
                     </div>
@@ -63,7 +73,7 @@
                         <div class="ctaLine"></div>
                     </a>
                 </div>
-                <div class="burgerMenuWrapper">
+                <!--  <div class="burgerMenuWrapper">
                     <button class="burgerMenu">
                         <svg viewBox="0 0 64 48">
                             <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
@@ -71,7 +81,7 @@
                             <path class="pathSVG" d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
                         </svg>
                     </button>
-                </div>
+                </div> -->
             </nav>
         </header>
         <!--FIRST SECTION-->
@@ -94,49 +104,43 @@
             <div class="serviceItemWrapper">
                 <div>
                     <div class="serviceCircle">
-                        <img src="/src/assets/service/FrontendIcon.png" alt="Frontend Development">
+                        <img src="assets/service/FrontendIcon.png" alt="Frontend Development">
                     </div>
                     <div class="serviceItemHeadline">
                         <p><span>Frontend</span> Entwicklung</p>
                     </div>
                     <div class="serviceItemDescription">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem saepe vero officiis ex minus
-                            assumenda dolorum iste consectetur, quis corrupti alias a nam rerum totam nostrum voluptatem
-                            quibusdam blanditiis sed.
+                        <p>Sie haben bereits ein fertiges Design und suchen Hilfe bei der Umsetzung? Ich helfe seit vielen Jahren Endkunden und Agenturen bei der Umsetzung Ihrer Webprojekte. Sprechen Sie mich gerne an.
                         </p>
                     </div>
                 </div>
                 <div>
                     <div class="serviceCircle">
-                        <img src="/src/assets/service/ShopifyIcon.png" alt="Shopify Development">
+                        <img src="assets/service/ShopifyIcon.png" alt="Shopify Development">
                     </div>
                     <div class="serviceItemHeadline">
                         <p><span>Shopify</span> Entwicklung</p>
                     </div>
                     <div class="serviceItemDescription">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem saepe vero officiis ex minus
-                            assumenda dolorum iste consectetur, quis corrupti alias a nam rerum totam nostrum voluptatem
-                            quibusdam blanditiis sed.
+                        <p>Sie wollen sich online ein Geschäft aufbauen oder suchen Hilfe bei der Optimierung Ihres bestehenden Shopify-Shops? Ich berate Sie gerne und helfe Ihnen dabei, Ihren Shop erfolgreicher zu machen.   
                         </p>
                     </div>
                 </div>
                 <div>
                     <div class="serviceCircle">
-                        <img src="/src/assets/service/WordpressIcon.png" alt="Wordpress Development">
+                        <img src="assets/service/WordpressIcon.png" alt="Wordpress Development">
                     </div>
                     <div class="serviceItemHeadline">
                         <p><span>Wordpress</span> Entwicklung</p>
                     </div>
                     <div class="serviceItemDescription">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem saepe vero officiis ex
-                            minus assumenda dolorum iste consectetur, quis corrupti alias a nam rerum totam nostrum
-                            voluptatem quibusdam blanditiis sed.
+                        <p>Wordpress ist das bekannteste CMS-System und bietet sich für alle an, die einen Blog betreiben oder selbst an Ihrer Webseite Änderungen vornehmen wollen. 
                         </p>
                     </div>
                 </div>
                 <div>
                     <div class="serviceCircle">
-                        <img src="/src/assets/service/XDIcon.png" alt="Prototyping Adobe XD">
+                        <img src="assets/service/XDIcon.png" alt="Prototyping Adobe XD">
                     </div>
                     <div class="serviceItemHeadline">
                         <p><span>Adobe XD</span> Prototyping</p>
@@ -158,10 +162,91 @@
                 </div>
             </div>
             <div class="portfolioGridWrapper">
-                <img src="/src/assets/portfolio/kreatifabrik.png" alt="Projekt KreatiFabrik Agentur">
-                <img src="/src/assets/portfolio/petersen.png" alt="Projekt Petersen">
-                <img src="/src/assets/portfolio/goodgrade.png" alt="Projekt Kieninger Consulting">
-                <img src="/src/assets/portfolio/kieninger.png" alt="Projekt Kieninger Consulting">
+                <a href="https://kreatifabrik.de/" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/KreatiFabrikFront.png"
+                                alt="Projekt KreatiFabrik Agentur">
+                        </div>
+                        <div class="flipBack">
+                            <img src="assets/portfolio/flipCards/KreatiFabrikBack.png"
+                                alt="Projekt KreatiFabrik Agentur">
+                        </div>
+                    </div>
+                </a>
+                <a href="https://petersen-vs.de/" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/PetersenFront.png" alt="Projekt Petersen">
+                        </div>
+                        <div class="flipBack">
+                            <img src="assets/portfolio/flipCards/PetersenBack.png" alt="Projekt Petersen">
+                        </div>
+                    </div>
+                </a>
+                <a href="https://kurse.goodgrade.de/" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/GoodgradeFront.png" alt="Projekt Goodgrade Nachhilfe">
+                        </div>
+                        <div class="flipBack">
+                            <img src="assets/portfolio/flipCards/GoodgradeBack.png" alt="Projekt Goodgrade Nachhilfe">
+                        </div>
+                    </div>
+                </a>
+                <!--TODO LINK-->
+                <a href="#" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/ÄventyrVandraFront.png" alt="Projekt ÄventyrVandra">
+                        </div>
+                        <div class="flipBack">
+                            <!--TODO IMAGE-->
+                        </div>
+                    </div>
+                </a>
+                <a href="http://kieninger-consulting.ch/" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/KieningerFront.png" alt="Projekt Kieninger Consulting">
+                        </div>
+                        <div class="flipBack">
+                            <img src="assets/portfolio/flipCards/KieningerBack.png" alt="Projekt Kieninger Consulting">
+                        </div>
+                    </div>
+                </a>
+                <a href="http://logoergo-schoemberg.de/" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/LogoErgoFront.png" alt="Projekt LogoErgo">
+                        </div>
+                        <div class="flipBack">
+                            <img src="assets/portfolio/flipCards/LogoErgoBack.png" alt="Projekt LogoErgo">
+                        </div>
+                    </div>
+                </a>
+                <!--TODO LINK-->
+                <a href="#" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/AlpakaFront.png" alt="Projekt Alpaka Team">
+                        </div>
+                        <div class="flipBack">
+                            <!--TODO IMAGE-->
+                        </div>
+                    </div>
+                </a>
+                <!--TODO LINK-->
+                <a href="#" target="_blank">
+                    <div class="flipContent">
+                        <div class="flipFront">
+                            <img src="assets/portfolio/flipCards/CJFront.png" alt="Projekt CJ Development 2021">
+                        </div>
+                        <div class="flipBack">
+                            <img src="assets/portfolio/flipCards/CJBack.png" alt="Projekt CJ Development 2021">
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="section4"></div>
