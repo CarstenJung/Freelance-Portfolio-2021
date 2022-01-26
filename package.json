@@ -4,7 +4,7 @@
   "description": "Portfolio Website - CJ Development",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./"
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
