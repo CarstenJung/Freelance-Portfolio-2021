@@ -599,7 +599,7 @@ body {
                 .subtitle {
                     text-align: center;
                     color: #fff;
-                    font-size: 1.3em;
+                    font-size: 1vw;
                     font-weight: 100;
                 }
 
@@ -626,15 +626,15 @@ body {
                         background: #fff;
 
                         img {
-                            width: 100%;
+                            width: 10vw;
                             background-size: cover;
                         }
                     }
 
                     .testimonialCompany {
-                        margin-top: 2em;
+                        margin: 1em 0 .5em 0;
                         text-align: center;
-                        font-size: 2em;
+                        font-size: 2.5vw;
                         font-weight: bold;
                         color: #F1B24A;
                     }
@@ -642,10 +642,47 @@ body {
                     .testimonialDescription {
                         text-align: center;
                         max-width: 600px;
+                        font-size: 1vw;
                         margin: auto;
                         color: #fff;
                     }
                 }
+
+                .btnWrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 3em;
+
+                    .left, .right {
+                        width: 2vw;
+                        height: 2vw;
+                        margin: 2em;
+                        border-radius: 50%;
+                        background: #FFCD48;
+                    }
+                }
+            }
+        }
+
+        .section5 {
+            .contactFormWrapper {
+                margin-top: 200px;
+
+                   .subtitle {
+                       text-align: center;
+                       color: #fff;
+                       font-size: 1vw;
+                       font-weight: 100;
+                   }
+
+                   .headline {
+                       margin: 0;
+                       font-size: 3vw;
+                       color: white;
+                       font-weight: bold;
+                       text-align: center;
+                   }
             }
         }
     }

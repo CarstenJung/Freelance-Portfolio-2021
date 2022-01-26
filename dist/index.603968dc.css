@@ -515,7 +515,7 @@ body .wrapper .section4 .testimonialsWrapper {
 body .wrapper .section4 .testimonialsWrapper .subtitle {
   text-align: center;
   color: #fff;
-  font-size: 1.3em;
+  font-size: 1vw;
   font-weight: 100;
 }
 body .wrapper .section4 .testimonialsWrapper .headline {
@@ -540,20 +540,50 @@ body .wrapper .section4 .testimonialsWrapper .testimonial .logoCircle {
   background: #fff;
 }
 body .wrapper .section4 .testimonialsWrapper .testimonial .logoCircle img {
-  width: 100%;
+  width: 10vw;
   background-size: cover;
 }
 body .wrapper .section4 .testimonialsWrapper .testimonial .testimonialCompany {
-  margin-top: 2em;
+  margin: 1em 0 0.5em 0;
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5vw;
   font-weight: bold;
   color: #F1B24A;
 }
 body .wrapper .section4 .testimonialsWrapper .testimonial .testimonialDescription {
   text-align: center;
   max-width: 600px;
+  font-size: 1vw;
   margin: auto;
   color: #fff;
+}
+body .wrapper .section4 .testimonialsWrapper .btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+}
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left, body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
+  width: 2vw;
+  height: 2vw;
+  margin: 2em;
+  border-radius: 50%;
+  background: #FFCD48;
+}
+body .wrapper .section5 .contactFormWrapper {
+  margin-top: 200px;
+}
+body .wrapper .section5 .contactFormWrapper .subtitle {
+  text-align: center;
+  color: #fff;
+  font-size: 1vw;
+  font-weight: 100;
+}
+body .wrapper .section5 .contactFormWrapper .headline {
+  margin: 0;
+  font-size: 3vw;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
