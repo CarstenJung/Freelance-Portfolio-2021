@@ -274,16 +274,16 @@
                 <div class="contactForm">
                     <form name="contactMe" method="POST" data-netlify="true">
                         <p>
-                            <label>Name <input type="text" name="name"></label>
+                            <label class="labelAbove">Name <input id="formName" type="text" name="name"></label>
                         </p>
                         <p>
-                            <label>Firma <input type="text" name="name"></label>
+                            <label class="labelAbove">Firma <input id="formCompany" type="text" name="name"></label>
                         </p>
                         <p>
-                            <label>Mail <input type="email" name="email"></label>
+                            <label class="labelAbove">Mail <input id="formMail" type="email" name="email"></label>
                         </p>
-                        <p>
-                            <label>Nachricht <textarea name="message"></textarea></label>
+                        <p id="messageWrapper">
+                            <label class="labelAbove">Nachricht <textarea id="formMessage" name="message"></textarea></label>
                         </p>
                         <fieldset>
                             <legend>What are you planning?</legend>
@@ -308,14 +308,11 @@
                                 <label for="websiteOptimisation">Optimisation</label>
                             </p>
                             <p>
-                                <label>
-                                    <input type="radio" name="other" value="Other"> Other
-                                </label>
                                 <input type="radio" id="websiteOther" name="other" value="yes">
                                 <label for="websiteOptimisation">Other</label>
                             </p>
                         </fieldset>
-                        <p>
+                        <p id="formBtn">
                             <button type="submit">Send</button>
                         </p>
                     </form>

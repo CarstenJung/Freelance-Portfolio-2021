@@ -563,7 +563,8 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper {
   align-items: center;
   margin: 3em;
 }
-body .wrapper .section4 .testimonialsWrapper .btnWrapper .left, body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left,
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
   width: 2vw;
   height: 2vw;
   margin: 2em;
@@ -571,7 +572,9 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .left, body .wrapper .s
   background: #FFCD48;
 }
 body .wrapper .section5 .contactFormWrapper {
-  margin-top: 200px;
+  max-width: 1200px;
+  margin: 200px auto auto auto;
+  padding-bottom: 100px;
 }
 body .wrapper .section5 .contactFormWrapper .subtitle {
   text-align: center;
@@ -585,5 +588,74 @@ body .wrapper .section5 .contactFormWrapper .headline {
   color: white;
   font-weight: bold;
   text-align: center;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm {
+  margin-top: 100px;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm form {
+  display: grid;
+  grid-template-areas: "name company mail" "radioBtn message messageEnd" "empty1 btn empty2";
+  grid-template-columns: repeat(3, 1fr);
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formName {
+  grid-area: name;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formCompany {
+  grid-area: company;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formMail {
+  grid-area: mail;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #messageWrapper {
+  grid-column-start: message;
+  grid-column-end: messageEnd;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
+  grid-area: radioBtn;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn {
+  /* grid-column-start: btnStart;
+  grid-column-end: btnEnd; */
+  grid-area: btn;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button {
+  width: 200px;
+  height: 40px;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove,
+body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove input,
+body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove textarea {
+  display: block;
+  color: #fff;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove textarea {
+  margin-top: 1em;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm input[type=text],
+body .wrapper .section5 .contactFormWrapper .contactForm input[type=email] {
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 0.5px solid #FFCD48;
+  width: 80%;
+  height: 30px;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formMessage {
+  width: 90%;
+  height: 20vh;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
+  border: none;
+  color: #fff;
+  width: 200px;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
+  padding-top: 50px;
+  font-size: 0.8vw;
+  font-weight: bold;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
+  font-size: 0.7vw;
 }
 /*# sourceMappingURL=index.603968dc.css.map */

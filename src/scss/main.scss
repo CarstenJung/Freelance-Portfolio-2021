@@ -654,7 +654,8 @@ body {
                     align-items: center;
                     margin: 3em;
 
-                    .left, .right {
+                    .left,
+                    .right {
                         width: 2vw;
                         height: 2vw;
                         margin: 2em;
@@ -667,22 +668,113 @@ body {
 
         .section5 {
             .contactFormWrapper {
-                margin-top: 200px;
+                max-width: 1200px;
+                margin: 200px auto auto auto;
+                padding-bottom: 100px;
 
-                   .subtitle {
-                       text-align: center;
-                       color: #fff;
-                       font-size: 1vw;
-                       font-weight: 100;
-                   }
 
-                   .headline {
-                       margin: 0;
-                       font-size: 3vw;
-                       color: white;
-                       font-weight: bold;
-                       text-align: center;
-                   }
+                .subtitle {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1vw;
+                    font-weight: 100;
+                }
+
+                .headline {
+                    margin: 0;
+                    font-size: 3vw;
+                    color: white;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .contactForm {
+                    margin-top: 100px;
+
+                    form {
+                        display: grid;
+                        grid-template-areas:
+                            "name company mail"
+                            "radioBtn message messageEnd"
+                            "empty1 btn empty2";
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+
+                    #formName {
+                        grid-area: name;
+                    }
+
+                    #formCompany {
+                        grid-area: company;
+                    }
+
+                    #formMail {
+                        grid-area: mail;
+                    }
+
+                    #messageWrapper {
+                        grid-column-start: message;
+                        grid-column-end: messageEnd;
+                    }
+
+                    fieldset {
+                        grid-area: radioBtn;
+                    }
+
+                    #formBtn {
+                        /* grid-column-start: btnStart;
+                        grid-column-end: btnEnd; */
+                        grid-area: btn;
+
+                        button {
+                            width: 200px;
+                            height: 40px;
+                        }
+                    }
+
+                    .labelAbove,
+                    .labelAbove input,
+                    .labelAbove textarea {
+                        display: block;
+                        color: #fff;
+                    }
+
+                    .labelAbove textarea {
+                        margin-top: 1em;
+                    }
+
+                    input[type="text"],
+                    input[type="email"] {
+                        background: transparent;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
+                        border-bottom: .5px solid #FFCD48;
+                        width: 80%;
+                        height: 30px;
+                    }
+
+                    #formMessage {
+                        width: 90%;
+                        height: 20vh;
+                    }
+
+                    fieldset {
+                        border: none;
+                        color: #fff;
+                        width: 200px;
+
+                        legend {
+                            padding-top: 50px;
+                            font-size: .8vw;
+                            font-weight: bold;
+                        }
+
+                        label {
+                            font-size: .7vw;
+                        }
+                    }
+                }
             }
         }
     }
