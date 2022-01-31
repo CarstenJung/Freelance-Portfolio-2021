@@ -4359,10 +4359,10 @@ var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
 _gsapDefault.default.registerPlugin(_scrollTriggerDefault.default);
 _gsapDefault.default.to("nav", {
     x: 500,
-    markers: true,
     scrollTrigger: {
         trigger: ".section3",
-        start: "top top"
+        start: "top top",
+        markers: true
     } // start the animation when ".box" enters the viewport (once)
 });
 
