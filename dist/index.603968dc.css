@@ -245,7 +245,7 @@ body .wrapper nav .logoContainer img {
 body .wrapper nav .logoContainer .logoLine {
   width: 100px;
   height: 1px;
-  background-color: #fff;
+  background-color: white;
   transform: rotate(90deg);
   position: relative;
   top: 55px;
@@ -259,7 +259,7 @@ body .wrapper nav .logoContainer .logoLine span {
   left: 70px;
   bottom: 6px;
   width: 130px;
-  color: #fff;
+  color: white;
   transform: rotate(180deg);
 }
 body .wrapper nav .ctaBtn button {
@@ -283,7 +283,7 @@ body .wrapper nav .ctaBtn .ctaLine {
 body .wrapper .section1 {
   width: 100%;
   height: 100vh;
-  margin-bottom: 100px;
+  margin-bottom: 250px;
 }
 body .wrapper .section1 .socialsContainer {
   position: absolute;
@@ -304,7 +304,7 @@ body .wrapper .section1 .socialsContainer ul li a .fab {
   margin-bottom: 1em;
 }
 body .wrapper .section1 .socialsContainer ul a {
-  color: #fff;
+  color: white;
 }
 body .wrapper .section1 .socialsContainer ul li {
   position: relative;
@@ -342,9 +342,12 @@ body .wrapper .section1 .socialsContainer ul li:nth-child(3)::before {
 body .wrapper .section1 .socialsContainer ul li:hover:before {
   height: 110%;
 }
+body .wrapper .section1 .heroWrapper img {
+  height: 100vh;
+}
 body .wrapper .section2 {
   max-width: 1500px;
-  margin: auto auto 200px auto;
+  margin: auto auto 250px auto;
 }
 body .wrapper .section2 .headline {
   max-height: 75px;
@@ -507,7 +510,7 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack img {
 }
 body .wrapper .section4 {
   max-width: 1500px;
-  margin: auto;
+  margin: 500px auto auto auto;
 }
 body .wrapper .section4 .testimonialsWrapper {
   margin-top: 400px;
@@ -573,7 +576,7 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
 }
 body .wrapper .section5 .contactFormWrapper {
   max-width: 1200px;
-  margin: 200px auto auto auto;
+  margin: 300px auto auto auto;
   padding-bottom: 100px;
 }
 body .wrapper .section5 .contactFormWrapper .subtitle {
@@ -657,5 +660,23 @@ body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
 }
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
   font-size: 0.7vw;
+}
+body .wrapper .footerWrapper {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper .footerWrapper a {
+  color: white;
+  padding-right: 1.5em;
+  font-size: 1.3em;
+}
+body .wrapper .footerWrapper .policyImprint {
+  color: #fff;
+}
+body .wrapper .footerWrapper .policyImprint p {
+  float: right;
+  padding-right: 1em;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
