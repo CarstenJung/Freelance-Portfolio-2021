@@ -4356,10 +4356,14 @@ var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
 var _scrollTrigger = require("gsap/ScrollTrigger");
 var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
-/* gsap.registerPlugin(ScrollTrigger); */ _gsapDefault.default.to("nav", {
-    scrollTrigger: ".section4",
+_gsapDefault.default.registerPlugin(_scrollTriggerDefault.default);
+_gsapDefault.default.to("nav", {
     x: 500,
-    markers: true
+    markers: true,
+    scrollTrigger: {
+        trigger: ".section3",
+        start: "top top"
+    } // start the animation when ".box" enters the viewport (once)
 });
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","gsap":"2aTR0","gsap/ScrollTrigger":"41HI5"}],"41HI5":[function(require,module,exports) {
