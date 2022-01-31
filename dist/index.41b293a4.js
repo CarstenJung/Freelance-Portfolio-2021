@@ -4357,7 +4357,7 @@ var _gsapDefault = parcelHelpers.interopDefault(_gsap);
 var _scrollTrigger = require("gsap/ScrollTrigger");
 var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
 /* gsap.registerPlugin(ScrollTrigger); */ _gsapDefault.default.to("nav", {
-    scrollTrigger: ".section2",
+    scrollTrigger: ".section4",
     x: 500,
     markers: true
 });
