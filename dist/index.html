@@ -69,15 +69,6 @@
                         <div class="ctaLine"></div>
                     </a>
                 </div>
-                <!--  <div class="burgerMenuWrapper">
-                    <button class="burgerMenu">
-                        <svg viewBox="0 0 64 48">
-                            <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
-                            <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
-                            <path class="pathSVG" d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
-                        </svg>
-                    </button>
-                </div> -->
             </nav>
         </header>
         <!--FIRST SECTION-->
@@ -268,8 +259,8 @@
                         corporis fugit sunt deleniti aliquam quidem!</div>
                 </div>
                 <div class="btnWrapper">
-                    <button class="left"></button>
-                    <button class="right"></button>
+                    <button class="left"><i class="fas fa-angle-double-left"></i></button>
+                    <button class="right"><i class="fas fa-arrow-circle-right"></i></button>
                 </div>
             </div>
         </div>
@@ -280,7 +271,7 @@
                 <div class="contactForm">
                     <form name="contactMe" method="POST" data-netlify="true">
                         <p>
-                            <label class="labelAbove">Name <input id="formName" type="text" name="name"></label>
+                            <label class="labelAbove bcgColor">Name <input id="formName" type="text" name="name"></label>
                         </p>
                         <p>
                             <label class="labelAbove">Firma <input id="formCompany" type="text" name="name"></label>
@@ -319,7 +310,12 @@
                             </p>
                         </fieldset>
                         <p id="formBtn">
-                            <button type="submit">Send</button>
+                            <button type="submit">
+                                <span class="submitCircle" aria-hidden="true">
+                                    <span><i class="fas fa-paper-plane"></i></span>
+                                </span>
+                                <span class="buttonText">Nachricht senden</span>
+                            </button>
                         </p>
                     </form>
                 </div>

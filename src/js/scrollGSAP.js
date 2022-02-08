@@ -1,13 +1,21 @@
-/* import gsap from "gsap"
+import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("nav", {
-    x: 500,
+
+/*BURGER MENU*/
+let ScrollAnimations = gsap.timeline({
     scrollTrigger: {
-        trigger:".section3",
-        start: "top top",
-        markers: true         
-    } // start the animation when ".box" enters the viewport (once)
-}); */
+        trigger: "nav",
+        start: "bottom",
+        scrub: .3,
+    }
+});
+
+ScrollAnimations.to(".burgerMenu", {
+    paddingTop: '0px',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+});
+/**********/ 
+

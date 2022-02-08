@@ -1,4 +1,5 @@
 import gsap from "gsap"
+
 /* PORTFOLIO SLIDER ANIMATION MENU */
 let menuProjectItems = gsap.timeline();
 
@@ -44,11 +45,14 @@ menuProjectItems.repeat(-1);
       const menuOverlay = document.querySelector(".burgerMenu");
 
       if (menuOverlay.classList.contains("active")) {
+        gsap.to('.logoContainer, .socialsContainer', {
+          opacity: 0
+        })
         gsap.to(".menuOverlay", {
           opacity: 1,
           display: "flex",
           duration: 1,
-          zIndex: 1
+          zIndex: 4
         });
         gsap.to(".menuFlexContainer ul li", {
           y: 0,
@@ -62,6 +66,9 @@ menuProjectItems.repeat(-1);
         })
         menuProjectItems.play()
       } else {
+         gsap.to('.logoContainer, .socialsContainer', {
+          opacity: 1
+        })
         gsap.to(".menuOverlay", {
           opacity: 0,
           display: "none",

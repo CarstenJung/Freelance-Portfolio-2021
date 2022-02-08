@@ -1,7 +1,15 @@
 :root {
   --accentColor: #FFCD48;
   --lightColor: rgb(255, 255, 255);
+  --darkColor: #1f1f1f;
   --burgerMenu: #000;
+  --mainFont: "Montserrat", sans-serif;
+  --secondFont: "Alata", sans-serif;
+  --slideColorOne: #e0ffff;
+  --slideColorTwo: #fafad2;
+  --slideColorThree: #d8bfd8;
+  --slideColorFour: #6bbd76;
+  --slideColorFive: #de6868;
 }
 
 body {
@@ -9,6 +17,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
   /** NEW START **/
   /** BURGER MENU **/
   /** NEW END **/
@@ -90,21 +99,20 @@ body .menuOverlay .menuSlideTwo .officeFlexContainer .menuProjectsSlider {
 }
 body .burgerMenuWrapper {
   position: fixed;
-  right: 4em;
-  top: 1em;
   font-family: "Roboto", Arial, sans-serif;
-  z-index: 3;
+  z-index: 4;
+  right: 0;
 }
 body .burgerMenuWrapper .burgerMenu {
   color: var(--lightColor);
-  width: 36px;
-  height: 36px;
-  padding: 0;
+  padding-top: 32px;
   margin: 0;
   outline: none;
-  position: relative;
+  /* position: absolute;
+  left: 0px; */
   border: none;
-  background: none;
+  background: transparent;
+  border-radius: 0px 0px 0px 30px;
   cursor: pointer;
   -webkit-appearence: none;
   -webkit-tap-highlight-color: transparent;
@@ -117,7 +125,7 @@ body .burgerMenuWrapper .burgerMenu svg {
   stroke-linejoin: round;
   fill: none;
   display: block;
-  position: absolute;
+  position: relative;
 }
 body .burgerMenuWrapper .burgerMenu svg path {
   transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
@@ -160,8 +168,9 @@ body .wrapper {
   /* SECTION ONE */
 }
 body .wrapper nav {
-  position: fixed;
+  position: relative;
   width: 100%;
+  z-index: 3;
 }
 body .wrapper nav .logoContainer img {
   height: 80px;
@@ -207,11 +216,16 @@ body .wrapper nav .ctaBtn .ctaLine {
 }
 body .wrapper .section1 {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   margin-bottom: 250px;
+  position: relative;
+  z-index: 2;
 }
 body .wrapper .section1 .bcgStructureOne {
   position: absolute;
+}
+body .wrapper .section1 .bcgStructureOne img {
+  z-index: 1;
 }
 body .wrapper .section1 .socialsContainer {
   position: absolute;
@@ -247,7 +261,7 @@ body .wrapper .section1 .socialsContainer ul li a .fab:hover {
 body .wrapper .section1 .socialsContainer ul li:before {
   position: absolute;
   font-family: FontAwesome;
-  top: -1px;
+  top: 0;
   left: 0;
   font-size: 1.3em;
   width: 100%;
@@ -341,6 +355,7 @@ body .wrapper .section3 .headline h1 {
 body .wrapper .section3 .portfolioGridWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 0.1em;
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent {
   transition: transform 3s;
@@ -363,23 +378,23 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontKreati,
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontLogoErgo {
-  background: #e0ffff;
+  background: var(--slideColorOne);
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontAlpaka {
-  background: #fff;
+  background: var(--lightColor);
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontPetersen,
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontCJ {
-  background: #fafad2;
+  background: var(--slideColorTwo);
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontGoodgrade {
-  background: #d8bfd8;
+  background: var(--slideColorThree);
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontAeventyr {
-  background: #6bbd76;
+  background: var(--slideColorFour);
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontKieninger {
-  background: #de6868;
+  background: var(--slideColorFive);
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront {
   position: relative;
@@ -398,7 +413,8 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront:before {
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
   transform: rotatey(0.5turn);
-  background: transparent linear-gradient(119deg, #111111 100%, #292929 0%) 0% 0% no-repeat padding-box;
+  /* background: transparent linear-gradient(119deg, #111111 100%, #292929 0%) 0% 0% no-repeat padding-box; */
+  background: #fff;
   text-align: center;
 }
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack span {
@@ -406,7 +422,7 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack span {
   left: 40%;
   top: 10%;
   transform: translate(-50%, -50%);
-  color: var(--lightColor);
+  color: var(--darkColor);
   opacity: 0.5;
   font-size: 0.7rem;
   transform: translateZ(3em);
@@ -423,21 +439,23 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack p {
   top: 12%;
   transform: translate(-50%, -50%);
   /*  bottom: 10px;
-   left: 110px; */
-  color: var(--lightColor);
+  left: 110px; */
+  color: var(--darkColor);
   font-weight: bold;
   transform: translateZ(3em);
   backface-visibility: hidden;
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 0.7rem;
 }
 body .wrapper .section4 {
   max-width: 1500px;
-  margin: 500px auto auto auto;
+  margin: auto;
   overflow: hidden;
 }
 body .wrapper .section4 .bcgStructureTwo {
   position: absolute;
+  z-index: 1;
+  max-width: 100%;
 }
 body .wrapper .section4 .testimonialsWrapper {
   margin-top: 400px;
@@ -492,6 +510,8 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper {
   justify-content: center;
   align-items: center;
   margin: 3em;
+  position: relative;
+  z-index: 3;
 }
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left,
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
@@ -499,7 +519,15 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
   height: 2vw;
   margin: 2em;
   border-radius: 50%;
+  border: none;
   background: var(--accentColor);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+body .wrapper .section5 {
+  position: relative;
+  z-index: 3;
 }
 body .wrapper .section5 .contactFormWrapper {
   max-width: 1200px;
@@ -539,6 +567,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formMail {
 body .wrapper .section5 .contactFormWrapper .contactForm #messageWrapper {
   grid-column-start: message;
   grid-column-end: messageEnd;
+  margin-top: 3em;
 }
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
   grid-area: radioBtn;
@@ -547,17 +576,75 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formBtn {
   grid-area: btn;
 }
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button {
-  width: 200px;
-  height: 40px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-weight: bold;
+  width: 18rem;
+  height: auto;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .submitCircle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--accentColor);
+  border-radius: 1.625rem;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .submitCircle span {
+  font-size: 1.3rem;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: var(--darkColor);
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .buttonText {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 20px;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button:hover .submitCircle {
+  width: 100%;
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button:hover .submitCircle .icon.arrow {
+  background: #242424;
+  transform: translate(1rem, 0);
+}
+body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button:hover .buttonText {
+  color: #242424;
 }
 body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove,
 body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove input,
 body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove textarea {
   display: block;
   color: var(--lightColor);
-}
-body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove textarea {
-  margin-top: 1em;
+  font-family: var(--mainFont);
+  font-weight: bold;
 }
 body .wrapper .section5 .contactFormWrapper .contactForm input[type=text],
 body .wrapper .section5 .contactFormWrapper .contactForm input[type=email] {
@@ -572,6 +659,8 @@ body .wrapper .section5 .contactFormWrapper .contactForm input[type=email] {
 body .wrapper .section5 .contactFormWrapper .contactForm #formMessage {
   width: 90%;
   height: 20vh;
+  color: #3d3d3d;
+  margin-top: 1em;
 }
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
   border: none;
