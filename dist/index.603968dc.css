@@ -1,16 +1,54 @@
 :root {
+  --bcgColor: transparent linear-gradient(119deg, #111111 0%, #292929 100%) 0% 0% no-repeat padding-box;
   --accentColor: #FFCD48;
   --lightColor: rgb(255, 255, 255);
   --darkColor: #1f1f1f;
   --burgerMenu: #000;
   --mainFont: "Montserrat", sans-serif;
   --secondFont: "Alata", sans-serif;
-  --slideColorOne: #e0ffff;
-  --slideColorTwo: #fafad2;
-  --slideColorThree: #d8bfd8;
-  --slideColorFour: #6bbd76;
-  --slideColorFive: #de6868;
 }
+
+/* KEYFRAMES */
+
+@keyframes arrowAnimationRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes arrowAnimationLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+/********************/
 
 body {
   padding: 0;
@@ -22,6 +60,7 @@ body {
   /** BURGER MENU **/
   /** NEW END **/
 }
+
 body .menuOverlay {
   position: fixed;
   top: 0;
@@ -31,17 +70,20 @@ body .menuOverlay {
   display: none;
   opacity: 0;
 }
+
 body .menuOverlay .menuSlideOne {
   width: 50%;
   height: 100%;
   background: #111111;
 }
+
 body .menuOverlay .menuSlideOne img {
   position: absolute;
   height: 80px;
   margin: 2em 0 0 3em;
   opacity: 0.4;
 }
+
 body .menuOverlay .menuSlideOne .menuFlexContainer {
   display: flex;
   align-items: center;
@@ -49,6 +91,7 @@ body .menuOverlay .menuSlideOne .menuFlexContainer {
   flex-direction: column;
   height: 100%;
 }
+
 body .menuOverlay .menuSlideOne .menuFlexContainer h1 {
   color: var(--lightColor);
   font-size: 1vw;
@@ -57,26 +100,31 @@ body .menuOverlay .menuSlideOne .menuFlexContainer h1 {
   opacity: 0;
   transform: translatex(-100px);
 }
+
 body .menuOverlay .menuSlideOne .menuFlexContainer ul {
   color: var(--lightColor);
   list-style: none;
   font-size: 3vw;
 }
+
 body .menuOverlay .menuSlideOne .menuFlexContainer ul li {
   line-height: 1.5em;
   font-weight: bold;
   transform: translatey(-100px);
 }
+
 body .menuOverlay .menuSlideOne .menuFlexContainer ul span {
   color: #686868;
   font-weight: 100;
 }
+
 body .menuOverlay .menuSlideTwo {
   width: 50%;
   height: 100%;
   background: #1f1a0e;
   position: relative;
 }
+
 body .menuOverlay .menuSlideTwo .officeFlexContainer {
   display: flex;
   align-items: center;
@@ -84,6 +132,7 @@ body .menuOverlay .menuSlideTwo .officeFlexContainer {
   flex-direction: column;
   height: 100%;
 }
+
 body .menuOverlay .menuSlideTwo .officeFlexContainer h1 {
   color: var(--lightColor);
   font-size: 1vw;
@@ -92,17 +141,20 @@ body .menuOverlay .menuSlideTwo .officeFlexContainer h1 {
   letter-spacing: 0.3em;
   opacity: 0;
 }
+
 body .menuOverlay .menuSlideTwo .officeFlexContainer .menuProjectsSlider {
   opacity: 0;
   display: none;
   max-width: 24vw;
 }
+
 body .burgerMenuWrapper {
   position: fixed;
   font-family: "Roboto", Arial, sans-serif;
   z-index: 4;
   right: 0;
 }
+
 body .burgerMenuWrapper .burgerMenu {
   color: var(--lightColor);
   padding-top: 32px;
@@ -117,6 +169,7 @@ body .burgerMenuWrapper .burgerMenu {
   -webkit-appearence: none;
   -webkit-tap-highlight-color: transparent;
 }
+
 body .burgerMenuWrapper .burgerMenu svg {
   height: 74px;
   stroke: var(--lightColor);
@@ -127,12 +180,14 @@ body .burgerMenuWrapper .burgerMenu svg {
   display: block;
   position: relative;
 }
+
 body .burgerMenuWrapper .burgerMenu svg path {
   transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
   stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
   stroke-dashoffset: var(--offset, 126px);
   transform: translateZ(0);
 }
+
 body .burgerMenuWrapper .burgerMenu svg path:nth-child(2) {
   --duration: 0.7s;
   --easing: ease-in;
@@ -140,42 +195,51 @@ body .burgerMenuWrapper .burgerMenu svg path:nth-child(2) {
   --array-2: 74px;
   transform: scalex(80%) translateX(12px) translateY(-2px);
 }
+
 body .burgerMenuWrapper .burgerMenu svg path:nth-child(3) {
   --offset: 133px;
   --array-2: 107px;
   transform: scalex(50%) translateX(47px) translateY(-4px);
 }
+
 body .burgerMenuWrapper .burgerMenu.active svg path {
   --offset: 57px;
 }
+
 body .burgerMenuWrapper .burgerMenu.active svg path:nth-child(1), body .burgerMenuWrapper .burgerMenu.active svg path:nth-child(3) {
   --delay: 0.15s;
   --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
 }
+
 body .burgerMenuWrapper .burgerMenu.active svg path:nth-child(2) {
   --duration: 0.4s;
   --offset: 1px;
   --array-1: 1px;
   transform: scalex(100%) translateX(0) translateY(-2px);
 }
+
 body .burgerMenuWrapper .burgerMenu.active svg path:nth-child(3) {
   --offset: 58px;
   transform: scalex(100%) translateX(0px) translateY(-4px);
 }
+
 body .wrapper {
-  background: transparent linear-gradient(119deg, #111111 0%, #292929 100%) 0% 0% no-repeat padding-box;
+  background: var(--bcgColor);
   /* NAVIGATION */
   /* SECTION ONE */
 }
+
 body .wrapper nav {
   position: relative;
   width: 100%;
   z-index: 3;
 }
+
 body .wrapper nav .logoContainer img {
   height: 80px;
   margin: 2em 0 0 3em;
 }
+
 body .wrapper nav .logoContainer .logoLine {
   width: 100px;
   height: 1px;
@@ -184,7 +248,9 @@ body .wrapper nav .logoContainer .logoLine {
   position: relative;
   top: 55px;
   left: 44px;
+  opacity: 0.8;
 }
+
 body .wrapper nav .logoContainer .logoLine span {
   font-weight: 400;
   font-size: 0.7em;
@@ -196,6 +262,7 @@ body .wrapper nav .logoContainer .logoLine span {
   color: var(--lightColor);
   transform: rotate(180deg);
 }
+
 body .wrapper nav .ctaBtn button {
   position: absolute;
   right: 12em;
@@ -206,6 +273,7 @@ body .wrapper nav .ctaBtn button {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 body .wrapper nav .ctaBtn .ctaLine {
   position: absolute;
   right: 10.2em;
@@ -214,6 +282,7 @@ body .wrapper nav .ctaBtn .ctaLine {
   height: 1px;
   background-color: var(--lightColor);
 }
+
 body .wrapper .section1 {
   width: 100%;
   height: 90vh;
@@ -221,12 +290,15 @@ body .wrapper .section1 {
   position: relative;
   z-index: 2;
 }
+
 body .wrapper .section1 .bcgStructureOne {
   position: absolute;
 }
+
 body .wrapper .section1 .bcgStructureOne img {
   z-index: 1;
 }
+
 body .wrapper .section1 .socialsContainer {
   position: absolute;
   bottom: 4em;
@@ -234,30 +306,36 @@ body .wrapper .section1 .socialsContainer {
   display: flex;
   flex-direction: column;
 }
+
 body .wrapper .section1 .socialsContainer ul {
   list-style: none;
   position: relative;
   display: flex;
   flex-direction: column;
 }
+
 body .wrapper .section1 .socialsContainer ul li a .fas,
 body .wrapper .section1 .socialsContainer ul li a .fab {
   font-size: 1.3em;
   margin-bottom: 1em;
 }
+
 body .wrapper .section1 .socialsContainer ul a {
   color: var(--lightColor);
 }
+
 body .wrapper .section1 .socialsContainer ul li {
   position: relative;
   margin: 0 10px;
   cursor: pointer;
 }
+
 body .wrapper .section1 .socialsContainer ul li a .fas:hover,
 body .wrapper .section1 .socialsContainer ul li a .fab:hover {
   opacity: 0;
   transition: opacity 0.6s ease-in;
 }
+
 body .wrapper .section1 .socialsContainer ul li:before {
   position: absolute;
   font-family: FontAwesome;
@@ -269,28 +347,35 @@ body .wrapper .section1 .socialsContainer ul li:before {
   overflow: hidden;
   transition: 0.6s ease-in-out;
 }
+
 body .wrapper .section1 .socialsContainer ul li:nth-child(1)::before {
   content: "\f1fa";
   color: var(--accentColor);
 }
+
 body .wrapper .section1 .socialsContainer ul li:nth-child(2)::before {
   content: "\f0e1";
   color: var(--accentColor);
 }
+
 body .wrapper .section1 .socialsContainer ul li:nth-child(3)::before {
   content: "\f4f9";
   color: var(--accentColor);
 }
+
 body .wrapper .section1 .socialsContainer ul li:hover:before {
   height: 110%;
 }
+
 body .wrapper .section1 .heroWrapper img {
   height: 100vh;
 }
+
 body .wrapper .section2 {
   max-width: 1500px;
   margin: auto auto 250px auto;
 }
+
 body .wrapper .section2 .headline h1 {
   font-size: 3vw;
   color: var(--lightColor);
@@ -298,14 +383,17 @@ body .wrapper .section2 .headline h1 {
   text-align: center;
   margin-bottom: 100px;
 }
+
 body .wrapper .section2 .serviceItemWrapper {
   display: flex;
 }
+
 body .wrapper .section2 .serviceItemWrapper > div {
   width: 25%;
   height: 400px;
   margin: auto;
 }
+
 body .wrapper .section2 .serviceItemWrapper .serviceCircle {
   width: 5vw;
   height: 5vw;
@@ -315,10 +403,12 @@ body .wrapper .section2 .serviceItemWrapper .serviceCircle {
   align-items: center;
   justify-content: center;
 }
+
 body .wrapper .section2 .serviceItemWrapper .serviceCircle img {
   width: 60%;
   margin: auto;
 }
+
 body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline {
   font-weight: bold;
   text-align: center;
@@ -326,25 +416,31 @@ body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline {
   font-family: "Alata", sans-serif;
   font-size: 1.1vw;
 }
+
 body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline span {
   color: var(--accentColor);
 }
+
 body .wrapper .section2 .serviceItemWrapper .serviceItemDescription {
   color: var(--lightColor);
   font-size: 0.8vw;
 }
+
 body .wrapper .section2 .serviceItemWrapper .serviceItemDescription p {
   width: 12vw;
   margin: auto;
 }
+
 body .wrapper .section3 {
   max-width: 1400px;
   margin: auto;
   position: relative;
 }
+
 body .wrapper .section3 .headline {
   max-height: 75px;
 }
+
 body .wrapper .section3 .headline h1 {
   font-size: 3vw;
   color: var(--lightColor);
@@ -352,20 +448,24 @@ body .wrapper .section3 .headline h1 {
   text-align: center;
   margin-bottom: 120px;
 }
+
 body .wrapper .section3 .portfolioGridWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.1em;
+  gap: 0.2em;
 }
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent {
   transition: transform 3s;
   transform-style: preserve-3d;
   width: 100%;
   height: 100%;
 }
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent:hover {
   transform: rotatey(0.5turn);
 }
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront,
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
   position: absolute;
@@ -376,33 +476,19 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontKreati,
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontLogoErgo {
-  background: var(--slideColorOne);
-}
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontAlpaka {
-  background: var(--lightColor);
-}
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontPetersen,
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontCJ {
-  background: var(--slideColorTwo);
-}
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontGoodgrade {
-  background: var(--slideColorThree);
-}
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontAeventyr {
-  background: var(--slideColorFour);
-}
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFrontKieninger {
-  background: var(--slideColorFive);
-}
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront {
   position: relative;
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
+  background-blend-mode: soft-light, screen;
 }
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront img {
   transform: translateZ(3rem);
   max-width: 100%;
 }
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront:before {
   content: "";
   position: absolute;
@@ -411,61 +497,42 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront:before {
   bottom: 1em;
   left: 1em;
 }
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
   transform: rotatey(0.5turn);
-  /* background: transparent linear-gradient(119deg, #111111 100%, #292929 0%) 0% 0% no-repeat padding-box; */
   background: #fff;
   text-align: center;
 }
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack span {
-  position: absolute;
-  left: 40%;
-  top: 10%;
-  transform: translate(-50%, -50%);
-  color: var(--darkColor);
-  opacity: 0.5;
-  font-size: 0.7rem;
-  transform: translateZ(3em);
-  backface-visibility: hidden;
-}
+
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack img {
   max-width: 100%;
   transform: translateZ(3em);
   backface-visibility: hidden;
 }
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack p {
-  position: absolute;
-  left: 33%;
-  top: 12%;
-  transform: translate(-50%, -50%);
-  /*  bottom: 10px;
-  left: 110px; */
-  color: var(--darkColor);
-  font-weight: bold;
-  transform: translateZ(3em);
-  backface-visibility: hidden;
-  opacity: 0.8;
-  font-size: 0.7rem;
-}
+
 body .wrapper .section4 {
   max-width: 1500px;
   margin: auto;
   overflow: hidden;
 }
+
 body .wrapper .section4 .bcgStructureTwo {
   position: absolute;
   z-index: 1;
   max-width: 100%;
 }
+
 body .wrapper .section4 .testimonialsWrapper {
   margin-top: 400px;
 }
+
 body .wrapper .section4 .testimonialsWrapper .subtitle {
   text-align: center;
   color: var(--lightColor);
   font-size: 1vw;
   font-weight: 100;
 }
+
 body .wrapper .section4 .testimonialsWrapper .headline {
   margin: 0;
   font-size: 3vw;
@@ -473,13 +540,14 @@ body .wrapper .section4 .testimonialsWrapper .headline {
   font-weight: bold;
   text-align: center;
 }
+
 body .wrapper .section4 .testimonialsWrapper .testimonial {
   margin-top: 3em;
 }
+
 body .wrapper .section4 .testimonialsWrapper .testimonial .logoCircle {
-  width: 10vw;
-  height: 10vw;
-  border: 5px solid var(--accentColor);
+  width: 13vw;
+  height: 13vw;
   border-radius: 50%;
   margin: auto;
   display: flex;
@@ -487,17 +555,20 @@ body .wrapper .section4 .testimonialsWrapper .testimonial .logoCircle {
   justify-content: center;
   background: var(--lightColor);
 }
+
 body .wrapper .section4 .testimonialsWrapper .testimonial .logoCircle img {
-  width: 10vw;
+  width: 12vw;
   background-size: cover;
 }
+
 body .wrapper .section4 .testimonialsWrapper .testimonial .testimonialCompany {
-  margin: 1em 0 0.5em 0;
+  margin: 1.5em 0 0.5em 0;
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 2.2vw;
   font-weight: bold;
   color: var(--accentColor);
 }
+
 body .wrapper .section4 .testimonialsWrapper .testimonial .testimonialDescription {
   text-align: center;
   max-width: 600px;
@@ -505,41 +576,174 @@ body .wrapper .section4 .testimonialsWrapper .testimonial .testimonialDescriptio
   margin: auto;
   color: var(--lightColor);
 }
+
 body .wrapper .section4 .testimonialsWrapper .btnWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3em;
-  position: relative;
-  z-index: 3;
 }
+
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left,
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
-  width: 2vw;
-  height: 2vw;
-  margin: 2em;
-  border-radius: 50%;
-  border: none;
-  background: var(--accentColor);
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.1em;
+  position: relative;
+  z-index: 3;
+  height: 5vh;
+  padding: 3em;
 }
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle {
+  position: absolute;
+  border: 1px solid var(--lightColor);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer .arrow {
+  position: absolute;
+  bottom: 0;
+  margin-left: -1px;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  top: 9px;
+  left: 30%;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer .second {
+  margin-left: 8px;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer .next {
+  background-image: url("rightArrow.84c5844c.png");
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer .arrowAnimationRight {
+  animation-name: arrowAnimationRight;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer .arrow.first.arrowAnimationRight {
+  animation-name: arrowAnimationRight;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover .arrow {
+  animation-name: arrowAnimationRight;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover .arrow.first {
+  animation-name: arrowAnimationRight;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle {
+  position: absolute;
+  border: 1px solid var(--lightColor);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer .arrow {
+  position: absolute;
+  bottom: 0;
+  margin-left: -1px;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  top: 9px;
+  left: 38%;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer .second {
+  margin-left: -10px;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer .next {
+  background-image: url("leftArrow.de3f936d.png");
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer .arrowAnimationLeft {
+  animation-name: arrowAnimationLeft;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer .arrow.first.arrowAnimationLeft {
+  animation-name: arrowAnimationLeft;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle:hover .arrow {
+  animation-name: arrowAnimationLeft;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle:hover .arrow.first {
+  animation-name: arrowAnimationLeft;
+  animation-duration: 1.4s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 body .wrapper .section5 {
   position: relative;
   z-index: 3;
 }
+
 body .wrapper .section5 .contactFormWrapper {
   max-width: 1200px;
-  margin: 300px auto auto auto;
-  padding-bottom: 100px;
+  margin: 300px auto 80px auto;
 }
+
 body .wrapper .section5 .contactFormWrapper .subtitle {
   text-align: center;
   color: var(--lightColor);
   font-size: 1vw;
   font-weight: 100;
 }
+
 body .wrapper .section5 .contactFormWrapper .headline {
   margin: 0;
   font-size: 3vw;
@@ -547,34 +751,62 @@ body .wrapper .section5 .contactFormWrapper .headline {
   font-weight: bold;
   text-align: center;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm {
   margin-top: 100px;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm form {
   display: grid;
-  grid-template-areas: "name company mail" "radioBtn message messageEnd" "empty1 btn empty2";
+  grid-template-areas: "name company mail" "radioBtn message messageEnd" "empty1 policyText policyText" "empty3 btn empty4";
   grid-template-columns: repeat(3, 1fr);
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formName {
   grid-area: name;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formCompany {
   grid-area: company;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formMail {
   grid-area: mail;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #messageWrapper {
   grid-column-start: message;
   grid-column-end: messageEnd;
   margin-top: 3em;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
   grid-area: radioBtn;
 }
+
+body .wrapper .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper {
+  grid-area: policyText;
+  margin-top: -30px;
+  color: var(--lightColor);
+  max-width: 90%;
+  font-size: 0.8em;
+}
+
+body .wrapper .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper input {
+  padding-bottom: 20px;
+}
+
+body .wrapper .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper label {
+  position: absolute;
+  max-width: 35%;
+  padding-left: 10px;
+}
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn {
   grid-area: btn;
+  margin-top: 50px;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button {
   position: relative;
   display: inline-block;
@@ -590,6 +822,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button {
   width: 18rem;
   height: auto;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .submitCircle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
@@ -600,6 +833,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .submit
   background: var(--accentColor);
   border-radius: 1.625rem;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .submitCircle span {
   font-size: 1.3rem;
   position: absolute;
@@ -607,6 +841,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .submit
   top: 12px;
   color: var(--darkColor);
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -614,6 +849,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .icon {
   bottom: 0;
   margin: auto;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .buttonText {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -628,16 +864,20 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button .button
   text-align: center;
   text-transform: uppercase;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button:hover .submitCircle {
   width: 100%;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button:hover .submitCircle .icon.arrow {
   background: #242424;
   transform: translate(1rem, 0);
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button:hover .buttonText {
   color: #242424;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove,
 body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove input,
 body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove textarea {
@@ -646,6 +886,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm .labelAbove textarea {
   font-family: var(--mainFont);
   font-weight: bold;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm input[type=text],
 body .wrapper .section5 .contactFormWrapper .contactForm input[type=email] {
   background: transparent;
@@ -656,41 +897,86 @@ body .wrapper .section5 .contactFormWrapper .contactForm input[type=email] {
   width: 80%;
   height: 30px;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formMessage {
   width: 90%;
   height: 20vh;
   color: #3d3d3d;
   margin-top: 1em;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
   border: none;
   color: var(--lightColor);
   width: 200px;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
   padding-top: 50px;
   font-size: 0.8vw;
   font-weight: bold;
 }
+
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
   font-size: 0.7vw;
 }
+
 body .wrapper .footerWrapper {
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: rgba(17, 17, 17, 0.555);
 }
-body .wrapper .footerWrapper a {
+
+body .wrapper .footerWrapper .footerInnerContent {
+  display: grid;
+  align-items: center;
+  grid-template-areas: "imprint contact socials";
+  max-width: 95%;
+  margin: auto;
+  min-height: 50px;
+}
+
+body .wrapper .footerWrapper .footerInnerContent .footerSocials {
+  grid-area: socials;
+}
+
+body .wrapper .footerWrapper .footerInnerContent .footerSocials a {
   color: var(--lightColor);
   padding-right: 1.5em;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  float: right;
 }
-body .wrapper .footerWrapper .policyImprint {
+
+body .wrapper .footerWrapper .footerInnerContent .policyImprint {
+  grid-area: imprint;
+  color: var(--lightColor);
+  font-weight: lighter;
+  font-size: 0.7em;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+body .wrapper .footerWrapper .footerInnerContent .policyImprint p {
+  display: inline-flex;
+  flex-direction: column;
+  padding-right: 1em;
+}
+
+body .wrapper .footerWrapper .footerInnerContent .contactItems {
+  grid-area: contact;
+  justify-self: center;
+}
+
+body .wrapper .footerWrapper .footerInnerContent .contactItems i {
   color: var(--lightColor);
 }
-body .wrapper .footerWrapper .policyImprint p {
-  float: right;
-  padding-right: 1em;
+
+body .wrapper .footerWrapper .footerInnerContent .contactItems i span {
+  font-family: var(--mainFont);
+  font-weight: 400;
+  margin-left: 0.5em;
+  color: var(--lightColor);
+}
+
+body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
+  margin-left: 3em;
 }
 /*# sourceMappingURL=index.603968dc.css.map */

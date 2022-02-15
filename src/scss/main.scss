@@ -1,16 +1,59 @@
 :root {
+    --bcgColor: transparent linear-gradient(119deg, #111111 0%, #292929 100%) 0% 0% no-repeat padding-box;
     --accentColor: #FFCD48;
     --lightColor: rgb(255, 255, 255);
     --darkColor: #1f1f1f;
     --burgerMenu: #000;
     --mainFont: "Montserrat", sans-serif;
     --secondFont: 'Alata', sans-serif;
-    --slideColorOne: #e0ffff;
-    --slideColorTwo: #fafad2;
-    --slideColorThree: #d8bfd8;
-    --slideColorFour: #6bbd76;
-    --slideColorFive: #de6868;
 }
+
+/* KEYFRAMES */
+@keyframes arrowAnimationRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateX(10px) scale(0.9);
+    }
+
+    26% {
+        opacity: 0;
+        transform: translateX(-10px) scale(0.9);
+    }
+
+    55% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+
+@keyframes arrowAnimationLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateX(-10px) scale(0.9);
+    }
+
+    26% {
+        opacity: 0;
+        transform: translateX(10px) scale(0.9);
+    }
+
+    55% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+
+/********************/
 
 body {
     padding: 0;
@@ -195,7 +238,7 @@ body {
 
     /** NEW END **/
     .wrapper {
-        background: transparent linear-gradient(119deg, #111111 0%, #292929 100%) 0% 0% no-repeat padding-box;
+        background: var(--bcgColor);
 
         /* NAVIGATION */
         nav {
@@ -218,6 +261,7 @@ body {
                     position: relative;
                     top: 55px;
                     left: 44px;
+                    opacity: .8;
 
                     span {
                         font-weight: 400;
@@ -435,7 +479,7 @@ body {
             .portfolioGridWrapper {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                gap: .1em;
+                gap: .2em;
 
 
                 .flipContent {
@@ -459,35 +503,18 @@ body {
                         transform-style: preserve-3d;
                     }
 
-                    .flipFrontKreati,
-                    .flipFrontLogoErgo {
-                        background: var(--slideColorOne);
-                    }
-
-                    .flipFrontAlpaka {
-                        background: var(--lightColor)
-                    }
-
-                    .flipFrontPetersen,
-                    .flipFrontCJ {
-                        background: var(--slideColorTwo);
-                    }
-
-                    .flipFrontGoodgrade {
-                        background: var(--slideColorThree);
-                    }
-
-                    .flipFrontAeventyr {
-                        background: var(--slideColorFour);
-                    }
-
-                    .flipFrontKieninger {
-                        background: var(--slideColorFive);
-                    }
 
 
                     .flipFront {
                         position: relative;
+                        //background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                        background-color: #DCD9D4;
+                        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+                            radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+                        background-blend-mode: soft-light,
+                            screen;
+
+                        
 
                         img {
                             transform: translateZ(3rem);
@@ -506,42 +533,14 @@ body {
 
                     .flipBack {
                         transform: rotatey(.5turn);
-                        /* background: transparent linear-gradient(119deg, #111111 100%, #292929 0%) 0% 0% no-repeat padding-box; */
                         background: #fff;
                         text-align: center;
 
-                        span {
-                            position: absolute;
-                            left: 40%;
-                            top: 10%;
-                            transform: translate(-50%, -50%);
-                            //top: 20px;
-                            color: var(--darkColor);
-                            opacity: 0.5;
-                            font-size: 0.7rem;
-                            transform: translateZ(3em);
-                            backface-visibility: hidden;
-                        }
 
                         img {
                             max-width: 100%;
                             transform: translateZ(3em);
                             backface-visibility: hidden;
-                        }
-
-                        p {
-                            position: absolute;
-                            left: 33%;
-                            top: 12%;
-                            transform: translate(-50%, -50%);
-                            /*  bottom: 10px;
-                            left: 110px; */
-                            color: var(--darkColor);
-                            font-weight: bold;
-                            transform: translateZ(3em);
-                            backface-visibility: hidden;
-                            opacity: .8;
-                            font-size: .7rem;
                         }
                     }
                 }
@@ -582,9 +581,8 @@ body {
                     margin-top: 3em;
 
                     .logoCircle {
-                        width: 10vw;
-                        height: 10vw;
-                        border: 5px solid var(--accentColor);
+                        width: 13vw;
+                        height: 13vw;
                         border-radius: 50%;
                         margin: auto;
                         display: flex;
@@ -593,15 +591,15 @@ body {
                         background: var(--lightColor);
 
                         img {
-                            width: 10vw;
+                            width: 12vw;
                             background-size: cover;
                         }
                     }
 
                     .testimonialCompany {
-                        margin: 1em 0 .5em 0;
+                        margin: 1.5em 0 .5em 0;
                         text-align: center;
-                        font-size: 2.5vw;
+                        font-size: 2.2vw;
                         font-weight: bold;
                         color: var(--accentColor);
                     }
@@ -619,23 +617,156 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin: 3em;
-                    position: relative;
-                    z-index: 3;
-
 
                     .left,
                     .right {
-                        width: 2vw;
-                        height: 2vw;
-                        margin: 2em;
-                        border-radius: 50%;
-                        border: none;
-                        background: var(--accentColor);
-                        cursor: pointer;
-                        font-weight: bold;
-                        font-size: 1.1em;
-                        //color: red;
+                        position: relative;
+                        z-index: 3;
+                        height: 5vh;
+                        padding: 3em;
+                    }
+
+
+                    .right {
+                        .circle {
+                            position: absolute;
+                            border: 1px solid var(--lightColor);
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 100%;
+                            transition: all 0.3s ease-in-out;
+
+                            #btnContainer {
+                                width: 100%;
+                                cursor: pointer;
+                                position: absolute;
+
+                                .arrow {
+                                    position: absolute;
+                                    bottom: 0;
+                                    margin-left: -1px;
+                                    width: 12px;
+                                    height: 12px;
+                                    background-size: contain;
+                                    top: 9px;
+                                    left: 30%;
+                                }
+
+                                .second {
+                                    margin-left: 8px;
+                                }
+
+                                .next {
+                                    background-image: url("/src/assets/arrows/rightArrow.png");
+                                }
+
+                                .arrowAnimationRight {
+                                    animation-name: arrowAnimationRight;
+                                    animation-duration: 1.4s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+
+                                .arrow.first.arrowAnimationRight {
+                                    animation-name: arrowAnimationRight;
+                                    animation-duration: 1.4s;
+                                    animation-delay: 0.2s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+                            }
+
+                            &:hover {
+                                //background: var(--darkColor);
+                                transition: all 0.3s ease-in-out;
+
+                                .arrow {
+                                    animation-name: arrowAnimationRight;
+                                    animation-duration: 1.4s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+
+                                .arrow.first {
+                                    animation-name: arrowAnimationRight;
+                                    animation-duration: 1.4s;
+                                    animation-delay: 0.2s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+                            }
+                        }
+                    }
+
+                    .left {
+                        .circle {
+                            position: absolute;
+                            border: 1px solid var(--lightColor);
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 100%;
+                            transition: all 0.3s ease-in-out;
+
+                            #btnContainer {
+                                width: 100%;
+                                cursor: pointer;
+                                position: absolute;
+
+                                .arrow {
+                                    position: absolute;
+                                    bottom: 0;
+                                    margin-left: -1px;
+                                    width: 12px;
+                                    height: 12px;
+                                    background-size: contain;
+                                    top: 9px;
+                                    left: 38%;
+                                }
+
+                                .second {
+                                    margin-left: -10px;
+                                }
+
+                                .next {
+                                    background-image: url("/src/assets/arrows/leftArrow.png");
+                                }
+
+                                .arrowAnimationLeft {
+                                    animation-name: arrowAnimationLeft;
+                                    animation-duration: 1.4s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+
+                                .arrow.first.arrowAnimationLeft {
+                                    animation-name: arrowAnimationLeft;
+                                    animation-duration: 1.4s;
+                                    animation-delay: 0.2s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+                            }
+
+                            &:hover {
+                                //background: var(--darkColor);
+                                transition: all 0.3s ease-in-out;
+
+                                .arrow {
+                                    animation-name: arrowAnimationLeft;
+                                    animation-duration: 1.4s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+
+                                .arrow.first {
+                                    animation-name: arrowAnimationLeft;
+                                    animation-duration: 1.4s;
+                                    animation-delay: 0.2s;
+                                    animation-iteration-count: infinite;
+                                    animation-timing-function: linear;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -647,8 +778,7 @@ body {
 
             .contactFormWrapper {
                 max-width: 1200px;
-                margin: 300px auto auto auto;
-                padding-bottom: 100px;
+                margin: 300px auto 80px auto;
 
 
                 .subtitle {
@@ -674,7 +804,8 @@ body {
                         grid-template-areas:
                             "name company mail"
                             "radioBtn message messageEnd"
-                            "empty1 btn empty2";
+                            "empty1 policyText policyText"
+                            "empty3 btn empty4";
                         grid-template-columns: repeat(3, 1fr);
                     }
 
@@ -700,8 +831,27 @@ body {
                         grid-area: radioBtn;
                     }
 
+                    .policyCheckboxWrapper {
+                        grid-area: policyText;
+                        margin-top: -30px;
+                        color: var(--lightColor);
+                        max-width: 90%;
+                        font-size: .8em;
+
+                        input {
+                            padding-bottom: 20px;
+                        }
+
+                        label {
+                            position: absolute;
+                            max-width: 35%;
+                            padding-left: 10px;
+                        }
+                    }
+
                     #formBtn {
                         grid-area: btn;
+                        margin-top: 50px;
 
                         button {
                             position: relative;
@@ -826,25 +976,64 @@ body {
         }
 
         .footerWrapper {
-            background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: rgba(17, 17, 17, 0.555);
 
-            a {
-                color: var(--lightColor);
-                padding-right: 1.5em;
-                font-size: 1.3em;
-            }
 
-            .policyImprint {
-                color: var(--lightColor);
+            .footerInnerContent {
+                display: grid;
+                align-items: center;
+                grid-template-areas: "imprint contact socials";
+                max-width: 95%;
+                margin: auto;
+                min-height: 50px;
 
-                p {
-                    float: right;
-                    padding-right: 1em;
+                .footerSocials {
+                    grid-area: socials;
+
+
+                    a {
+                        color: var(--lightColor);
+                        padding-right: 1.5em;
+                        font-size: 1.2em;
+                        float: right;
+                    }
                 }
 
+                .policyImprint {
+                    grid-area: imprint;
+                    color: var(--lightColor);
+                    font-weight: lighter;
+                    font-size: .7em;
+                    opacity: .6;
+                    text-transform: uppercase;
+
+                    p {
+                        display: inline-flex;
+                        flex-direction: column;
+                        padding-right: 1em;
+                    }
+
+                }
+
+                .contactItems {
+                    grid-area: contact;
+                    justify-self: center;
+
+                    i {
+                        color: var(--lightColor);
+
+                        span {
+                            font-family: var(--mainFont);
+                            font-weight: 400;
+                            margin-left: .5em;
+                            color: var(--lightColor);
+                        }
+                    }
+
+                    .fa-at {
+                        margin-left: 3em;
+                    }
+                }
             }
         }
     }
