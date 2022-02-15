@@ -514,7 +514,30 @@ body {
                         background-blend-mode: soft-light,
                             screen;
 
-                        
+                        .headline {
+                            position: absolute;
+                            left: 50%;
+                            top: 15%;
+                            transform: translate(-50%, -50%);
+                            color: var(--darkColor);
+                            
+
+                            h1 {
+                                font-size: 1.3em;
+                                margin: 0;
+                                color: var(--darkColor);
+                                 opacity: .9;
+                            }
+
+                            p {
+                                margin: 0;
+                                font-size: .8em;
+                                width: 300px;
+                                text-align: center;
+                                transform: translateZ(3rem);
+                                opacity: .7;
+                            }
+                        }
 
                         img {
                             transform: translateZ(3rem);
