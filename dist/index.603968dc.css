@@ -386,22 +386,19 @@ body .wrapper .section2 .headline h1 {
 
 body .wrapper .section2 .serviceItemWrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 body .wrapper .section2 .serviceItemWrapper > div {
-  width: 25%;
   height: 400px;
   margin: auto;
 }
 
 body .wrapper .section2 .serviceItemWrapper .serviceCircle {
-  width: 5vw;
-  height: 5vw;
+  width: 7vw;
+  height: 7vw;
   border-radius: 50%;
-  margin: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 body .wrapper .section2 .serviceItemWrapper .serviceCircle img {
@@ -411,7 +408,6 @@ body .wrapper .section2 .serviceItemWrapper .serviceCircle img {
 
 body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline {
   font-weight: bold;
-  text-align: center;
   color: var(--lightColor);
   font-family: "Alata", sans-serif;
   font-size: 1.1vw;
@@ -428,7 +424,6 @@ body .wrapper .section2 .serviceItemWrapper .serviceItemDescription {
 
 body .wrapper .section2 .serviceItemWrapper .serviceItemDescription p {
   width: 12vw;
-  margin: auto;
 }
 
 body .wrapper .section3 {
@@ -511,6 +506,8 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront .headline 
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront img {
   transform: translateZ(3rem);
   max-width: 100%;
+  position: relative;
+  top: 10px;
 }
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront:before {
@@ -524,14 +521,178 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipFront:before {
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
   transform: rotatey(0.5turn);
-  background: #fff;
+  background-color: #dfdfdf;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
+  background-blend-mode: soft-light, screen;
   text-align: center;
 }
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack img {
-  max-width: 100%;
+  margin-top: 15px;
+  max-width: 35%;
   transform: translateZ(3em);
   backface-visibility: hidden;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .line {
+  width: 90%;
+  height: 1px;
+  background-color: #cecece;
+  margin: 10px auto;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription {
+  width: 90%;
+  margin: 30px auto;
+  padding: 0;
+  list-style: none;
+  color: var(--darkColor);
+  transform: translateZ(3em);
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .project {
+  text-align: left;
+  position: relative;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .project span {
+  transform: translateZ(3em);
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .project span:nth-child(1) {
+  font-weight: lighter;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .project span:nth-child(2) {
+  font-weight: bold;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .project span:nth-child(3) {
+  position: absolute;
+  left: 113px;
+  top: -9px;
+  text-align: left;
+  max-width: 225px;
+  font-size: 0.65em;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .skills {
+  text-align: left;
+  margin-top: 40px;
+  position: relative;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .skills span:nth-child(1) {
+  font-weight: lighter;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .skills span:nth-child(2) {
+  font-weight: bold;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .skills span:nth-child(3) {
+  position: absolute;
+  left: 113px;
+  top: -9px;
+  text-align: left;
+  max-width: 225px;
+  font-size: 0.65em;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .team {
+  text-align: left;
+  margin-top: 40px;
+  position: relative;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .team span:nth-child(1) {
+  font-weight: lighter;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .team span:nth-child(2) {
+  font-weight: bold;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .team span:nth-child(3) {
+  position: absolute;
+  left: 113px;
+  top: -9px;
+  text-align: left;
+  max-width: 225px;
+  font-size: 0.65em;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-weight: bold;
+  width: 18rem;
+  height: auto;
+  left: 50px;
+  top: 10px;
+  transform: translateZ(3em);
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button .submitCircle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  background: var(--lightColor);
+  border-radius: 1.625rem;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button .submitCircle span {
+  font-size: 0.9rem;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  color: var(--darkColor);
+  opacity: 0.8;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button .buttonText {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  padding: 0.5rem 0;
+  margin: 0 0 0 1.85rem;
+  color: var(--darkColor);
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button:hover .submitCircle {
+  width: 75%;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button:hover .buttonText {
+  color: #242424;
+  opacity: 1;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .goodgrade {
+  padding-top: 20px;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .goodgrade .skills {
+  padding-bottom: 30px;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .goodgrade .skills span:nth-child(3) {
+  top: -3px;
 }
 
 body .wrapper .section4 {
@@ -617,7 +778,7 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .right {
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle {
   position: absolute;
-  border: 1px solid var(--lightColor);
+  border: 2px solid var(--lightColor);
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -685,7 +846,7 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover .a
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle {
   position: absolute;
-  border: 1px solid var(--lightColor);
+  border: 2px solid var(--lightColor);
   width: 30px;
   height: 30px;
   border-radius: 100%;
