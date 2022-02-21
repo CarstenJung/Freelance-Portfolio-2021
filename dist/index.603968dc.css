@@ -381,7 +381,6 @@ body .wrapper .section2 .headline h1 {
   color: var(--lightColor);
   font-weight: bold;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 body .wrapper .section2 .serviceItemWrapper {
@@ -399,6 +398,7 @@ body .wrapper .section2 .serviceItemWrapper .serviceCircle {
   height: 7vw;
   border-radius: 50%;
   display: flex;
+  margin: auto;
 }
 
 body .wrapper .section2 .serviceItemWrapper .serviceCircle img {
@@ -411,6 +411,7 @@ body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline {
   color: var(--lightColor);
   font-family: "Alata", sans-serif;
   font-size: 1.1vw;
+  text-align: center;
 }
 
 body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline span {
@@ -420,10 +421,12 @@ body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline span {
 body .wrapper .section2 .serviceItemWrapper .serviceItemDescription {
   color: var(--lightColor);
   font-size: 0.8vw;
+  position: absolute;
+  margin-top: -10px;
 }
 
 body .wrapper .section2 .serviceItemWrapper .serviceItemDescription p {
-  width: 12vw;
+  width: 13vw;
 }
 
 body .wrapper .section3 {
@@ -433,7 +436,7 @@ body .wrapper .section3 {
 }
 
 body .wrapper .section3 .headline {
-  max-height: 75px;
+  margin-bottom: 80px;
 }
 
 body .wrapper .section3 .headline h1 {
@@ -441,7 +444,7 @@ body .wrapper .section3 .headline h1 {
   color: var(--lightColor);
   font-weight: bold;
   text-align: center;
-  margin-bottom: 120px;
+  margin: 0;
 }
 
 body .wrapper .section3 .portfolioGridWrapper {
@@ -525,11 +528,29 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
   background-blend-mode: soft-light, screen;
   text-align: center;
+  /*HELPER CLASSES*/
+  /****************/
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .pf-smallSlogo {
+  max-width: 20%;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .pf-biggerLogo {
+  max-width: 35%;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .textAdjustment {
+  top: -3px !important;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .kieningerMarginImg {
+  margin-top: 30px;
 }
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack img {
-  margin-top: 15px;
-  max-width: 35%;
+  margin-top: 20px;
+  max-width: 25%;
   transform: translateZ(3em);
   backface-visibility: hidden;
 }
@@ -683,15 +704,15 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button:hove
   opacity: 1;
 }
 
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .goodgrade {
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .no-team {
   padding-top: 20px;
 }
 
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .goodgrade .skills {
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .no-team .skills {
   padding-bottom: 30px;
 }
 
-body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .goodgrade .skills span:nth-child(3) {
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .no-team .skills span:nth-child(3) {
   top: -3px;
 }
 
@@ -1081,6 +1102,10 @@ body .wrapper .section5 .contactFormWrapper .contactForm input[type=email] {
   border-bottom: 0.5px solid var(--accentColor);
   width: 80%;
   height: 30px;
+}
+
+body .wrapper .section5 .contactFormWrapper .contactForm input[type=radio] {
+  cursor: pointer;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm #formMessage {

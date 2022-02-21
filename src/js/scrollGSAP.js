@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 let ScrollAnimations = gsap.timeline({
     scrollTrigger: {
         trigger: "nav",
-        start: "bottom",
+        start: "top",
         scrub: .3,
     }
 });

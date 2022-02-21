@@ -4366,7 +4366,7 @@ _gsapDefault.default.registerPlugin(_scrollTriggerDefault.default);
 /*BURGER MENU*/ let ScrollAnimations = _gsapDefault.default.timeline({
     scrollTrigger: {
         trigger: "nav",
-        start: "bottom",
+        start: "top",
         scrub: 0.3
     }
 });
