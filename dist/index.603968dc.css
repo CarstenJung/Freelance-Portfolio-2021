@@ -716,6 +716,31 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .no-team .s
   top: -3px;
 }
 
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject {
+  color: var(--darkColor);
+  font-weight: bold;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject p {
+  max-width: 85%;
+  margin: 100px auto;
+  transform: translateZ(3em);
+  opacity: 0.9;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject button {
+  left: 20px;
+  top: -50px;
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject button .submitCircle {
+  background: var(--accentColor);
+}
+
+body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject button:hover .submitCircle {
+  width: 92%;
+}
+
 body .wrapper .section4 {
   max-width: 1500px;
   margin: auto;

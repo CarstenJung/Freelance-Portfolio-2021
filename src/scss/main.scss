@@ -758,6 +758,34 @@ body {
                             }
                         }
                     }
+
+                    .flipBack.newProject {
+                        color: var(--darkColor);
+                        font-weight: bold;
+
+                        p {
+                            max-width: 85%;
+                            margin: 100px auto;
+                            transform: translateZ(3em);
+                            opacity: .9;
+                        }
+
+                        button {
+                            left: 20px;
+                            top: -50px;
+
+                            .submitCircle {
+                                background: var(--accentColor);
+                            }
+
+                            &:hover {
+
+                                .submitCircle {
+                                    width: 92%;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
