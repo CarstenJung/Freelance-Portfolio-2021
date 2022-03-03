@@ -4,6 +4,7 @@ import './scrollGSAP'
 import './slider'
 import './smoothScroll'
 import './closeOverlayMenu'
+import './headerAnimation'
 
 
 

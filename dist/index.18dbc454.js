@@ -525,8 +525,9 @@ var _scrollGSAP = require("./scrollGSAP");
 var _slider = require("./slider");
 var _smoothScroll = require("./smoothScroll");
 var _closeOverlayMenu = require("./closeOverlayMenu");
+var _headerAnimation = require("./headerAnimation");
 
-},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./closeOverlayMenu":"aau4X"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./closeOverlayMenu":"aau4X","./headerAnimation":"kImIF"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -5895,6 +5896,8 @@ var singleton = jumper();
 exports.default = singleton;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aau4X":[function(require,module,exports) {
+
+},{}],"kImIF":[function(require,module,exports) {
 
 },{}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 
