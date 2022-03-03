@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"lcWGR":[function(require,module,exports) {
+})({"cdybL":[function(require,module,exports) {
+"use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "4a236f9275d0a351";
-module.bundle.HMR_BUNDLE_ID = "620d954141b293a4";
-"use strict";
+var HMR_ENV_HASH = "d6ea1d42532a7575";
+module.bundle.HMR_BUNDLE_ID = "0bcb44a518dbc454";
 function _toConsumableArray(arr) {
     return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -518,13 +518,15 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"iWSTb":[function(require,module,exports) {
+},{}],"1SICI":[function(require,module,exports) {
 var _mainScss = require("./../scss/main.scss");
 var _burgerMenu = require("./burgerMenu");
 var _scrollGSAP = require("./scrollGSAP");
 var _slider = require("./slider");
+var _smoothScroll = require("./smoothScroll");
+var _closeOverlayMenu = require("./closeOverlayMenu");
 
-},{"./../scss/main.scss":"5b6JI","./burgerMenu":"2ziNo","./scrollGSAP":"3qQoy","./slider":"1O928"}],"5b6JI":[function() {},{}],"2ziNo":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./closeOverlayMenu":"aau4X"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -550,6 +552,30 @@ menuProjectItems.to("#menuProjectsItem1", {
     display: "block",
     duration: 3
 }).to("#menuProjectsItem3", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem4", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem4", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem5", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem5", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem6", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem6", {
     opacity: 0,
     display: "none",
     duration: 3
@@ -611,7 +637,7 @@ menuProjectItems.repeat(-1);
     });
 })();
 
-},{"gsap":"2aTR0","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"2aTR0":[function(require,module,exports) {
+},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "gsap", ()=>gsapWithCSS
@@ -669,7 +695,7 @@ var _csspluginJs = require("./CSSPlugin.js");
 var gsapWithCSS = _gsapCoreJs.gsap.registerPlugin(_csspluginJs.CSSPlugin) || _gsapCoreJs.gsap, // to protect from tree shaking
 TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
-},{"./gsap-core.js":"dbpJR","./CSSPlugin.js":"fM91I","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"dbpJR":[function(require,module,exports) {
+},{"./gsap-core.js":"05eeC","./CSSPlugin.js":"l02JQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"05eeC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "GSCache", ()=>GSCache
@@ -3455,7 +3481,7 @@ _coreReady = 1;
 _windowExists() && _wake();
 var Power0 = _easeMap.Power0, Power1 = _easeMap.Power1, Power2 = _easeMap.Power2, Power3 = _easeMap.Power3, Power4 = _easeMap.Power4, Linear = _easeMap.Linear, Quad = _easeMap.Quad, Cubic = _easeMap.Cubic, Quart = _easeMap.Quart, Quint = _easeMap.Quint, Strong = _easeMap.Strong, Elastic = _easeMap.Elastic, Back = _easeMap.Back, SteppedEase = _easeMap.SteppedEase, Bounce = _easeMap.Bounce, Sine = _easeMap.Sine, Expo = _easeMap.Expo, Circ = _easeMap.Circ;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"ciiiV":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -3485,7 +3511,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"fM91I":[function(require,module,exports) {
+},{}],"l02JQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CSSPlugin", ()=>CSSPlugin
@@ -4357,7 +4383,7 @@ _gsapCoreJs._forEachName("x,y,z,top,right,bottom,left,width,height,fontSize,padd
 });
 _gsapCoreJs.gsap.registerPlugin(CSSPlugin);
 
-},{"./gsap-core.js":"dbpJR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"3qQoy":[function(require,module,exports) {
+},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Bjehw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -4383,7 +4409,7 @@ _gsapDefault.default.registerPlugin(_scrollTriggerDefault.default);
     }
 }) /**********/ ;
 
-},{"gsap":"2aTR0","gsap/ScrollTrigger":"41HI5","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"41HI5":[function(require,module,exports) {
+},{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7wnFk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ScrollTrigger", ()=>ScrollTrigger
@@ -5685,9 +5711,9 @@ ScrollTrigger.sort = function(func) {
 };
 _getGSAP() && gsap.registerPlugin(ScrollTrigger);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1O928":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aMYz0":[function(require,module,exports) {
 document.addEventListener('DOMContentLoaded', ()=>{
-    const SLIDEDURATION = 800;
+    const SLIDEDURATION = 900;
     const btnBack = document.querySelector('.left');
     const btnForward = document.querySelector('.right');
     const slides = [
@@ -5734,6 +5760,142 @@ document.addEventListener('DOMContentLoaded', ()=>{
     initSlider();
 });
 
-},{}]},["lcWGR","iWSTb"], "iWSTb", "parcelRequire3355")
+},{}],"ax0jI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _jumpJs = require("jump.js");
+var _jumpJsDefault = parcelHelpers.interopDefault(_jumpJs);
+document.querySelector('.goBack').addEventListener('click', ()=>{
+    _jumpJsDefault.default('#scrollUP');
+});
 
-//# sourceMappingURL=index.41b293a4.js.map
+},{"jump.js":"4RgaE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4RgaE":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Robert Penner's easeInOutQuad
+// find the rest of his easing functions here: http://robertpenner.com/easing/
+// find them exported for ES6 consumption here: https://github.com/jaxgeller/ez.js
+var easeInOutQuad = function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+};
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function(obj) {
+    return typeof obj;
+} : function(obj) {
+    return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+var jumper = function jumper() {
+    // private variable cache
+    // no variables are created during a jump, preventing memory leaks
+    var element1 = void 0; // element to scroll to                   (node)
+    var start = void 0; // where scroll starts                    (px)
+    var stop = void 0; // where scroll stops                     (px)
+    var offset = void 0; // adjustment from the stop position      (px)
+    var easing = void 0; // easing function                        (function)
+    var a11y = void 0; // accessibility support flag             (boolean)
+    var distance = void 0; // distance of scroll                     (px)
+    var duration = void 0; // scroll duration                        (ms)
+    var timeStart = void 0; // time scroll started                    (ms)
+    var timeElapsed = void 0; // time spent scrolling thus far          (ms)
+    var next = void 0; // next scroll position                   (px)
+    var callback = void 0; // to call when done scrolling            (function)
+    // scroll position helper
+    function location() {
+        return window.scrollY || window.pageYOffset;
+    }
+    // element offset helper
+    function top(element) {
+        return element.getBoundingClientRect().top + start;
+    }
+    // rAF loop helper
+    function loop(timeCurrent) {
+        // store time scroll started, if not started already
+        if (!timeStart) timeStart = timeCurrent;
+        // determine time spent scrolling so far
+        timeElapsed = timeCurrent - timeStart;
+        // calculate next scroll position
+        next = easing(timeElapsed, start, distance, duration);
+        // scroll to it
+        window.scrollTo(0, next);
+        // check progress
+        timeElapsed < duration ? window.requestAnimationFrame(loop) // continue scroll loop
+         : done(); // scrolling is done
+    }
+    // scroll finished helper
+    function done() {
+        // account for rAF time rounding inaccuracies
+        window.scrollTo(0, start + distance);
+        // if scrolling to an element, and accessibility is enabled
+        if (element1 && a11y) {
+            // add tabindex indicating programmatic focus
+            element1.setAttribute('tabindex', '-1');
+            // focus the element
+            element1.focus();
+        }
+        // if it exists, fire the callback
+        if (typeof callback === 'function') callback();
+        // reset time for next jump
+        timeStart = false;
+    }
+    // API
+    function jump(target) {
+        var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+        };
+        // resolve options, or use defaults
+        duration = options.duration || 1000;
+        offset = options.offset || 0;
+        callback = options.callback; // "undefined" is a suitable default, and won't be called
+        easing = options.easing || easeInOutQuad;
+        a11y = options.a11y || false;
+        // cache starting position
+        start = location();
+        // resolve target
+        switch(typeof target === 'undefined' ? 'undefined' : _typeof(target)){
+            // scroll from current position
+            case 'number':
+                element1 = undefined; // no element to scroll to
+                a11y = false; // make sure accessibility is off
+                stop = start + target;
+                break;
+            // scroll to element (node)
+            // bounding rect is relative to the viewport
+            case 'object':
+                element1 = target;
+                stop = top(element1);
+                break;
+            // scroll to element (selector)
+            // bounding rect is relative to the viewport
+            case 'string':
+                element1 = document.querySelector(target);
+                stop = top(element1);
+                break;
+        }
+        // resolve scroll distance, accounting for offset
+        distance = stop - start + offset;
+        // resolve duration
+        switch(_typeof(options.duration)){
+            // number in ms
+            case 'number':
+                duration = options.duration;
+                break;
+            // function passed the distance of the scroll
+            case 'function':
+                duration = options.duration(distance);
+                break;
+        }
+        // start the loop
+        window.requestAnimationFrame(loop);
+    }
+    // expose only the jump method
+    return jump;
+};
+// export singleton
+var singleton = jumper();
+exports.default = singleton;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aau4X":[function(require,module,exports) {
+
+},{}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
+
+//# sourceMappingURL=index.18dbc454.js.map

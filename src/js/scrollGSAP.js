@@ -5,7 +5,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 /*BURGER MENU*/
-let ScrollAnimations = gsap.timeline({
+gsap.to(".burgerMenu", {
+    paddingTop: '0px',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     scrollTrigger: {
         trigger: "nav",
         start: "top",
@@ -13,9 +15,14 @@ let ScrollAnimations = gsap.timeline({
     }
 });
 
-ScrollAnimations.to(".burgerMenu", {
-    paddingTop: '0px',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-});
-/**********/ 
-
+/* GO BACK BTN */
+gsap.to(".goBack", {
+    opacity: 1,
+    delay: 1,
+    duration: 3,
+    scrollTrigger: {
+        trigger: ".section5",
+        start: "top 20%",
+    }
+})
+/**********/

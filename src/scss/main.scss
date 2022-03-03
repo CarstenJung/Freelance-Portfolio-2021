@@ -53,6 +53,50 @@
     }
 }
 
+@keyframes animateSlider {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideSlide {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*HELPER CLASSES SLIDER*/
+.moveInLeft,
+.moveInRight {
+    animation-name: animateSlider;
+}
+
+.moveOutLeft,
+.moveOutRight {
+    animation-name: hideSlide;
+}
+
+.active {
+    opacity: 1 !important;
+}
+
 /********************/
 
 body {
@@ -305,7 +349,7 @@ body {
             width: 100%;
             height: 90vh;
             margin-bottom: 250px;
-            position: relative;
+            //position: relative;
             z-index: 2;
 
             .bcgStructureOne {
@@ -385,9 +429,13 @@ body {
             }
 
             .heroWrapper {
+                position: absolute;
+                top: 25%;
+                left: 15%;
 
                 img {
-                    height: 100vh;
+                    //height: 100vh;
+                    max-width: 60%;
                 }
             }
         }
@@ -792,18 +840,23 @@ body {
 
         .section4 {
             max-width: 1500px;
-            margin: auto;
-            overflow: hidden;
+            margin: auto auto 800px auto;
+            //overflow: hidden;
 
 
             .bcgStructureTwo {
                 position: absolute;
                 z-index: 1;
                 max-width: 100%;
+
+                img {
+                    max-width: 90%;
+                }
             }
 
             .testimonialsWrapper {
                 margin-top: 400px;
+                position: relative;
 
                 .subtitle {
                     text-align: center;
@@ -821,7 +874,11 @@ body {
                 }
 
                 .testimonial {
-                    margin-top: 3em;
+                    position: absolute;
+                    top: 370px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
 
                     .logoCircle {
                         width: 13vw;
@@ -834,15 +891,19 @@ body {
                         background: var(--lightColor);
 
                         img {
-                            width: 12vw;
+                            width: 10vw;
                             background-size: cover;
+                        }
+
+                        img.logoSize {
+                            margin-right: 15px
                         }
                     }
 
                     .testimonialCompany {
                         margin: 1.5em 0 .5em 0;
                         text-align: center;
-                        font-size: 2.2vw;
+                        font-size: 1.9vw;
                         font-weight: bold;
                         color: var(--accentColor);
                     }
@@ -850,9 +911,14 @@ body {
                     .testimonialDescription {
                         text-align: center;
                         max-width: 600px;
-                        font-size: 1vw;
+                        font-size: .9vw;
                         margin: auto;
                         color: var(--lightColor);
+                    }
+
+                    .testimonialDescriptionLarge {
+                        max-width: 765px;
+                        width: 765px;
                     }
                 }
 
@@ -860,17 +926,21 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    position: relative;
+                    top: 520px;
+                    right: 12px;
 
                     .left,
                     .right {
                         position: relative;
                         z-index: 3;
                         height: 5vh;
-                        padding: 3em;
                     }
 
 
                     .right {
+                        margin-left: 2em;
+
                         .circle {
                             position: absolute;
                             border: 2px solid var(--lightColor);
@@ -942,6 +1012,8 @@ body {
                     }
 
                     .left {
+                        margin-right: 2em;
+
                         .circle {
                             position: absolute;
                             border: 2px solid var(--lightColor);
@@ -1220,6 +1292,27 @@ body {
                     }
                 }
             }
+
+            .goBack {
+                position: absolute;
+                right: 30px;
+                bottom: -50px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: rgba(17, 17, 17, 0.555);
+                opacity: 0;
+                cursor: pointer;
+
+                i {
+                    color: white;
+                    font-size: 1.5em;
+                    line-height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    opacity: .5;
+                }
+            }
         }
 
         .footerWrapper {
@@ -1237,8 +1330,8 @@ body {
                 .footerSocials {
                     grid-area: socials;
 
-
                     a {
+                        cursor: pointer;
                         color: var(--lightColor);
                         padding-right: 1.5em;
                         font-size: 1.2em;
@@ -1258,6 +1351,7 @@ body {
                         display: inline-flex;
                         flex-direction: column;
                         padding-right: 1em;
+                        cursor: pointer;
                     }
 
                 }
@@ -1266,14 +1360,34 @@ body {
                     grid-area: contact;
                     justify-self: center;
 
+                    a:hover {
+                        /*                i {
+                            color: var(--accentColor);
+                        } */
+
+                        span:after {
+                            transform: scaleX(1);
+                            transform-origin: 0% 50%;
+                        }
+                    }
+
                     i {
                         color: var(--lightColor);
+                        transition: .3s;
 
                         span {
                             font-family: var(--mainFont);
                             font-weight: 400;
                             margin-left: .5em;
                             color: var(--lightColor);
+
+                            &:after {
+                                display: block;
+                                content: '';
+                                border-bottom: .5px solid var(--accentColor);
+                                transform: scaleX(0);
+                                transition: transform 250ms ease-in-out;
+                            }
                         }
                     }
 
