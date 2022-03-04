@@ -4397,7 +4397,8 @@ _gsapDefault.default.registerPlugin(_scrollTriggerDefault.default);
     scrollTrigger: {
         trigger: "nav",
         start: "top",
-        scrub: 0.3
+        scrub: 0.3,
+        markers: true
     }
 });
 /* GO BACK BTN */ _gsapDefault.default.to(".goBack", {

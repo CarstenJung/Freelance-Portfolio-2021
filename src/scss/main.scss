@@ -217,7 +217,7 @@ body {
             background: transparent;
             border-radius: 0px 0px 0px 30px;
             cursor: pointer;
-           /*  -webkit-appearence: none;
+            /*  -webkit-appearence: none;
             -webkit-tap-highlight-color: transparent; */
 
             svg {
@@ -243,6 +243,8 @@ body {
                         --offset: 100px;
                         --array-2: 74px;
                         transform: scalex(80%) translateX(12px) translateY(-2px);
+                        -webkit-transform: scalex(80%) translateX(12px) translateY(-2px);
+                        -ms-transform: scalex(80%) translateX(12px) translateY(-2px);
                     }
 
                     &:nth-child(3) {
@@ -511,6 +513,7 @@ body {
 
             .headline {
                 margin-bottom: 80px;
+                -webkit-backface-visibility: hidden;
 
                 h1 {
                     font-size: 3vw;
@@ -526,6 +529,10 @@ body {
                 grid-template-columns: repeat(4, 1fr);
                 gap: .2em;
 
+              /*   a {
+                    position: relative;
+                    z-index: 2;
+                } */
 
                 .flipContent {
                     transition: transform 3s;
@@ -545,6 +552,8 @@ body {
                         bottom: 0;
                         left: 0;
                         backface-visibility: hidden;
+                        -webkit-backface-visibility: hidden;
+                        -moz-backface-visibility: hidden;
                         transform-style: preserve-3d;
                     }
 
@@ -634,6 +643,8 @@ body {
                             max-width: 25%;
                             transform: translateZ(3em);
                             backface-visibility: hidden;
+                            -webkit-backface-visibility: hidden;
+                            -moz-backface-visibility: hidden;
                         }
 
                         .line {

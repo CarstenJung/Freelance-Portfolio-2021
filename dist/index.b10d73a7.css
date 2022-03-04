@@ -10,6 +10,25 @@
 
 /* KEYFRAMES */
 
+@-webkit-keyframes arrowAnimationRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
 @keyframes arrowAnimationRight {
   0% {
     opacity: 1;
@@ -22,6 +41,25 @@
   26% {
     opacity: 0;
     transform: translateX(-10px) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@-webkit-keyframes arrowAnimationLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
   }
   55% {
     opacity: 1;
@@ -48,6 +86,18 @@
   }
 }
 
+@-webkit-keyframes animateSlider {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes animateSlider {
   0% {
     opacity: 0;
@@ -57,6 +107,18 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes hideSlide {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -76,12 +138,14 @@
 
 .moveInLeft,
 .moveInRight {
-  animation-name: animateSlider;
+  -webkit-animation-name: animateSlider;
+          animation-name: animateSlider;
 }
 
 .moveOutLeft,
 .moveOutRight {
-  animation-name: hideSlide;
+  -webkit-animation-name: hideSlide;
+          animation-name: hideSlide;
 }
 
 .active {
@@ -207,7 +271,7 @@ body .burgerMenuWrapper .burgerMenu {
   border-radius: 0px 0px 0px 30px;
   cursor: pointer;
   /*  -webkit-appearence: none;
-   -webkit-tap-highlight-color: transparent; */
+  -webkit-tap-highlight-color: transparent; */
 }
 
 body .burgerMenuWrapper .burgerMenu svg {
@@ -234,6 +298,8 @@ body .burgerMenuWrapper .burgerMenu svg path:nth-child(2) {
   --offset: 100px;
   --array-2: 74px;
   transform: scalex(80%) translateX(12px) translateY(-2px);
+  -webkit-transform: scalex(80%) translateX(12px) translateY(-2px);
+  -ms-transform: scalex(80%) translateX(12px) translateY(-2px);
 }
 
 body .burgerMenuWrapper .burgerMenu svg path:nth-child(3) {
@@ -482,6 +548,7 @@ body .wrapper .section3 {
 
 body .wrapper .section3 .headline {
   margin-bottom: 80px;
+  -webkit-backface-visibility: hidden;
 }
 
 body .wrapper .section3 .headline h1 {
@@ -496,6 +563,10 @@ body .wrapper .section3 .portfolioGridWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.2em;
+  /*   a {
+        position: relative;
+        z-index: 2;
+    } */
 }
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent {
@@ -517,6 +588,8 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack {
   bottom: 0;
   left: 0;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   transform-style: preserve-3d;
 }
 
@@ -598,6 +671,8 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack img {
   max-width: 25%;
   transform: translateZ(3em);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .line {
@@ -925,18 +1000,27 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnCont
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer .arrowAnimationRight {
-  animation-name: arrowAnimationRight;
-  animation-duration: 1.4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationRight;
+          animation-name: arrowAnimationRight;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle #btnContainer .arrow.first.arrowAnimationRight {
-  animation-name: arrowAnimationRight;
-  animation-duration: 1.4s;
-  animation-delay: 0.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationRight;
+          animation-name: arrowAnimationRight;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover {
@@ -944,18 +1028,27 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover {
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover .arrow {
-  animation-name: arrowAnimationRight;
-  animation-duration: 1.4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationRight;
+          animation-name: arrowAnimationRight;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .right .circle:hover .arrow.first {
-  animation-name: arrowAnimationRight;
-  animation-duration: 1.4s;
-  animation-delay: 0.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationRight;
+          animation-name: arrowAnimationRight;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left {
@@ -997,18 +1090,27 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnConta
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer .arrowAnimationLeft {
-  animation-name: arrowAnimationLeft;
-  animation-duration: 1.4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationLeft;
+          animation-name: arrowAnimationLeft;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle #btnContainer .arrow.first.arrowAnimationLeft {
-  animation-name: arrowAnimationLeft;
-  animation-duration: 1.4s;
-  animation-delay: 0.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationLeft;
+          animation-name: arrowAnimationLeft;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle:hover {
@@ -1016,18 +1118,27 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle:hover {
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle:hover .arrow {
-  animation-name: arrowAnimationLeft;
-  animation-duration: 1.4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationLeft;
+          animation-name: arrowAnimationLeft;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section4 .testimonialsWrapper .btnWrapper .left .circle:hover .arrow.first {
-  animation-name: arrowAnimationLeft;
-  animation-duration: 1.4s;
-  animation-delay: 0.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation-name: arrowAnimationLeft;
+          animation-name: arrowAnimationLeft;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 body .wrapper .section5 {
