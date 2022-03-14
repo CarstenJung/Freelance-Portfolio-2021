@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@100;400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <script src="js/main.js" type="module" defer></script>
     <!-- <script src="https://kit.fontawesome.com/a9276a43c6.js" crossorigin="anonymous"></script> -->
@@ -18,7 +19,27 @@
 </head>
 
 <body>
-    <!--NEW START-->
+    <!-- LOADING SCREEN -->
+    <div class="animationBcg">
+        <div class="startAnimationWrapper">
+            <svg width="100%" height="100%" viewBox="0 0 864 753" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+
+                <path id="CTop"
+                    d="M0,3.462l215.533,373.313l62.973,-109.071l-88.698,-153.628l353.214,0l64.845,-112.314l-607.867,1.7Z" />
+
+                <path id="CBottom"
+                    d="M258.862,455.979l171.277,296.661l170.191,-294.778l-124.454,0l-44.93,77.821l-47.9,-82.966l-124.184,3.262Z" />
+
+                <path id="JTop"
+                    d="M240.372,414.133l112.013,-194.011l128.357,0l-50.598,87.639l132.343,0l112.97,-195.67l-92.534,0l64.717,-112.091l215.553,0l-241.554,418.384l-381.267,-4.251Z" />
+
+            </svg>
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!-- END LOADING SCREEN -->
     <div class="menuOverlay">
         <div class="menuSlideOne">
             <img src="assets/logo/logoLight.png" alt="CJ Development Logo">
@@ -76,7 +97,6 @@
             </svg>
         </button>
     </div>
-    <!--NEW END-->
     <div class="wrapper">
         <!--NAVIGATION-->
         <header id="scrollUP">
@@ -101,7 +121,22 @@
                 <img src="assets/mainImg/backgroundStructure.png" alt="Background">
             </div>
             <div class="heroWrapper">
-               
+                <div class="heroText">
+                    <p>Frontend & Shopify Enwticklung</p>
+                    <h2>Werden Sie digital <br> sichtbar und bleiben <br> Sie in Erinnerung.</h2>
+                    <div class="line"></div>
+                    <h1>Als Freelancer mit Sitz nahe Frankfurt am Main unterstütze ich <br> seit vielen Jahren
+                        erfolgreich Unternehmen und Agenturen <br> dabei, mit ihren Webprojekten zu überzeugen.</h1>
+                    <button type="submit">
+                        <a href="#portfolio">
+                            <span class="submitCircle" aria-hidden="true"></span>
+                            <span class="buttonText"><span id="letterPO">Po</span>rtfolio</span>
+                        </a>
+                    </button>
+                </div>
+                <div class="scrollIndicator">
+
+                </div>
             </div>
             <div class="socialsContainer">
                 <ul>
@@ -116,50 +151,47 @@
                 <h1>Services</h1>
             </div>
             <div class="serviceItemWrapper">
-                <div>
+                <div class="serviceItem">
                     <div class="serviceCircle">
                         <img src="assets/service/FrontendIcon.png" alt="Frontend Development">
                     </div>
-                    <div class="serviceItemHeadline">
-                        <p><span>Frontend</span> Entwicklung</p>
-                    </div>
                     <div class="serviceItemDescription">
-                        <p>Sie haben bereits ein fertiges Design und suchen Hilfe bei der Umsetzung? Ich helfe seit
+                        <p><span><span class="accent">Frontend </span>- Development</span> <br><br>Sie haben bereits ein
+                            fertiges Design und suchen Hilfe bei der Umsetzung? Ich helfe seit
                             vielen Jahren Endkunden und Agenturen bei der Umsetzung Ihrer Webprojekte. Sprechen Sie mich
                             gerne an.
                         </p>
                     </div>
                 </div>
-                <div>
+                <div class="line"></div>
+                <div class="serviceItem">
                     <div class="serviceCircle">
-                        <img src="assets/service/ShopifyIcon.png" alt="Shopify Development">
-                    </div>
-                    <div class="serviceItemHeadline">
-                        <p><span>Shopify</span> Entwicklung</p>
+                        <img class="serviceImgsmaller" src="assets/service/ShopifyIcon.png" alt="Shopify Development">
                     </div>
                     <div class="serviceItemDescription">
-                        <p>Sie wollen sich online ein Geschäft aufbauen oder suchen Hilfe bei der Optimierung Ihres
+                        <p><span><span class="accent">Shopify </span>- Development</span> <br> <br>Sie wollen sich
+                            online ein Geschäft aufbauen oder suchen Hilfe bei der Optimierung Ihres
                             bestehenden Shopify-Shops? Ich berate Sie gerne und helfe Ihnen dabei, Ihren Shop
                             erfolgreicher zu machen.
                         </p>
                     </div>
                 </div>
-                <div>
+                <div class="line"></div>
+                <div class="serviceItem">
                     <div class="serviceCircle">
-                        <img src="assets/service/WordpressIcon.png" alt="Wordpress Development">
-                    </div>
-                    <div class="serviceItemHeadline">
-                        <p><span>Wordpress</span> Entwicklung</p>
+                        <img class="serviceImgsmaller" src="assets/service/WordpressIcon.png"
+                            alt="Wordpress Development">
                     </div>
                     <div class="serviceItemDescription">
-                        <p>Wordpress ist das bekannteste CMS-System und bietet sich für alle an, die einen Blog
+                        <p><span><span class="accent">Wordpress </span>- Development</span> <br><br>Wordpress ist das
+                            bekannteste CMS-System und bietet sich für alle an, die einen Blog
                             betreiben oder selbst an Ihrer Webseite Änderungen vornehmen wollen.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section3">
+        <div class="section3" id="portfolio">
             <div class="headline">
                 <h1>Portfolio</h1>
             </div>
@@ -199,9 +231,7 @@
                                     <div class="team">
                                         <span>03</span>
                                         <span>Team</span>
-                                        <span>Katja Molotschni (Projektleitung) <br>
-                                            Marko Stubljar (Design) <br>
-                                            Carsten Jung (Frontend Entwicklung)</span>
+                                        <span>Design (Agentur) <br> Carsten Jung (Frontend Entwicklung)</span>
                                     </div>
                                 </li>
                             </ul>
@@ -247,9 +277,7 @@
                                     <div class="team">
                                         <span>03</span>
                                         <span>Team</span>
-                                        <span>Katja Molotschni (Projektleitung) <br>
-                                            Marko Stubljar (Design) <br>
-                                            Carsten Jung (Frontend Entwicklung)</span>
+                                        <span>Design (Agentur) <br> Carsten Jung (Frontend Entwicklung)</span>
                                     </div>
                                 </li>
                             </ul>
@@ -335,9 +363,7 @@
                                     <div class="team">
                                         <span>03</span>
                                         <span>Team</span>
-                                        <span>Katja Molotschni (Projektleitung) <br>
-                                            Marko Stubljar (Design) <br>
-                                            Carsten Jung (Frontend Entwicklung)</span>
+                                        <span>Design (Agentur) <br> Carsten Jung (Frontend Entwicklung)</span>
                                     </div>
                                 </li>
                             </ul>
@@ -640,9 +666,9 @@
                     </div>
                     <div class="contactItems">
                         <a href="tel:0176/60145188">
-                        <i class="fas fa-phone-alt"><span>+49 (0)176 / 60145188</span></i></a>
+                            <i class="fas fa-phone-alt"><span>+49 (0)176 / 60145188</span></i></a>
                         <a href="mailto:hello@carstenjung.io">
-                        <i class="fas fa-at"><span>hello@carstenjung.io</span></i>
+                            <i class="fas fa-at"><span>hello@carstenjung.io</span></i>
                         </a>
                     </div>
                 </div>

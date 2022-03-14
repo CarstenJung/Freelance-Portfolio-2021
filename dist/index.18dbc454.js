@@ -526,8 +526,9 @@ var _slider = require("./slider");
 var _smoothScroll = require("./smoothScroll");
 var _closeOverlayMenu = require("./closeOverlayMenu");
 var _headerAnimation = require("./headerAnimation");
+var _loadingScreen = require("./loadingScreen");
 
-},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./closeOverlayMenu":"aau4X","./headerAnimation":"kImIF"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./closeOverlayMenu":"aau4X","./headerAnimation":"kImIF","./loadingScreen":"2lAB1"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -5769,6 +5770,9 @@ var _jumpJsDefault = parcelHelpers.interopDefault(_jumpJs);
 document.querySelector('.goBack').addEventListener('click', ()=>{
     _jumpJsDefault.default('#scrollUP');
 });
+document.querySelector('.heroText').addEventListener('click', ()=>{
+    _jumpJsDefault.default('#portfolio');
+});
 
 },{"jump.js":"4RgaE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4RgaE":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -5899,6 +5903,40 @@ exports.default = singleton;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aau4X":[function(require,module,exports) {
 
 },{}],"kImIF":[function(require,module,exports) {
+
+},{}],"2lAB1":[function(require,module,exports) {
+var startAnimation = gsap.timeline({
+    delay: 0.5
+});
+startAnimation.fromTo('#CTop', {
+    drawSVG: '0%'
+}, {
+    drawSVG: '100%',
+    duration: 1
+}).fromTo('#CBottom', {
+    drawSVG: '0%'
+}, {
+    drawSVG: '100%',
+    duration: 1
+}).fromTo('#JTop', {
+    drawSVG: '0%'
+}, {
+    drawSVG: '100%',
+    duration: 1
+}).to('#CTop, #CBottom', {
+    fill: '#fff',
+    duration: 2
+}).to('#JTop', {
+    fill: '#ffcd48',
+    duration: 2
+}, '-=2')//.to('.circle', {scale: 1, duration: 1.3})
+.to('.startAnimationWrapper', {
+    opacity: 0,
+    duration: 1
+}).to('.animationBcg', {
+    opacity: 0,
+    duration: 1
+}, '-=1');
 
 },{}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 

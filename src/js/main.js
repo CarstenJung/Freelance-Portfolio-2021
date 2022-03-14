@@ -5,6 +5,7 @@ import './slider'
 import './smoothScroll'
 import './closeOverlayMenu'
 import './headerAnimation'
+import './loadingScreen'
 
 
 

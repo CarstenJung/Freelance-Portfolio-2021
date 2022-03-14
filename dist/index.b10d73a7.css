@@ -134,6 +134,40 @@
   }
 }
 
+.startAnimationWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: var(--bcgColor);
+  z-index: 10;
+}
+
+.startAnimationWrapper svg {
+  position: relative;
+  z-index: 10;
+  width: 12vw;
+  fill: transparent;
+  overflow: visible;
+}
+
+.startAnimationWrapper svg #CTop {
+  stroke: white;
+  stroke-width: 5px;
+}
+
+.startAnimationWrapper svg #CBottom {
+  stroke: white;
+  stroke-width: 5px;
+}
+
+.startAnimationWrapper svg #JTop {
+  stroke: #ffcd48;
+  stroke-width: 5px;
+}
+
 /*HELPER CLASSES SLIDER*/
 
 .moveInLeft,
@@ -393,6 +427,7 @@ body .wrapper .section1 {
   width: 100%;
   height: 90vh;
   margin-bottom: 250px;
+  position: relative;
   z-index: 2;
 }
 
@@ -472,14 +507,108 @@ body .wrapper .section1 .socialsContainer ul li:hover:before {
   height: 110%;
 }
 
-body .wrapper .section1 .heroWrapper {
+body .wrapper .section1 .heroWrapper .heroText {
   position: absolute;
-  top: 25%;
   left: 15%;
+  top: 100px;
+  font-size: 2.5em;
+  color: var(--lightColor);
 }
 
-body .wrapper .section1 .heroWrapper img {
-  max-width: 60%;
+body .wrapper .section1 .heroWrapper .heroText p {
+  font-size: 0.35em;
+  letter-spacing: 0;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+}
+
+body .wrapper .section1 .heroWrapper .heroText h2 {
+  margin: 40px 0 10px 100px;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+body .wrapper .section1 .heroWrapper .heroText h1 {
+  margin: 30px 0 0 100px;
+  font-size: 0.45em;
+  font-weight: 200;
+  line-height: 1.3em;
+}
+
+body .wrapper .section1 .heroWrapper .heroText .line {
+  width: 75%;
+  margin: auto;
+  height: 3px;
+  background: var(--lightColor);
+  opacity: 0.04;
+  border-radius: 5px;
+  margin: 20px 0 0 100px;
+}
+
+body .wrapper .section1 .heroWrapper .heroText button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  width: 18rem;
+  height: auto;
+  top: 50px;
+  left: 100px;
+}
+
+body .wrapper .section1 .heroWrapper .heroText button #letterPO {
+  color: var(--darkColor);
+}
+
+body .wrapper .section1 .heroWrapper .heroText button .submitCircle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--accentColor);
+  border-radius: 1.625rem;
+}
+
+body .wrapper .section1 .heroWrapper .heroText button .buttonText {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: -5px;
+  right: 117px;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  font-family: var(--mainFont);
+}
+
+body .wrapper .section1 .heroWrapper .heroText button:hover .submitCircle {
+  width: 62%;
+}
+
+body .wrapper .section1 .heroWrapper .heroText button:hover .submitCircle .icon.arrow {
+  background: #242424;
+  transform: translate(1rem, 0);
+}
+
+body .wrapper .section1 .heroWrapper .heroText button:hover .buttonText {
+  color: #242424;
 }
 
 body .wrapper .section2 {
@@ -495,49 +624,98 @@ body .wrapper .section2 .headline h1 {
 }
 
 body .wrapper .section2 .serviceItemWrapper {
-  display: flex;
-  justify-content: space-between;
+  /* &>div {
+      height: 400px;
+      margin: auto;
+  }
+
+  .serviceCircle {
+      width: 7vw;
+      height: 7vw;
+      border-radius: 50%;
+      display: flex;
+      margin: auto;
+
+      img {
+          width: 60%;
+          margin: auto;
+      }
+  }
+
+  .serviceItemHeadline {
+      font-weight: bold;
+      color: var(--lightColor);
+      font-family: 'Alata',
+          sans-serif;
+      font-size: 1.1vw;
+      text-align: center;
+
+      span {
+          color: var(--accentColor);
+      }
+  }
+
+  .serviceItemDescription {
+      color: var(--lightColor);
+      font-size: 0.8vw;
+      position: absolute;
+      margin-top: -10px;
+
+      p {
+          width: 13vw;
+      }
+  } */
 }
 
-body .wrapper .section2 .serviceItemWrapper > div {
-  height: 400px;
+body .wrapper .section2 .serviceItemWrapper .line {
+  width: 70%;
   margin: auto;
+  height: 3px;
+  background: var(--lightColor);
+  opacity: 0.1;
+  border-radius: 5px;
 }
 
-body .wrapper .section2 .serviceItemWrapper .serviceCircle {
-  width: 7vw;
-  height: 7vw;
-  border-radius: 50%;
+body .wrapper .section2 .serviceItemWrapper .serviceItem {
   display: flex;
-  margin: auto;
+  padding: 2em 4em;
+  justify-content: center;
 }
 
-body .wrapper .section2 .serviceItemWrapper .serviceCircle img {
+body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceCircle {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 5em;
+}
+
+body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
+  height: 110px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
+  height: 100px;
+}
+
+body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceItemDescription {
+  color: var(--lightColor);
+  font-size: 1em;
   width: 60%;
-  margin: auto;
+  font-weight: 100;
 }
 
-body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline {
-  font-weight: bold;
-  color: var(--lightColor);
-  font-family: "Alata", sans-serif;
-  font-size: 1.1vw;
-  text-align: center;
+body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceItemDescription span {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: rgba(248, 248, 248, 0.89);
 }
 
-body .wrapper .section2 .serviceItemWrapper .serviceItemHeadline span {
+body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceItemDescription .accent {
   color: var(--accentColor);
-}
-
-body .wrapper .section2 .serviceItemWrapper .serviceItemDescription {
-  color: var(--lightColor);
-  font-size: 0.8vw;
-  position: absolute;
-  margin-top: -10px;
-}
-
-body .wrapper .section2 .serviceItemWrapper .serviceItemDescription p {
-  width: 13vw;
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 body .wrapper .section3 {
@@ -564,9 +742,9 @@ body .wrapper .section3 .portfolioGridWrapper {
   grid-template-columns: repeat(4, 1fr);
   gap: 0.2em;
   /*   a {
-        position: relative;
-        z-index: 2;
-    } */
+      position: relative;
+      z-index: 2;
+  } */
 }
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent {
@@ -757,7 +935,7 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDes
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack .projectDescription .team span:nth-child(3) {
   position: absolute;
   left: 113px;
-  top: -9px;
+  top: -3px;
   text-align: left;
   max-width: 225px;
   font-size: 0.65em;
