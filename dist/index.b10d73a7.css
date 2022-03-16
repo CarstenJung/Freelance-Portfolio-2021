@@ -1642,9 +1642,13 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   margin-left: 3em;
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
   .heroText {
-    top: 50px;
+    top: 50px !important;
+  }
+
+  .menuFlexContainer, .officeFlexContainer {
+    margin-top: 2vw;
   }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */

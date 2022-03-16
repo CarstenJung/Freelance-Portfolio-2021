@@ -1624,10 +1624,14 @@ body {
     @media (min-width: 1025px) and (max-width: 1280px) {}
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
 
     .heroText {
-        top: 50px;
+        top: 50px !important;
+    }
+
+    .menuFlexContainer, .officeFlexContainer {
+        margin-top: 2vw;
     }
 
 }
