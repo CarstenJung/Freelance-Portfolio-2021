@@ -5905,13 +5905,16 @@ exports.default = singleton;
 },{}],"kImIF":[function(require,module,exports) {
 
 },{}],"2lAB1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
-_gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
+var _scrollTrigger = require("gsap/ScrollTrigger");
+var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
+_gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin, _scrollTriggerDefault.default);
 var startAnimation = _gsap.gsap.timeline({
     delay: 0.5
 });
-/* gsap.set('.staggerItem', {perspective: '1200px'}) */ startAnimation.fromTo('#CTop', {
+startAnimation.fromTo('#CTop', {
     drawSVG: '0%'
 }, {
     drawSVG: '100%',
@@ -5931,7 +5934,10 @@ var startAnimation = _gsap.gsap.timeline({
     duration: 2
 }).to('#JTop', {
     fill: '#ffcd48',
-    duration: 2.3
+    duration: 2.3,
+    onComplete: ()=>{
+        document.querySelector('.wrapper').classList.remove('isLoading');
+    }
 }, '-=2').to('.startAnimationWrapper', {
     autoAlpha: 0,
     duration: 2
@@ -5944,7 +5950,7 @@ var startAnimation = _gsap.gsap.timeline({
     display: 'none'
 });
 
-},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"htWnw":[function(require,module,exports) {
+},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"htWnw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DrawSVGPlugin", ()=>DrawSVGPlugin
