@@ -83,36 +83,53 @@
 
 
 // LOADING SCREEN
-.startAnimationWrapper {
+.staggerAnimation {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     width: 100%;
-    background: var(--bcgColor);
+    height: 100vh;
     z-index: 10;
 
-    svg {
-        position: relative;
-        z-index: 10;
-        width: 12vw;
-        fill: transparent;
-        overflow: visible;
+    .staggerItem {
+        background: #111111;
+        height: 100vh;
+        width: 16.6666667%;
+        float: right;
+    }
+}
 
-        #CTop {
-            stroke: white;
-            stroke-width: 5px;
-        }
+.animationBcg {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
 
-        #CBottom {
-            stroke: white;
-            stroke-width: 5px;
-        }
+    .startAnimationWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
 
-        #JTop {
-            stroke: #ffcd48;
-            stroke-width: 5px;
+        svg {
+            width: 15vw;
+            fill: transparent;
+            overflow: visible;
+            z-index: 11;
+
+            #CTop {
+                stroke: white;
+                stroke-width: 3px;
+            }
+
+            #CBottom {
+                stroke: white;
+                stroke-width: 3px;
+            }
+
+            #JTop {
+                stroke: #ffcd48;
+                stroke-width: 3px;
+            }
         }
     }
 }

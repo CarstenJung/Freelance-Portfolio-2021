@@ -134,38 +134,55 @@
   }
 }
 
-.startAnimationWrapper {
+.staggerAnimation {
   position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+.staggerAnimation .staggerItem {
+  background: #111111;
+  height: 100vh;
+  width: 16.6666667%;
+  float: right;
+}
+
+.animationBcg {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+.animationBcg .startAnimationWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: var(--bcgColor);
-  z-index: 10;
 }
 
-.startAnimationWrapper svg {
-  position: relative;
-  z-index: 10;
-  width: 12vw;
+.animationBcg .startAnimationWrapper svg {
+  width: 15vw;
   fill: transparent;
   overflow: visible;
+  z-index: 11;
 }
 
-.startAnimationWrapper svg #CTop {
+.animationBcg .startAnimationWrapper svg #CTop {
   stroke: white;
-  stroke-width: 5px;
+  stroke-width: 3px;
 }
 
-.startAnimationWrapper svg #CBottom {
+.animationBcg .startAnimationWrapper svg #CBottom {
   stroke: white;
-  stroke-width: 5px;
+  stroke-width: 3px;
 }
 
-.startAnimationWrapper svg #JTop {
+.animationBcg .startAnimationWrapper svg #JTop {
   stroke: #ffcd48;
-  stroke-width: 5px;
+  stroke-width: 3px;
 }
 
 /*HELPER CLASSES SLIDER*/

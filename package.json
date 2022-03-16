@@ -23,7 +23,7 @@
     "postcss": "^8.4.7"
   },
   "dependencies": {
-    "gsap": "^3.9.1",
+    "gsap": "npm:@gsap/shockingly@^3.9.1",
     "jump.js": "^1.0.2"
   },
   "postcss": {
