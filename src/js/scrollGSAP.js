@@ -3,7 +3,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
+setTimeout(() => {
 /*BURGER MENU*/
 gsap.to(".burgerMenu", {
     paddingTop: '0px',
@@ -27,3 +27,5 @@ gsap.to(".goBack", {
     }
 })
 /**********/
+}, 7000);
+

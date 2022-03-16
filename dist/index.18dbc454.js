@@ -4392,25 +4392,27 @@ var _gsapDefault = parcelHelpers.interopDefault(_gsap);
 var _scrollTrigger = require("gsap/ScrollTrigger");
 var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
 _gsapDefault.default.registerPlugin(_scrollTriggerDefault.default);
-/*BURGER MENU*/ _gsapDefault.default.to(".burgerMenu", {
-    paddingTop: '0px',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    scrollTrigger: {
-        trigger: "nav",
-        start: "top",
-        scrub: 0.3,
-        markers: true
-    }
-});
-/* GO BACK BTN */ _gsapDefault.default.to(".goBack", {
-    opacity: 1,
-    delay: 1,
-    duration: 3,
-    scrollTrigger: {
-        trigger: ".section5",
-        start: "top 20%"
-    }
-}) /**********/ ;
+setTimeout(()=>{
+    /*BURGER MENU*/ _gsapDefault.default.to(".burgerMenu", {
+        paddingTop: '0px',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        scrollTrigger: {
+            trigger: "nav",
+            start: "top",
+            scrub: 0.3,
+            markers: true
+        }
+    });
+    /* GO BACK BTN */ _gsapDefault.default.to(".goBack", {
+        opacity: 1,
+        delay: 1,
+        duration: 3,
+        scrollTrigger: {
+            trigger: ".section5",
+            start: "top 20%"
+        }
+    });
+/**********/ }, 7000);
 
 },{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7wnFk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -5905,12 +5907,9 @@ exports.default = singleton;
 },{}],"kImIF":[function(require,module,exports) {
 
 },{}],"2lAB1":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
-var _scrollTrigger = require("gsap/ScrollTrigger");
-var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
-_gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin, _scrollTriggerDefault.default);
+_gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
 var startAnimation = _gsap.gsap.timeline({
     delay: 0.5
 });
@@ -5950,7 +5949,7 @@ startAnimation.fromTo('#CTop', {
     display: 'none'
 });
 
-},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"htWnw":[function(require,module,exports) {
+},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"htWnw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DrawSVGPlugin", ()=>DrawSVGPlugin
