@@ -214,6 +214,7 @@ body {
   /** NEW START **/
   /** BURGER MENU **/
   /** NEW END **/
+  /* MEDIA QUERY LAPTOP */
 }
 
 body .menuOverlay {
@@ -1634,5 +1635,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems i span:after {
 
 body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   margin-left: 3em;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body .heroText {
+    top: 0px;
+  }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */
