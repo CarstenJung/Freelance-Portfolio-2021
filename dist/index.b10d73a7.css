@@ -1641,4 +1641,10 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems i span:after {
 body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   margin-left: 3em;
 }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .heroText {
+    top: 50px;
+  }
+}
 /*# sourceMappingURL=index.b10d73a7.css.map */
