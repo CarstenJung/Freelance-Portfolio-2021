@@ -26,7 +26,7 @@
     </div>
     <div class="animationBcg">
         <div class="startAnimationWrapper">
-            <svg width="100%" height="100%" viewbox="0 0 864 753" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+            <svg id="startAnimationLogo" width="100%" height="100%" viewbox="0 0 864 753" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
 
                 <path id="CTop" d="M0,3.462l215.533,373.313l62.973,-109.071l-88.698,-153.628l353.214,0l64.845,-112.314l-607.867,1.7Z"></path>
 
@@ -44,11 +44,11 @@
             <div class="menuFlexContainer">
                 <h1>NAVIGATION</h1>
                 <ul>
-                    <li><span>01</span> Home</li>
-                    <li><span>02</span> Service</li>
-                    <li><span>03</span> Portfolio</li>
-                    <li><span>04</span> Kontakt</li>
-                    <li><span>05</span> Blog</li>
+                    <li class="toggleActive"><a href="#scrollUP"><span>01</span> Home </a></li>
+                    <li class="toggleActive"><a href="#section2"><span>02</span> Service</a></li>
+                    <li class="toggleActive"><a href="#portfolio"><span>03</span> Portfolio</a></li>
+                    <li class="toggleActive"><a href="#section4"><span>04</span> Reviews</a></li>
+                    <li class="toggleActive"><a href="#contact"><span>05</span> Kontakt</a></li>
                 </ul>
             </div>
         </div>
@@ -89,7 +89,7 @@
             </svg>
         </button>
     </div>
-    <div class="wrapper">
+    <div class="wrapper isLoading">
         <!--NAVIGATION-->
         <header id="scrollUP">
             <nav>
@@ -138,7 +138,7 @@
                 </ul>
             </div>
         </div>
-        <div class="section2">
+        <div class="section2" id="section2">
             <div class="headline">
                 <h1>Services</h1>
             </div>
@@ -508,8 +508,101 @@
                     </div>
                 </a>
             </div>
+            <div class="portfolioGridWrapperMobile">
+                <a href="https://kreatifabrik.de/" target="_blank">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile flipFrontKreatiMobile">
+                            <div class="headlineMobile">
+                                <h1>KreatiFabrik</h1>
+                                <p>Marken und Werbeagentur</p>
+                            </div>
+                            <img src="/KreatiFabrikBackN.cb0459da.png" alt="Projekt KreatiFabrik Agentur">
+                        </div>
+                    </div>
+                </a>
+                <a href="https://petersen-vs.de/" target="_blank">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile flipFrontPetersenMobile">
+                            <div class="headlineMobile">
+                                <h1>Petersen</h1>
+                                <p>Der Handwerkermarkt</p>
+                            </div>
+                            <img src="/PetersenBack.54e13551.png" alt="Projekt Petersen">
+                        </div>
+                    </div>
+                </a>
+                <!--TODO LINK-->
+                <a href="#" target="_blank">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile flipFrontAeventyrMobile">
+                            <div class="headlineMobile">
+                                <h1>ÄventyrVandra</h1>
+                                <p>Outdoor Landingpage</p>
+                            </div>
+                            <img src="/AeventyrVandraFront.d5c710b7.png" alt="Projekt ÄventyrVandra">
+                        </div>
+                    </div>
+                </a>
+                <a href="http://kieninger-consulting.ch/" target="_blank">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile flipFrontKieningerMobile">
+                            <div class="headlineMobile">
+                                <h1>Kieninger</h1>
+                                <p>Consulting</p>
+                            </div>
+                            <img src="/KieningerBack.2b4bf867.png" alt="Projekt Kieninger Consulting">
+                        </div>
+                    </div>
+                </a>
+                <!--TODO LINK-->
+                <a href="#" target="_blank">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile flipFrontAlpakaMobile">
+                            <div class="headlineMobile">
+                                <h1>Alpaka Team</h1>
+                                <p>Tierische Momente erleben</p>
+                            </div>
+                            <img src="/AlpakaFront.511fbf7c.png" alt="Projekt Alpaka Team">
+                        </div>
+                    </div>
+                </a>
+                <a href="http://logoergo-schoemberg.de/" target="_blank">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile flipFrontLogoErgoMobile">
+                            <div class="headlineMobile">
+                                <h1>LogoErgo</h1>
+                                <p>Logopädie und Ergotherapie</p>
+                            </div>
+                            <img src="/LogoErgoBack.668d14cc.png" alt="Projekt LogoErgo">
+                        </div>
+                    </div>
+                </a>
+                <!--TODO LINK-->
+                <a href="#" target="_blank">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile flipFrontCJMobile">
+                            <div class="headlineMobile">
+                                <h1>CJ Development</h1>
+                                <p>Porfolio 2019</p>
+                            </div>
+                            <img src="/CJBack.aae85d1f.png" alt="Projekt CJ Development 2021">
+                        </div>
+                    </div>
+                </a>
+                <a href="#contact">
+                    <div class="flipContentMobile">
+                        <div class="flipFrontMobile">
+                            <div class="headlineMobile">
+                                <h1>Ihr nächstes Projekt ?</h1>
+                                <p>Sprechen Sie mich gerne an</p>
+                            </div>
+                            <img src="/newProjekt.f021cbe3.png" alt="Projekt CJ Development 2021">
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="section4">
+        <div class="section4" id="section4">
             <div class="bcgStructureTwo">
                 <img src="/backgroundStructureTwo.d41b4970.png" alt="Background">
             </div>

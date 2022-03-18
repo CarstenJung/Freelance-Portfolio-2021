@@ -744,11 +744,6 @@ body {
                 grid-template-columns: repeat(4, 1fr);
                 gap: .2em;
 
-                /*   a {
-                    position: relative;
-                    z-index: 2;
-                } */
-
                 .flipContent {
                     transition: transform 3s;
                     transform-style: preserve-3d;
@@ -776,7 +771,6 @@ body {
 
                     .flipFront {
                         position: relative;
-                        //background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
                         background-color: #DCD9D4;
                         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
                             radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
@@ -1059,6 +1053,59 @@ body {
                                     width: 92%;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+
+            .portfolioGridWrapperMobile {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: .2em;
+                visibility: hidden;
+                height: 0px;
+
+                .flipContentMobile {
+                    width: 100%;
+                    height: 100%;
+
+                    .flipFrontMobile {
+                        position: relative;
+                        background-color: #DCD9D4;
+                        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+                            radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+                        background-blend-mode: soft-light,
+                            screen;
+
+                        .headlineMobile {
+                            position: absolute;
+                            left: 50%;
+                            top: 15%;
+                            transform: translate(-50%, -50%);
+                            color: var(--darkColor);
+
+
+                            h1 {
+                                font-size: 1.3em;
+                                margin: 0;
+                                color: var(--darkColor);
+                                opacity: .9;
+                                text-align: center;
+                            }
+
+                            p {
+                                margin: 0;
+                                font-size: .8em;
+                                width: 300px;
+                                text-align: center;
+                                opacity: .7;
+                            }
+                        }
+
+                        img {
+                            max-width: 100%;
+                            position: relative;
+                            top: 10px;
                         }
                     }
                 }

@@ -769,10 +769,6 @@ body .wrapper .section3 .portfolioGridWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.2em;
-  /*   a {
-      position: relative;
-      z-index: 2;
-  } */
 }
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent {
@@ -1065,6 +1061,56 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject 
 
 body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject button:hover .submitCircle {
   width: 92%;
+}
+
+body .wrapper .section3 .portfolioGridWrapperMobile {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2em;
+  visibility: hidden;
+  height: 0px;
+}
+
+body .wrapper .section3 .portfolioGridWrapperMobile .flipContentMobile {
+  width: 100%;
+  height: 100%;
+}
+
+body .wrapper .section3 .portfolioGridWrapperMobile .flipContentMobile .flipFrontMobile {
+  position: relative;
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
+  background-blend-mode: soft-light, screen;
+}
+
+body .wrapper .section3 .portfolioGridWrapperMobile .flipContentMobile .flipFrontMobile .headlineMobile {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  color: var(--darkColor);
+}
+
+body .wrapper .section3 .portfolioGridWrapperMobile .flipContentMobile .flipFrontMobile .headlineMobile h1 {
+  font-size: 1.3em;
+  margin: 0;
+  color: var(--darkColor);
+  opacity: 0.9;
+  text-align: center;
+}
+
+body .wrapper .section3 .portfolioGridWrapperMobile .flipContentMobile .flipFrontMobile .headlineMobile p {
+  margin: 0;
+  font-size: 0.8em;
+  width: 300px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+body .wrapper .section3 .portfolioGridWrapperMobile .flipContentMobile .flipFrontMobile img {
+  max-width: 100%;
+  position: relative;
+  top: 10px;
 }
 
 body .wrapper .section4 {
@@ -1653,7 +1699,8 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     top: 50px !important;
   }
 
-  .menuFlexContainer, .officeFlexContainer {
+  .menuFlexContainer,
+.officeFlexContainer {
     margin-top: 2vw;
   }
 
@@ -1676,6 +1723,13 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 
   .testimonial .testimonialDescription {
     font-size: 1.3vw !important;
+  }
+}
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .portfolioGridWrapperMobile {
+    visibility: visible;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */
