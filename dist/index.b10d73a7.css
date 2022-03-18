@@ -456,6 +456,7 @@ body .wrapper .section1 {
   margin-bottom: 250px;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 body .wrapper .section1 .bcgStructureOne {
@@ -1646,6 +1647,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   margin-left: 3em;
 }
 /* MEDIA QUERYS */
+/* LAPTOP */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .heroText {
     top: 50px !important;

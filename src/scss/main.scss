@@ -163,7 +163,7 @@ body {
         sans-serif;
     overflow-x: hidden;
     overflow-y: scroll;
-    
+
 
     /** NEW START **/
     .menuOverlay {
@@ -417,6 +417,7 @@ body {
             margin-bottom: 250px;
             position: relative;
             z-index: 2;
+            overflow: hidden;
 
             .bcgStructureOne {
                 position: absolute;
