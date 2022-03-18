@@ -1,10 +1,9 @@
 import './../scss/main.scss'
+import './../scss/responsive.scss'
 import './burgerMenu'
 import './scrollGSAP'
 import './slider'
 import './smoothScroll'
-import './closeOverlayMenu'
-import './headerAnimation'
 import './loadingScreen'
 
 

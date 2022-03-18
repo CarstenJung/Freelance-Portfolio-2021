@@ -212,6 +212,11 @@ body {
                         line-height: 1.5em;
                         font-weight: bold;
                         transform: translatey(-100px);
+
+                        a {
+                            text-decoration: none;
+                            color: var(--lightColor);
+                        }
                     }
 
                     span {
@@ -1619,19 +1624,4 @@ body {
             }
         }
     }
-
-    /* MEDIA QUERY LAPTOP */
-    @media (min-width: 1025px) and (max-width: 1280px) {}
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-
-    .heroText {
-        top: 50px !important;
-    }
-
-    .menuFlexContainer, .officeFlexContainer {
-        margin-top: 2vw;
-    }
-
 }
