@@ -1,7 +1,7 @@
 /* MEDIA QUERYS */
 
 /* LAPTOP */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1200px) and (max-width: 1440px) {
 
     .heroText {
         top: 50px !important;
@@ -36,11 +36,15 @@
 }
 
 /* TABLET */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1199px) {
 
     .portfolioGridWrapperMobile {
-        visibility: visible;
-        height: 100%;
+        visibility: visible !important;
+        height: 100% !important;
+    }
+
+    .portfolioGridWrapper {
+        display: none !important;
     }
 
 }
