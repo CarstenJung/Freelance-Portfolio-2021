@@ -47,6 +47,15 @@
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
 
+    nav {
+        .ctaBtn {
+            button {
+                right: 14.2em !important;
+                top: 4.9em !important;
+            }
+        }
+    }
+
     .wrapper {
         overflow: hidden;
     }
@@ -82,11 +91,12 @@
     }
 
 
-    nav {
-        .ctaBtn {
-            button {
-                right: 14.2em !important;
-                top: 4.9em !important;
+    .section2 {
+        .serviceCircle {
+            padding-right: 0 !important;
+
+            img {
+                width: 50% !important;
             }
         }
     }
