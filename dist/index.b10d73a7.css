@@ -1767,7 +1767,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
 
   .section2 .serviceItemWrapper .serviceItem {
-    padding: 1em 2em;
+    padding: 1em 2em !important;
   }
   .section2 .serviceItemWrapper .serviceItem .serviceCircle {
     padding-right: 0 !important;
