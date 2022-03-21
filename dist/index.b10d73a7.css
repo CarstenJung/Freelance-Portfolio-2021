@@ -1752,7 +1752,6 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
   .section1 .heroWrapper .heroText .buttonText {
     right: 137px !important;
-    top: 4.8em !important;
   }
   .section1 .socialsContainer {
     bottom: 7em !important;
@@ -1760,6 +1759,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 
   nav .ctaBtn button {
     right: 14.2em !important;
+    top: 4.8em !important;
   }
 
   .portfolioGridWrapperMobile {
