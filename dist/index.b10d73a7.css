@@ -1750,9 +1750,12 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .heroWrapper .heroText h1 {
     font-size: 1.2vw !important;
   }
+  .heroWrapper .heroText .buttonText {
+    right: 137px;
+  }
 
   nav .ctaBtn button {
-    right: 14.5em !important;
+    right: 14.3em !important;
   }
 
   .portfolioGridWrapperMobile {
