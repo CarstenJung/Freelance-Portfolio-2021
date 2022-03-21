@@ -1772,6 +1772,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section2 .serviceCircle img {
     width: 50% !important;
   }
+  .section2 .serviceCircle .serviceImgsmaller {
+    height: 120px;
+  }
 
   .portfolioGridWrapperMobile {
     visibility: visible !important;
