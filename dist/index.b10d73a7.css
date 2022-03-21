@@ -1752,13 +1752,14 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
   .section1 .heroWrapper .heroText .buttonText {
     right: 137px !important;
+    top: 4.8em !important;
   }
   .section1 .socialsContainer {
-    bottom: 6em !important;
+    bottom: 7em !important;
   }
 
   nav .ctaBtn button {
-    right: 14.3em !important;
+    right: 14.2em !important;
   }
 
   .portfolioGridWrapperMobile {
