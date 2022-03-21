@@ -1731,7 +1731,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
 
   .section3 .portfolioGridWrapper .flipContent .flipBack button {
-    display: none;
+    display: none !important;
   }
 }
 /* TABLET */
