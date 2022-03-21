@@ -1743,7 +1743,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
 
   nav .ctaBtn button {
-    right: 13em;
+    right: 13em !important;
   }
 
   .portfolioGridWrapperMobile {
