@@ -1746,5 +1746,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .portfolioGridWrapper {
     display: none !important;
   }
+
+  .headlineMobile h1 {
+    font-size: 1.1em;
+  }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */
