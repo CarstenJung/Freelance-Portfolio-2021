@@ -1742,13 +1742,13 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     bottom: 3%;
   }
   .heroWrapper .heroText p {
-    font-size: 1vw;
+    font-size: 1vw !important;
   }
   .heroWrapper .heroText h2 {
-    font-size: 1.7em;
+    font-size: 1.7em !important;
   }
   .heroWrapper .heroText h1 {
-    font-size: 1.1vw;
+    font-size: 1.1vw !important;
   }
 
   nav .ctaBtn button {
