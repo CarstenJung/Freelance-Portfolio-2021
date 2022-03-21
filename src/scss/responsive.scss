@@ -51,13 +51,27 @@
         position: relative;
         left: 5%;
         bottom: 3%;
+
+        .heroText {
+            p {
+                font-size: 1vw;
+            }
+
+            h2 {
+                font-size: 1.7em;
+            }
+
+            h1 {
+                font-size: 1.1vw;
+            }
+        }
     }
 
     nav {
-        .ctaBtn{
-           button {
-               right: 13em !important;
-           } 
+        .ctaBtn {
+            button {
+                right: 13em !important;
+            }
         }
     }
 
