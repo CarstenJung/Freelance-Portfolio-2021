@@ -1766,20 +1766,23 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     bottom: 7em !important;
   }
 
-  .section2 .serviceCircle {
+  .section2 .serviceItemWrapper .serviceItem {
+    padding: 1em 2em;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle {
     padding-right: 0 !important;
   }
-  .section2 .serviceCircle img {
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
     width: 55% !important;
   }
-  .section2 .serviceCircle .serviceImgsmaller {
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
     height: 120px !important;
     width: 50% !important;
   }
-  .section2 .serviceItemDescription span {
+  .section2 .serviceItemWrapper .serviceItemDescription span {
     color: #fff;
   }
-  .section2 .serviceItemDescription .accent {
+  .section2 .serviceItemWrapper .serviceItemDescription .accent {
     font-size: 1.5em;
   }
 

@@ -92,29 +92,38 @@
 
 
     .section2 {
-        .serviceCircle {
-            padding-right: 0 !important;
+        .serviceItemWrapper {
 
-            img {
-                width: 55% !important;
+
+            .serviceItem {
+                padding: 1em 2em;
+
+                .serviceCircle {
+                    padding-right: 0 !important;
+
+                    img {
+                        width: 55% !important;
+                    }
+
+                    .serviceImgsmaller {
+                        height: 120px !important;
+                        width: 50% !important;
+                    }
+                }
             }
 
-            .serviceImgsmaller {
-                height: 120px !important;
-                width: 50% !important;
+            .serviceItemDescription {
+
+                span {
+                    color: #fff;
+                }
+
+                .accent {
+                    font-size: 1.5em;
+                }
             }
         }
 
-        .serviceItemDescription {
-
-            span {
-                color: #fff;
-            }
-            
-            .accent {
-                font-size: 1.5em;
-            }
-        }
     }
 
     .portfolioGridWrapperMobile {
