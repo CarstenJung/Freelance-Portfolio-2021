@@ -1742,15 +1742,8 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     bottom: 3%;
   }
 
-  nav .ctaBtn .ctaLine {
-    right: 9em;
-    top: 4.5em;
-    width: 4em;
-  }
-  nav .ctaBtn .ctaLine {
-    right: 9em;
-    top: 4.5em;
-    width: 4em;
+  nav .ctaBtn button {
+    right: 13em;
   }
 
   .portfolioGridWrapperMobile {
