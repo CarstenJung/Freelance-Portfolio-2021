@@ -1740,6 +1740,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     visibility: visible !important;
     height: 100% !important;
     width: 85%;
+    margin: auto;
   }
 
   .portfolioGridWrapper {
