@@ -1736,6 +1736,10 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 }
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
+  .wrapper {
+    overflow: hidden;
+  }
+
   .section1 .heroWrapper {
     position: relative;
     left: 5%;
@@ -1759,7 +1763,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 
   nav .ctaBtn button {
     right: 14.2em !important;
-    top: 4.8em !important;
+    top: 4.9em !important;
   }
 
   .portfolioGridWrapperMobile {
