@@ -1736,6 +1736,18 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 }
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
+  .heroWrapper {
+    position: relative;
+    left: 5%;
+    bottom: 2%;
+  }
+
+  .ctaLine {
+    right: 9em;
+    top: 4.5em;
+    width: 4em;
+  }
+
   .portfolioGridWrapperMobile {
     visibility: visible !important;
     height: 100% !important;
