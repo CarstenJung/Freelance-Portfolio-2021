@@ -1775,6 +1775,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section2 .serviceCircle .serviceImgsmaller {
     height: 120px !important;
     width: 45% !important;
+    background-size: cover;
   }
 
   .portfolioGridWrapperMobile {
