@@ -1730,7 +1730,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     margin: auto;
   }
 
-  .portfolioVisitBtn {
+  .section3 .portfolioGridWrapper .flipContent .flipBack button {
     display: none;
   }
 }
