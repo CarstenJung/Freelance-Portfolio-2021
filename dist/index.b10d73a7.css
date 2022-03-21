@@ -1724,6 +1724,15 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .testimonial .testimonialDescription {
     font-size: 1.3vw !important;
   }
+
+  .portfolioGridWrapper {
+    max-width: 85%;
+    margin: auto;
+  }
+
+  .portfolioVisitBtn {
+    display: none;
+  }
 }
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
