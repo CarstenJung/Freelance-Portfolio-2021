@@ -1776,6 +1776,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     height: 120px !important;
     width: 50% !important;
   }
+  .section2 .serviceItemDescription span {
+    color: #fff;
+  }
   .section2 .serviceItemDescription .accent {
     font-size: 1.5em;
   }
