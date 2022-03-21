@@ -1770,11 +1770,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     padding-right: 0 !important;
   }
   .section2 .serviceCircle img {
-    width: 50% !important;
+    width: 55% !important;
   }
   .section2 .serviceCircle .serviceImgsmaller {
     height: 120px !important;
-    width: 45% !important;
+    width: 50% !important;
     background-size: cover;
   }
 
