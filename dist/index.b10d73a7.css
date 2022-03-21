@@ -1739,10 +1739,15 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .heroWrapper {
     position: relative;
     left: 5%;
-    bottom: 2%;
+    bottom: 3%;
   }
 
-  .ctaLine {
+  nav .ctaBtn .ctaLine {
+    right: 9em;
+    top: 4.5em;
+    width: 4em;
+  }
+  nav .ctaBtn .ctaLine {
     right: 9em;
     top: 4.5em;
     width: 4em;

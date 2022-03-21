@@ -50,13 +50,21 @@
     .heroWrapper {
         position: relative;
         left: 5%;
-        bottom: 2%;
+        bottom: 3%;
     }
 
-    .ctaLine {
-        right: 9em;
-        top: 4.5em;
-        width: 4em;
+    nav .ctaBtn {
+        .ctaLine {
+            right: 9em;
+            top: 4.5em;
+            width: 4em;
+        }
+
+        .ctaLine {
+            right: 9em;
+            top: 4.5em;
+            width: 4em;
+        }
     }
 
     .portfolioGridWrapperMobile {
