@@ -28,7 +28,7 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": true
     }
   }
 }
