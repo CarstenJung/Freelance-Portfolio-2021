@@ -1783,11 +1783,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     height: 120px !important;
     width: 50% !important;
   }
+  .section2 .serviceItemWrapper .serviceItemDescription {
+    font-weight: 300 !important;
+  }
   .section2 .serviceItemWrapper .serviceItemDescription span {
     color: #fff;
-  }
-  .section2 .serviceItemWrapper .serviceItemDescription .accent {
-    font-size: 1.5em !important;
   }
 
   .portfolioGridWrapperMobile {
