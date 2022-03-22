@@ -1700,11 +1700,10 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
       right: 11.9em;
     }
 
-    .menuOverlay,
-.burgerMenuWrapper {
-      transform: translateZ(4rem);
-    }
-
+    /*         .menuOverlay,
+            .burgerMenuWrapper {
+                transform: translateZ(4rem);
+            } */
     .section1 .heroWrapper .buttonText {
       top: -2px !important;
       right: 138px !important;
@@ -1723,18 +1722,6 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
       width: 50% !important;
     }
-
-    /*         .section3 {
-        .portfolioGridWrapper {
-            .flipContent {
-                .flipFront {
-                    img {
-                        transform: translateZ(1rem) !important;
-                    }
-                }
-            }
-        }
-    } */
   }
 }
 /* LAPTOP */
