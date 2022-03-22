@@ -1774,14 +1774,14 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     padding: 1em 2em;
   }
   .section2 .serviceItemWrapper .serviceItem .serviceCircle {
-    padding-right: 0 !important;
+    /*  padding-right: 0 !important; */
   }
   .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
-    width: 55% !important;
+    /*  width: 55% !important; */
   }
   .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
-    height: 120px !important;
-    width: 50% !important;
+    /* height: 120px !important;
+    width: 50% !important; */
   }
   .section2 .serviceItemWrapper .serviceItemDescription {
     font-weight: 300 !important;
