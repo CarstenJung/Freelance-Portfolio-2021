@@ -660,7 +660,7 @@ menuProjectItems.repeat(-1);
                 duration: 3
             });
             _gsapDefault.default.to(".pathSVG", {
-                transform: "translateY(-4px) translateX(23px) scaleX(50%)"
+                transform: "translateY(-4px) translateX(23px) scaleX(0.5)"
             });
             menuProjectItems.pause();
         }

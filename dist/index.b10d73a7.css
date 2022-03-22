@@ -358,15 +358,13 @@ body .burgerMenuWrapper .burgerMenu svg path:nth-child(2) {
   --easing: ease-in;
   --offset: 100px;
   --array-2: 74px;
-  transform: scalex(80%) translateX(12px) translateY(-2px);
-  -webkit-transform: scalex(80%) translateX(12px) translateY(-2px);
-  -ms-transform: scalex(80%) translateX(12px) translateY(-2px);
+  transform: scalex(0.8) translateX(12px) translateY(-2px);
 }
 
 body .burgerMenuWrapper .burgerMenu svg path:nth-child(3) {
   --offset: 133px;
   --array-2: 107px;
-  transform: scalex(50%) translateX(47px) translateY(-4px);
+  transform: scalex(0.5) translateX(47px) translateY(-4px);
 }
 
 body .burgerMenuWrapper .burgerMenu.active svg path {
@@ -382,12 +380,12 @@ body .burgerMenuWrapper .burgerMenu.active svg path:nth-child(2) {
   --duration: 0.4s;
   --offset: 1px;
   --array-1: 1px;
-  transform: scalex(100%) translateX(0) translateY(-2px);
+  transform: scalex(1) translateX(0) translateY(-2px);
 }
 
 body .burgerMenuWrapper .burgerMenu.active svg path:nth-child(3) {
   --offset: 58px;
-  transform: scalex(100%) translateX(0px) translateY(-4px);
+  transform: scalex(1) translateX(0px) translateY(-4px);
 }
 
 body .wrapper {

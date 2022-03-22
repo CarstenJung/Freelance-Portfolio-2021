@@ -154,7 +154,7 @@ document.querySelectorAll(".toggleActive").forEach((toggle) => {
         duration: 3,
       });
       gsap.to(".pathSVG", {
-        transform: "translateY(-4px) translateX(23px) scaleX(50%)",
+        transform: "translateY(-4px) translateX(23px) scaleX(0.5)",
       });
       menuProjectItems.pause();
     }
