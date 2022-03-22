@@ -123,7 +123,7 @@ menuProjectItems.repeat(-1);
           pathId.style.transform = "translateY(0px)";
         } else {
           pathId.style.transform =
-            "translateY(-4px) translateX(23px) scaleX(50%)";
+            "translateY(-4px) translateX(23px) scaleX(0.5)";
         }
       }, 150);
     });

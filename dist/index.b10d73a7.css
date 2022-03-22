@@ -437,6 +437,7 @@ body .wrapper nav .ctaBtn button {
   color: var(--lightColor);
   text-transform: uppercase;
   cursor: pointer;
+  font-size: 0.69vw;
 }
 
 body .wrapper nav .ctaBtn .ctaLine {
@@ -1691,6 +1692,51 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   margin-left: 3em;
 }
 /* MEDIA QUERYS */
+/* BROWSER SPECIFIC */
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    body .wrapper nav .ctaBtn button {
+      top: 4.3em;
+      right: 11.9em;
+    }
+
+    .menuOverlay,
+.burgerMenuWrapper {
+      transform: translateZ(4rem);
+    }
+
+    .section1 .heroWrapper .buttonText {
+      top: -2px !important;
+      right: 138px !important;
+    }
+    .section1 .heroWrapper .heroText button:hover .submitCircle {
+      width: 58% !important;
+    }
+
+    .section2 .serviceItemWrapper .serviceItem .serviceCircle {
+      padding: 0 !important;
+    }
+    .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
+      height: 100% !important;
+      width: 55% !important;
+    }
+    .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
+      width: 50% !important;
+    }
+
+    /*         .section3 {
+        .portfolioGridWrapper {
+            .flipContent {
+                .flipFront {
+                    img {
+                        transform: translateZ(1rem) !important;
+                    }
+                }
+            }
+        }
+    } */
+  }
+}
 /* LAPTOP */
 @media (min-width: 1200px) and (max-width: 1440px) {
   .heroText {
@@ -1780,8 +1826,8 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 
   .section3 {
     /*  .headlineMobile h1 {
-         font-size: 1.1em;
-     } */
+        font-size: 1.1em;
+    } */
   }
   .section3 .portfolioGridWrapperMobile {
     visibility: visible !important;

@@ -1,4 +1,63 @@
 /* MEDIA QUERYS */
+/* BROWSER SPECIFIC */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+
+        body .wrapper nav .ctaBtn button {
+            top: 4.3em;
+            right: 11.9em;
+        }
+
+        .menuOverlay,
+        .burgerMenuWrapper {
+            transform: translateZ(4rem);
+        }
+
+        .section1 {
+            .heroWrapper {
+                .buttonText {
+                    top: -2px !important;
+                    right: 138px !important;
+                }
+
+                .heroText button:hover .submitCircle {
+                    width: 58% !important;
+                }
+            }
+        }
+
+        .section2 {
+            .serviceItemWrapper {
+                .serviceItem {
+                    .serviceCircle {
+                        padding: 0 !important;
+
+                        img {
+                            height: 100% !important;
+                            width: 55% !important;
+                        }
+
+                        .serviceImgsmaller {
+                            width: 50% !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*         .section3 {
+            .portfolioGridWrapper {
+                .flipContent {
+                    .flipFront {
+                        img {
+                            transform: translateZ(1rem) !important;
+                        }
+                    }
+                }
+            }
+        } */
+    }
+}
 
 /* LAPTOP */
 @media (min-width: 1200px) and (max-width: 1440px) {
@@ -127,7 +186,7 @@
             display: none !important;
         }
 
-       /*  .headlineMobile h1 {
+        /*  .headlineMobile h1 {
             font-size: 1.1em;
         } */
 
