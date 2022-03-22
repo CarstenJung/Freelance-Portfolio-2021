@@ -1761,6 +1761,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
   .section1 .heroWrapper .heroText h1 {
     font-size: 1.2vw !important;
+    font-weight: 400 !important;
   }
   .section1 .heroWrapper .heroText .buttonText {
     right: 137px !important;
