@@ -1698,6 +1698,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .heroText {
     top: 50px !important;
   }
+  .heroText h1 {
+    font-weight: 400 !important;
+  }
 
   .menuFlexContainer,
 .officeFlexContainer {
