@@ -1773,16 +1773,6 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section2 .serviceItemWrapper .serviceItem {
     padding: 1em 2em;
   }
-  .section2 .serviceItemWrapper .serviceItem .serviceCircle {
-    /*  padding-right: 0 !important; */
-  }
-  .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
-    /*  width: 55% !important; */
-  }
-  .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
-    /* height: 120px !important;
-    width: 50% !important; */
-  }
   .section2 .serviceItemWrapper .serviceItemDescription {
     font-weight: 300 !important;
   }
@@ -1790,19 +1780,22 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     color: #fff;
   }
 
-  .portfolioGridWrapperMobile {
+  .section3 {
+    /*  .headlineMobile h1 {
+         font-size: 1.1em;
+     } */
+  }
+  .section3 .portfolioGridWrapperMobile {
     visibility: visible !important;
     height: 100% !important;
     width: 78%;
     margin: auto;
   }
-
-  .portfolioGridWrapper {
+  .section3 .portfolioGridWrapper {
     display: none !important;
   }
-
-  .headlineMobile h1 {
-    font-size: 1.1em;
+  .section3 .nextProjectMobile {
+    font-size: 1em !important;
   }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */

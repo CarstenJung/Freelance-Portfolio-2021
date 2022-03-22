@@ -102,19 +102,6 @@
 
             .serviceItem {
                 padding: 1em 2em;
-
-                .serviceCircle {
-                   /*  padding-right: 0 !important; */
-
-                    img {
-                       /*  width: 55% !important; */
-                    }
-
-                    .serviceImgsmaller {
-                        /* height: 120px !important;
-                        width: 50% !important; */
-                    }
-                }
             }
 
             .serviceItemDescription {
@@ -128,19 +115,25 @@
 
     }
 
-    .portfolioGridWrapperMobile {
-        visibility: visible !important;
-        height: 100% !important;
-        width: 78%;
-        margin: auto;
-    }
+    .section3 {
+        .portfolioGridWrapperMobile {
+            visibility: visible !important;
+            height: 100% !important;
+            width: 78%;
+            margin: auto;
+        }
 
-    .portfolioGridWrapper {
-        display: none !important;
-    }
+        .portfolioGridWrapper {
+            display: none !important;
+        }
 
-    .headlineMobile h1 {
-        font-size: 1.1em;
+       /*  .headlineMobile h1 {
+            font-size: 1.1em;
+        } */
+
+        .nextProjectMobile {
+            font-size: 1em !important;
+        }
     }
 
 }
