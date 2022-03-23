@@ -4,6 +4,6 @@ document.querySelector('.goBack').addEventListener('click', () => {
     jump('#scrollUP')
 })
 
-document.querySelector('.heroText').addEventListener('click', () => {
+document.querySelector('.heroText a').addEventListener('click', () => {
     jump('#portfolio')
 })

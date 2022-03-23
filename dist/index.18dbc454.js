@@ -5800,7 +5800,7 @@ var _jumpJsDefault = parcelHelpers.interopDefault(_jumpJs);
 document.querySelector('.goBack').addEventListener('click', ()=>{
     _jumpJsDefault.default('#scrollUP');
 });
-document.querySelector('.heroText').addEventListener('click', ()=>{
+document.querySelector('.heroText a').addEventListener('click', ()=>{
     _jumpJsDefault.default('#portfolio');
 });
 
