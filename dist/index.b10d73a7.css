@@ -1844,7 +1844,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     top: 330px !important;
   }
   .section4 .testimonialsWrapper .testimonial .logoCircle {
-    height: 23 vw !important;
+    height: 23vw !important;
     width: 23vw !important;
   }
   .section4 .testimonialsWrapper .testimonial .logoCircle img {
@@ -1913,7 +1913,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     height: 300px !important;
   }
   .section4 .testimonialsWrapper .testimonial .testimonialCompany {
-    font-size: 2.5em !important;
+    font-size: 2.3em !important;
   }
   .section4 .testimonialsWrapper .testimonial .testimonialDescription {
     font-size: 2.3vw !important;
@@ -1922,5 +1922,14 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section4 .testimonialsWrapper .btnWrapper {
     top: 570px !important;
   }
+
+  .section5 .contactFormWrapper {
+    max-width: 90vw !important;
+  }
+  .section5 .contactFormWrapper .policyCheckboxWrapper {
+    margin-top: -10px !important;
+    margin-bottom: 40px;
+  }
 }
+/* MOBILE */
 /*# sourceMappingURL=index.b10d73a7.css.map */

@@ -202,7 +202,7 @@
                 top: 330px !important;
 
                 .logoCircle {
-                    height: 23 vw !important;
+                    height: 23vw !important;
                     width: 23vw !important;
 
                     img {
@@ -314,7 +314,7 @@
                 }
 
                 .testimonialCompany {
-                    font-size: 2.5em !important;
+                    font-size: 2.3em !important;
                 }
 
                 .testimonialDescription {
@@ -328,4 +328,21 @@
             }
         }
     }
+
+    .section5 {
+        .contactFormWrapper {
+            max-width: 90vw !important;
+
+            .policyCheckboxWrapper {
+                margin-top: -10px !important;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+/* MOBILE */
+@media (min-width: 320px) and (max-width: 767px) {
+
+
 }
