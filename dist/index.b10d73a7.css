@@ -1778,12 +1778,12 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
   nav .ctaBtn button {
-    font-size: 14px !important;
+    font-size: 13px !important;
     right: 11.1em !important;
     top: 3.7em !important;
   }
   nav .ctaBtn .ctaLine {
-    width: 6em !important;
+    width: 5.5em !important;
   }
 
   .wrapper {
