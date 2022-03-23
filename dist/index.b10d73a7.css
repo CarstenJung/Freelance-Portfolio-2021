@@ -1839,5 +1839,10 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section3 .nextProjectMobile h1 {
     font-size: 1em !important;
   }
+
+  .section4 .testimonialsWrapper .testimonial .logoCircle {
+    height: 20vw !important;
+    width: 20vw !important;
+  }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */
