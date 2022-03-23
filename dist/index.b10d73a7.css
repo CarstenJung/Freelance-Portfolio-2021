@@ -1779,7 +1779,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 @media (min-width: 768px) and (max-width: 1199px) {
   nav .ctaBtn button {
     font-size: 13px !important;
-    right: 12em !important;
+    right: 11.8em !important;
     top: 4em !important;
   }
   nav .ctaBtn .ctaLine {
