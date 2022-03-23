@@ -13,6 +13,19 @@
             transform: translateZ(4rem);
         } */
 
+        .burgerMenuWrapper,
+        .menuOverlay {
+            transform: translate3d(0, 0, 0) translateZ(1000px);
+        }
+        .staggerAnimation,
+        .animationBcg {
+            transform: translate3d(0, 0, 0) translateZ(1001px);
+        }
+
+        .menuOverlay {
+
+        }
+
         .section1 {
             .heroWrapper {
                 .buttonText {

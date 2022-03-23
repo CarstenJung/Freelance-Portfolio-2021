@@ -1704,6 +1704,16 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
             .burgerMenuWrapper {
                 transform: translateZ(4rem);
             } */
+    .burgerMenuWrapper,
+.menuOverlay {
+      transform: translate3d(0, 0, 0) translateZ(1000px);
+    }
+
+    .staggerAnimation,
+.animationBcg {
+      transform: translate3d(0, 0, 0) translateZ(1001px);
+    }
+
     .section1 .heroWrapper .buttonText {
       top: -2px !important;
       right: 138px !important;
