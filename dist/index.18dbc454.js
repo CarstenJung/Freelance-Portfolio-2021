@@ -521,13 +521,13 @@ function hmrAcceptRun(bundle, id) {
 },{}],"1SICI":[function(require,module,exports) {
 var _mainScss = require("./../scss/main.scss");
 var _responsiveScss = require("./../scss/responsive.scss");
+var _loadingScreen = require("./loadingScreen");
 var _burgerMenu = require("./burgerMenu");
 var _scrollGSAP = require("./scrollGSAP");
 var _slider = require("./slider");
 var _smoothScroll = require("./smoothScroll");
-var _loadingScreen = require("./loadingScreen");
 
-},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./loadingScreen":"2lAB1","./../scss/responsive.scss":"622Es"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./../scss/responsive.scss":"622Es","./loadingScreen":"2lAB1"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -5930,7 +5930,7 @@ var jumper = function jumper() {
 var singleton = jumper();
 exports.default = singleton;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2lAB1":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"622Es":[function() {},{}],"2lAB1":[function(require,module,exports) {
 var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
 _gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
@@ -6201,6 +6201,6 @@ var DrawSVGPlugin = {
 };
 _getGSAP() && gsap.registerPlugin(DrawSVGPlugin);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"622Es":[function() {},{}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 
 //# sourceMappingURL=index.18dbc454.js.map

@@ -1840,9 +1840,87 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     font-size: 1em !important;
   }
 
+  .section4 .testimonialsWrapper .testimonial {
+    top: 330px !important;
+  }
   .section4 .testimonialsWrapper .testimonial .logoCircle {
-    height: 20vw !important;
+    height: 23 vw !important;
+    width: 23vw !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .logoCircle img {
     width: 20vw !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .testimonialCompany {
+    font-size: 2.8vw !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .testimonialDescription {
+    font-size: 1.5vw !important;
+  }
+
+  .section5 .contactFormWrapper {
+    max-width: 1000px !important;
+  }
+  .section5 .contactFormWrapper .policyCheckboxWrapper {
+    margin-top: -100px !important;
+  }
+  .section5 .contactFormWrapper fieldset legend {
+    font-size: 2.3vw !important;
+  }
+  .section5 .contactFormWrapper fieldset label {
+    font-size: 1.3vw !important;
+  }
+}
+/* TABLET PORTRAIT */
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+  .animationBcg .startAnimationWrapper svg {
+    width: 300px;
+  }
+
+  .section1 {
+    margin-bottom: 100px !important;
+    height: 60vh !important;
+  }
+  .section1 .heroWrapper .heroText p {
+    font-size: 1.5vw !important;
+  }
+  .section1 .heroWrapper .heroText h2 {
+    font-size: 2.2em !important;
+  }
+  .section1 .heroWrapper .heroText h1 {
+    font-size: 1.5vw !important;
+  }
+
+  .section2 {
+    margin-bottom: 200px !important;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
+    height: 100px !important;
+    width: 100px !important;
+    padding-right: 3em;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
+    height: 90px !important;
+    width: 90px !important;
+    padding-right: 3em;
+  }
+
+  .section3 .portfolioGridWrapperMobile {
+    width: 100%;
+  }
+
+  .section4 .testimonialsWrapper .testimonial .logoCircle {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .testimonialCompany {
+    font-size: 2.5em !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .testimonialDescription {
+    font-size: 2.3vw !important;
+    width: 1000px !important;
+  }
+  .section4 .testimonialsWrapper .btnWrapper {
+    top: 570px !important;
   }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */
