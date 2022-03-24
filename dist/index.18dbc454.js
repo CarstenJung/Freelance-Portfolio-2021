@@ -526,148 +526,52 @@ var _burgerMenu = require("./burgerMenu");
 var _scrollGSAP = require("./scrollGSAP");
 var _slider = require("./slider");
 var _smoothScroll = require("./smoothScroll");
+var _indicatorScrollMobile = require("./indicatorScrollMobile");
 
-},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./../scss/responsive.scss":"622Es","./loadingScreen":"2lAB1"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./loadingScreen":"2lAB1","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./indicatorScrollMobile":"2V4oj"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"2lAB1":[function(require,module,exports) {
 var _gsap = require("gsap");
-var _gsapDefault = parcelHelpers.interopDefault(_gsap);
-/* PORTFOLIO SLIDER ANIMATION MENU */ let menuProjectItems = _gsapDefault.default.timeline();
-menuProjectItems.to("#menuProjectsItem1", {
-    opacity: 1,
-    display: "block",
-    duration: 3
-}).to("#menuProjectsItem1", {
-    opacity: 0,
-    display: "none",
-    duration: 3
-}).to("#menuProjectsItem2", {
-    opacity: 1,
-    display: "block",
-    duration: 3
-}).to("#menuProjectsItem2", {
-    opacity: 0,
-    display: "none",
-    duration: 3
-}).to("#menuProjectsItem3", {
-    opacity: 1,
-    display: "block",
-    duration: 3
-}).to("#menuProjectsItem3", {
-    opacity: 0,
-    display: "none",
-    duration: 3
-}).to("#menuProjectsItem4", {
-    opacity: 1,
-    display: "block",
-    duration: 3
-}).to("#menuProjectsItem4", {
-    opacity: 0,
-    display: "none",
-    duration: 3
-}).to("#menuProjectsItem5", {
-    opacity: 1,
-    display: "block",
-    duration: 3
-}).to("#menuProjectsItem5", {
-    opacity: 0,
-    display: "none",
-    duration: 3
-}).to("#menuProjectsItem6", {
-    opacity: 1,
-    display: "block",
-    duration: 3
-}).to("#menuProjectsItem6", {
-    opacity: 0,
-    display: "none",
-    duration: 3
+var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
+_gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
+var startAnimation = _gsap.gsap.timeline({
+    delay: 0.5
 });
-menuProjectItems.repeat(-1);
-(function() {
-    document.querySelectorAll(".burgerMenu").forEach((btn)=>{
-        btn.addEventListener("click", (e)=>{
-            btn.classList.toggle("active");
-            /* PORTFOLIO SLIDER ANIMATION MENU */ const menuOverlay = document.querySelector(".burgerMenu");
-            if (menuOverlay.classList.contains("active")) {
-                _gsapDefault.default.to(".logoContainer, .socialsContainer", {
-                    opacity: 0
-                });
-                _gsapDefault.default.to(".menuOverlay", {
-                    opacity: 1,
-                    display: "flex",
-                    duration: 1,
-                    zIndex: 4
-                });
-                _gsapDefault.default.to(".menuFlexContainer ul li", {
-                    y: 0,
-                    stagger: 0.1,
-                    duration: 2
-                });
-                _gsapDefault.default.to(".menuFlexContainer h1, .officeFlexContainer h1", {
-                    opacity: 0.3,
-                    x: 0,
-                    duration: 3
-                });
-                menuProjectItems.play();
-            } else {
-                _gsapDefault.default.to(".logoContainer, .socialsContainer", {
-                    opacity: 1
-                });
-                _gsapDefault.default.to(".menuOverlay", {
-                    opacity: 0,
-                    display: "none",
-                    duration: 1
-                });
-                _gsapDefault.default.to(".menuFlexContainer ul li", {
-                    y: -100,
-                    stagger: 0.1,
-                    duration: 2
-                });
-                _gsapDefault.default.to(".menuFlexContainer h1, .officeFlexContainer h1", {
-                    opacity: 0,
-                    x: -100,
-                    duration: 3
-                });
-                menuProjectItems.pause();
-            }
-            setTimeout(()=>{
-                const pathId = document.querySelector(".pathSVG");
-                if (btn.classList.contains("active")) pathId.style.transform = "translateY(0px)";
-                else pathId.style.transform = "translateY(-4px) translateX(23px) scaleX(0.5)";
-            }, 150);
-        });
-    });
-})();
-/*** CLOSE MENU ON MENU-ITEM CLICKED ***/ document.querySelectorAll(".toggleActive").forEach((toggle)=>{
-    toggle.addEventListener("click", ()=>{
-        if (document.querySelector(".burgerMenu").classList.contains("active")) {
-            document.querySelector(".burgerMenu").classList.remove("active");
-            _gsapDefault.default.to(".logoContainer, .socialsContainer", {
-                opacity: 1
-            });
-            _gsapDefault.default.to(".menuOverlay", {
-                opacity: 0,
-                display: "none",
-                duration: 1
-            });
-            _gsapDefault.default.to(".menuFlexContainer ul li", {
-                y: -100,
-                stagger: 0.1,
-                duration: 2
-            });
-            _gsapDefault.default.to(".menuFlexContainer h1, .officeFlexContainer h1", {
-                opacity: 0,
-                x: -100,
-                duration: 3
-            });
-            _gsapDefault.default.to(".pathSVG", {
-                transform: "translateY(-4px) translateX(23px) scaleX(0.5)"
-            });
-            menuProjectItems.pause();
-        }
-    });
+startAnimation.fromTo('#CTop', {
+    drawSVG: '0%'
+}, {
+    drawSVG: '100%',
+    duration: 1
+}).fromTo('#CBottom', {
+    drawSVG: '0%'
+}, {
+    drawSVG: '100%',
+    duration: 1
+}).fromTo('#JTop', {
+    drawSVG: '0%'
+}, {
+    drawSVG: '100%',
+    duration: 1
+}).to('#CTop, #CBottom', {
+    fill: '#fff',
+    duration: 2
+}).to('#JTop', {
+    fill: '#ffcd48',
+    duration: 2.3,
+    onComplete: ()=>{
+        document.querySelector('.wrapper').classList.remove('isLoading');
+    }
+}, '-=2').to('.startAnimationWrapper', {
+    autoAlpha: 0,
+    duration: 2
+}).to('.staggerItem', {
+    rotationY: -90,
+    stagger: 0.1,
+    ease: "power1.out",
+    transformOrigin: "center center"
+}, '-=0.6').to('.staggerAnimation, .animationBcg', {
+    display: 'none'
 });
 
-},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
+},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "gsap", ()=>gsapWithCSS
@@ -4413,7 +4317,375 @@ _gsapCoreJs._forEachName("x,y,z,top,right,bottom,left,width,height,fontSize,padd
 });
 _gsapCoreJs.gsap.registerPlugin(CSSPlugin);
 
-},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Bjehw":[function(require,module,exports) {
+},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"htWnw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DrawSVGPlugin", ()=>DrawSVGPlugin
+);
+parcelHelpers.export(exports, "default", ()=>DrawSVGPlugin
+);
+/*!
+ * DrawSVGPlugin 3.9.1
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2021, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/ /* eslint-disable */ var gsap, _toArray, _doc, _win, _isEdge, _coreInitted, _windowExists = function _windowExists() {
+    return typeof window !== "undefined";
+}, _getGSAP = function _getGSAP() {
+    return gsap || _windowExists() && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+}, _numExp = /[-+=\.]*\d+[\.e\-\+]*\d*[e\-\+]*\d*/gi, //finds any numbers, including ones that start with += or -=, negative numbers, and ones in scientific notation like 1e-8.
+_types = {
+    rect: [
+        "width",
+        "height"
+    ],
+    circle: [
+        "r",
+        "r"
+    ],
+    ellipse: [
+        "rx",
+        "ry"
+    ],
+    line: [
+        "x2",
+        "y2"
+    ]
+}, _round = function _round(value) {
+    return Math.round(value * 10000) / 10000;
+}, _parseNum = function _parseNum(value) {
+    return parseFloat(value) || 0;
+}, _parseSingleVal = function _parseSingleVal(value, length) {
+    var num = _parseNum(value);
+    return ~value.indexOf("%") ? num / 100 * length : num;
+}, _getAttributeAsNumber = function _getAttributeAsNumber(target, attr) {
+    return _parseNum(target.getAttribute(attr));
+}, _sqrt = Math.sqrt, _getDistance = function _getDistance(x1, y1, x2, y2, scaleX, scaleY) {
+    return _sqrt(Math.pow((_parseNum(x2) - _parseNum(x1)) * scaleX, 2) + Math.pow((_parseNum(y2) - _parseNum(y1)) * scaleY, 2));
+}, _warn = function _warn(message) {
+    return console.warn(message);
+}, _hasNonScalingStroke = function _hasNonScalingStroke(target) {
+    return target.getAttribute("vector-effect") === "non-scaling-stroke";
+}, _bonusValidated = 1, //<name>DrawSVGPlugin</name>
+//accepts values like "100%" or "20% 80%" or "20 50" and parses it into an absolute start and end position on the line/stroke based on its length. Returns an an array with the start and end values, like [0, 243]
+_parse = function _parse(value, length, defaultStart) {
+    var i = value.indexOf(" "), s, e;
+    if (i < 0) {
+        s = defaultStart !== undefined ? defaultStart + "" : value;
+        e = value;
+    } else {
+        s = value.substr(0, i);
+        e = value.substr(i + 1);
+    }
+    s = _parseSingleVal(s, length);
+    e = _parseSingleVal(e, length);
+    return s > e ? [
+        e,
+        s
+    ] : [
+        s,
+        e
+    ];
+}, _getLength = function _getLength(target) {
+    target = _toArray(target)[0];
+    if (!target) return 0;
+    var type = target.tagName.toLowerCase(), style = target.style, scaleX = 1, scaleY = 1, length, bbox, points, prevPoint, i, rx, ry;
+    if (_hasNonScalingStroke(target)) {
+        //non-scaling-stroke basically scales the shape and then strokes it at the screen-level (after transforms), thus we need to adjust the length accordingly.
+        scaleY = target.getScreenCTM();
+        scaleX = _sqrt(scaleY.a * scaleY.a + scaleY.b * scaleY.b);
+        scaleY = _sqrt(scaleY.d * scaleY.d + scaleY.c * scaleY.c);
+    }
+    try {
+        //IE bug: calling <path>.getTotalLength() locks the repaint area of the stroke to whatever its current dimensions are on that frame/tick. To work around that, we must call getBBox() to force IE to recalculate things.
+        bbox = target.getBBox(); //solely for fixing bug in IE - we don't actually use the bbox.
+    } catch (e) {
+        //firefox has a bug that throws an error if the element isn't visible.
+        _warn("Some browsers won't measure invisible elements (like display:none or masks inside defs).");
+    }
+    var _ref = bbox || {
+        x: 0,
+        y: 0,
+        width: 0,
+        height: 0
+    }, x = _ref.x, y = _ref.y, width = _ref.width, height = _ref.height;
+    if ((!bbox || !width && !height) && _types[type]) {
+        //if the element isn't visible, try to discern width/height using its attributes.
+        width = _getAttributeAsNumber(target, _types[type][0]);
+        height = _getAttributeAsNumber(target, _types[type][1]);
+        if (type !== "rect" && type !== "line") {
+            //double the radius for circles and ellipses
+            width *= 2;
+            height *= 2;
+        }
+        if (type === "line") {
+            x = _getAttributeAsNumber(target, "x1");
+            y = _getAttributeAsNumber(target, "y1");
+            width = Math.abs(width - x);
+            height = Math.abs(height - y);
+        }
+    }
+    if (type === "path") {
+        prevPoint = style.strokeDasharray;
+        style.strokeDasharray = "none";
+        length = target.getTotalLength() || 0;
+        scaleX !== scaleY && _warn("Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled.");
+        length *= (scaleX + scaleY) / 2;
+        style.strokeDasharray = prevPoint;
+    } else if (type === "rect") length = width * 2 * scaleX + height * 2 * scaleY;
+    else if (type === "line") length = _getDistance(x, y, x + width, y + height, scaleX, scaleY);
+    else if (type === "polyline" || type === "polygon") {
+        points = target.getAttribute("points").match(_numExp) || [];
+        type === "polygon" && points.push(points[0], points[1]);
+        length = 0;
+        for(i = 2; i < points.length; i += 2)length += _getDistance(points[i - 2], points[i - 1], points[i], points[i + 1], scaleX, scaleY) || 0;
+    } else if (type === "circle" || type === "ellipse") {
+        rx = width / 2 * scaleX;
+        ry = height / 2 * scaleY;
+        length = Math.PI * (3 * (rx + ry) - _sqrt((3 * rx + ry) * (rx + 3 * ry)));
+    }
+    return length || 0;
+}, _getPosition = function _getPosition(target, length) {
+    target = _toArray(target)[0];
+    if (!target) return [
+        0,
+        0
+    ];
+    length || (length = _getLength(target) + 1);
+    var cs = _win.getComputedStyle(target), dash = cs.strokeDasharray || "", offset = _parseNum(cs.strokeDashoffset), i = dash.indexOf(",");
+    i < 0 && (i = dash.indexOf(" "));
+    dash = i < 0 ? length : _parseNum(dash.substr(0, i));
+    dash > length && (dash = length);
+    return [
+        -offset || 0,
+        dash - offset || 0
+    ];
+}, _initCore = function _initCore() {
+    if (_windowExists()) {
+        _doc = document;
+        _win = window;
+        _coreInitted = gsap = _getGSAP();
+        _toArray = gsap.utils.toArray;
+        _isEdge = ((_win.navigator || {
+        }).userAgent || "").indexOf("Edge") !== -1; //Microsoft Edge has a bug that causes it not to redraw the path correctly if the stroke-linecap is anything other than "butt" (like "round") and it doesn't match the stroke-linejoin. A way to trigger it is to change the stroke-miterlimit, so we'll only do that if/when we have to (to maximize performance)
+    }
+};
+var DrawSVGPlugin = {
+    version: "3.9.1",
+    name: "drawSVG",
+    register: function register(core) {
+        gsap = core;
+        _initCore();
+    },
+    init: function init(target, value, tween, index, targets) {
+        if (!target.getBBox) return false;
+        _coreInitted || _initCore();
+        var length = _getLength(target), start, end, cs;
+        this._style = target.style;
+        this._target = target;
+        if (value + "" === "true") value = "0 100%";
+        else if (!value) value = "0 0";
+        else if ((value + "").indexOf(" ") === -1) value = "0 " + value;
+        start = _getPosition(target, length);
+        end = _parse(value, length, start[0]);
+        this._length = _round(length);
+        this._dash = _round(start[1] - start[0]); //some browsers render artifacts if dash is 0, so we use a very small number in that case.
+        this._offset = _round(-start[0]);
+        this._dashPT = this.add(this, "_dash", this._dash, _round(end[1] - end[0]));
+        this._offsetPT = this.add(this, "_offset", this._offset, _round(-end[0]));
+        if (_isEdge) {
+            //to work around a bug in Microsoft Edge, animate the stroke-miterlimit by 0.0001 just to trigger the repaint (unnecessary if it's "round" and stroke-linejoin is also "round"). Imperceptible, relatively high-performance, and effective. Another option was to set the "d" <path> attribute to its current value on every tick, but that seems like it'd be much less performant.
+            cs = _win.getComputedStyle(target);
+            if (cs.strokeLinecap !== cs.strokeLinejoin) {
+                end = _parseNum(cs.strokeMiterlimit);
+                this.add(target.style, "strokeMiterlimit", end, end + 0.01);
+            }
+        }
+        this._live = _hasNonScalingStroke(target) || ~(value + "").indexOf("live");
+        this._nowrap = ~(value + "").indexOf("nowrap");
+        this._props.push("drawSVG");
+        return _bonusValidated;
+    },
+    render: function render(ratio, data) {
+        var pt = data._pt, style = data._style, length, lengthRatio, dash, offset;
+        if (pt) {
+            //when the element has vector-effect="non-scaling-stroke" and the SVG is resized (like on a window resize), it actually changes the length of the stroke! So we must sense that and make the proper adjustments.
+            if (data._live) {
+                length = _getLength(data._target);
+                if (length !== data._length) {
+                    lengthRatio = length / data._length;
+                    data._length = length;
+                    if (data._offsetPT) {
+                        data._offsetPT.s *= lengthRatio;
+                        data._offsetPT.c *= lengthRatio;
+                    }
+                    if (data._dashPT) {
+                        data._dashPT.s *= lengthRatio;
+                        data._dashPT.c *= lengthRatio;
+                    } else data._dash *= lengthRatio;
+                }
+            }
+            while(pt){
+                pt.r(ratio, pt.d);
+                pt = pt._next;
+            }
+            dash = data._dash || ratio && ratio !== 1 && 0.0001 || 0; // only let it be zero if it's at the start or end of the tween.
+            length = data._length - dash + 0.1;
+            offset = data._offset;
+            dash && offset && dash + Math.abs(offset % data._length) > data._length - 0.2 && (offset += offset < 0 ? 0.1 : -0.1) && (length += 0.1);
+            style.strokeDashoffset = dash ? offset : offset + 0.001;
+            style.strokeDasharray = length < 0.2 ? "none" : dash ? dash + "px," + (data._nowrap ? 999999 : length) + "px" : "0px, 999999px";
+        }
+    },
+    getLength: _getLength,
+    getPosition: _getPosition
+};
+_getGSAP() && gsap.registerPlugin(DrawSVGPlugin);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3Y3q2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _gsap = require("gsap");
+var _gsapDefault = parcelHelpers.interopDefault(_gsap);
+/* PORTFOLIO SLIDER ANIMATION MENU */ let menuProjectItems = _gsapDefault.default.timeline();
+menuProjectItems.to("#menuProjectsItem1", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem1", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem2", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem2", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem3", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem3", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem4", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem4", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem5", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem5", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+}).to("#menuProjectsItem6", {
+    opacity: 1,
+    display: "block",
+    duration: 3
+}).to("#menuProjectsItem6", {
+    opacity: 0,
+    display: "none",
+    duration: 3
+});
+menuProjectItems.repeat(-1);
+(function() {
+    document.querySelectorAll(".burgerMenu").forEach((btn)=>{
+        btn.addEventListener("click", (e)=>{
+            btn.classList.toggle("active");
+            /* PORTFOLIO SLIDER ANIMATION MENU */ const menuOverlay = document.querySelector(".burgerMenu");
+            if (menuOverlay.classList.contains("active")) {
+                _gsapDefault.default.to(".logoContainer, .socialsContainer", {
+                    opacity: 0
+                });
+                _gsapDefault.default.to(".menuOverlay", {
+                    opacity: 1,
+                    display: "flex",
+                    duration: 1,
+                    zIndex: 4
+                });
+                _gsapDefault.default.to(".menuFlexContainer ul li", {
+                    y: 0,
+                    stagger: 0.1,
+                    duration: 2
+                });
+                _gsapDefault.default.to(".menuFlexContainer h1, .officeFlexContainer h1", {
+                    opacity: 0.3,
+                    x: 0,
+                    duration: 3
+                });
+                menuProjectItems.play();
+            } else {
+                _gsapDefault.default.to(".logoContainer, .socialsContainer", {
+                    opacity: 1
+                });
+                _gsapDefault.default.to(".menuOverlay", {
+                    opacity: 0,
+                    display: "none",
+                    duration: 1
+                });
+                _gsapDefault.default.to(".menuFlexContainer ul li", {
+                    y: -100,
+                    stagger: 0.1,
+                    duration: 2
+                });
+                _gsapDefault.default.to(".menuFlexContainer h1, .officeFlexContainer h1", {
+                    opacity: 0,
+                    x: -100,
+                    duration: 3
+                });
+                menuProjectItems.pause();
+            }
+            setTimeout(()=>{
+                const pathId = document.querySelector(".pathSVG");
+                if (btn.classList.contains("active")) pathId.style.transform = "translateY(0px)";
+                else pathId.style.transform = "translateY(-4px) translateX(23px) scaleX(0.5)";
+            }, 150);
+        });
+    });
+})();
+/*** CLOSE MENU ON MENU-ITEM CLICKED ***/ document.querySelectorAll(".toggleActive").forEach((toggle)=>{
+    toggle.addEventListener("click", ()=>{
+        if (document.querySelector(".burgerMenu").classList.contains("active")) {
+            document.querySelector(".burgerMenu").classList.remove("active");
+            _gsapDefault.default.to(".logoContainer, .socialsContainer", {
+                opacity: 1
+            });
+            _gsapDefault.default.to(".menuOverlay", {
+                opacity: 0,
+                display: "none",
+                duration: 1
+            });
+            _gsapDefault.default.to(".menuFlexContainer ul li", {
+                y: -100,
+                stagger: 0.1,
+                duration: 2
+            });
+            _gsapDefault.default.to(".menuFlexContainer h1, .officeFlexContainer h1", {
+                opacity: 0,
+                x: -100,
+                duration: 3
+            });
+            _gsapDefault.default.to(".pathSVG", {
+                transform: "translateY(-4px) translateX(23px) scaleX(0.5)"
+            });
+            menuProjectItems.pause();
+        }
+    });
+});
+
+},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Bjehw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -4427,8 +4699,7 @@ setTimeout(()=>{
         scrollTrigger: {
             trigger: "nav",
             start: "top",
-            scrub: 0.3,
-            markers: true
+            scrub: 0.3
         }
     });
     /* GO BACK BTN */ _gsapDefault.default.to(".goBack", {
@@ -5930,277 +6201,30 @@ var jumper = function jumper() {
 var singleton = jumper();
 exports.default = singleton;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"622Es":[function() {},{}],"2lAB1":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2V4oj":[function(require,module,exports) {
 var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
 _gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
-var startAnimation = _gsap.gsap.timeline({
-    delay: 0.5
+let scrollIndicator = _gsap.gsap.timeline({
+    delay: 10
 });
-startAnimation.fromTo('#CTop', {
-    drawSVG: '0%'
+scrollIndicator.set('#indicatorDot', {
+    opacity: 0
+}, '-=10').fromTo('#indicatorFrame', {
+    drawSVG: 0
 }, {
-    drawSVG: '100%',
-    duration: 1
-}).fromTo('#CBottom', {
-    drawSVG: '0%'
+    drawSVG: 100,
+    duration: 1.3
+}).fromTo('#indicatorDot', {
+    y: 0,
+    opacity: 1
 }, {
-    drawSVG: '100%',
-    duration: 1
-}).fromTo('#JTop', {
-    drawSVG: '0%'
-}, {
-    drawSVG: '100%',
-    duration: 1
-}).to('#CTop, #CBottom', {
-    fill: '#fff',
-    duration: 2
-}).to('#JTop', {
-    fill: '#ffcd48',
-    duration: 2.3,
-    onComplete: ()=>{
-        document.querySelector('.wrapper').classList.remove('isLoading');
-    }
-}, '-=2').to('.startAnimationWrapper', {
-    autoAlpha: 0,
-    duration: 2
-}).to('.staggerItem', {
-    rotationY: -90,
-    stagger: 0.1,
-    ease: "power1.out",
-    transformOrigin: "center center"
-}, '-=0.6').to('.staggerAnimation, .animationBcg', {
-    display: 'none'
-});
+    y: 10,
+    duration: 2,
+    opacity: 0,
+    repeat: -1
+}, '+=.8') /* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */ ;
 
-},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"htWnw":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DrawSVGPlugin", ()=>DrawSVGPlugin
-);
-parcelHelpers.export(exports, "default", ()=>DrawSVGPlugin
-);
-/*!
- * DrawSVGPlugin 3.9.1
- * https://greensock.com
- *
- * @license Copyright 2008-2021, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
- * @author: Jack Doyle, jack@greensock.com
-*/ /* eslint-disable */ var gsap, _toArray, _doc, _win, _isEdge, _coreInitted, _windowExists = function _windowExists() {
-    return typeof window !== "undefined";
-}, _getGSAP = function _getGSAP() {
-    return gsap || _windowExists() && (gsap = window.gsap) && gsap.registerPlugin && gsap;
-}, _numExp = /[-+=\.]*\d+[\.e\-\+]*\d*[e\-\+]*\d*/gi, //finds any numbers, including ones that start with += or -=, negative numbers, and ones in scientific notation like 1e-8.
-_types = {
-    rect: [
-        "width",
-        "height"
-    ],
-    circle: [
-        "r",
-        "r"
-    ],
-    ellipse: [
-        "rx",
-        "ry"
-    ],
-    line: [
-        "x2",
-        "y2"
-    ]
-}, _round = function _round(value) {
-    return Math.round(value * 10000) / 10000;
-}, _parseNum = function _parseNum(value) {
-    return parseFloat(value) || 0;
-}, _parseSingleVal = function _parseSingleVal(value, length) {
-    var num = _parseNum(value);
-    return ~value.indexOf("%") ? num / 100 * length : num;
-}, _getAttributeAsNumber = function _getAttributeAsNumber(target, attr) {
-    return _parseNum(target.getAttribute(attr));
-}, _sqrt = Math.sqrt, _getDistance = function _getDistance(x1, y1, x2, y2, scaleX, scaleY) {
-    return _sqrt(Math.pow((_parseNum(x2) - _parseNum(x1)) * scaleX, 2) + Math.pow((_parseNum(y2) - _parseNum(y1)) * scaleY, 2));
-}, _warn = function _warn(message) {
-    return console.warn(message);
-}, _hasNonScalingStroke = function _hasNonScalingStroke(target) {
-    return target.getAttribute("vector-effect") === "non-scaling-stroke";
-}, _bonusValidated = 1, //<name>DrawSVGPlugin</name>
-//accepts values like "100%" or "20% 80%" or "20 50" and parses it into an absolute start and end position on the line/stroke based on its length. Returns an an array with the start and end values, like [0, 243]
-_parse = function _parse(value, length, defaultStart) {
-    var i = value.indexOf(" "), s, e;
-    if (i < 0) {
-        s = defaultStart !== undefined ? defaultStart + "" : value;
-        e = value;
-    } else {
-        s = value.substr(0, i);
-        e = value.substr(i + 1);
-    }
-    s = _parseSingleVal(s, length);
-    e = _parseSingleVal(e, length);
-    return s > e ? [
-        e,
-        s
-    ] : [
-        s,
-        e
-    ];
-}, _getLength = function _getLength(target) {
-    target = _toArray(target)[0];
-    if (!target) return 0;
-    var type = target.tagName.toLowerCase(), style = target.style, scaleX = 1, scaleY = 1, length, bbox, points, prevPoint, i, rx, ry;
-    if (_hasNonScalingStroke(target)) {
-        //non-scaling-stroke basically scales the shape and then strokes it at the screen-level (after transforms), thus we need to adjust the length accordingly.
-        scaleY = target.getScreenCTM();
-        scaleX = _sqrt(scaleY.a * scaleY.a + scaleY.b * scaleY.b);
-        scaleY = _sqrt(scaleY.d * scaleY.d + scaleY.c * scaleY.c);
-    }
-    try {
-        //IE bug: calling <path>.getTotalLength() locks the repaint area of the stroke to whatever its current dimensions are on that frame/tick. To work around that, we must call getBBox() to force IE to recalculate things.
-        bbox = target.getBBox(); //solely for fixing bug in IE - we don't actually use the bbox.
-    } catch (e) {
-        //firefox has a bug that throws an error if the element isn't visible.
-        _warn("Some browsers won't measure invisible elements (like display:none or masks inside defs).");
-    }
-    var _ref = bbox || {
-        x: 0,
-        y: 0,
-        width: 0,
-        height: 0
-    }, x = _ref.x, y = _ref.y, width = _ref.width, height = _ref.height;
-    if ((!bbox || !width && !height) && _types[type]) {
-        //if the element isn't visible, try to discern width/height using its attributes.
-        width = _getAttributeAsNumber(target, _types[type][0]);
-        height = _getAttributeAsNumber(target, _types[type][1]);
-        if (type !== "rect" && type !== "line") {
-            //double the radius for circles and ellipses
-            width *= 2;
-            height *= 2;
-        }
-        if (type === "line") {
-            x = _getAttributeAsNumber(target, "x1");
-            y = _getAttributeAsNumber(target, "y1");
-            width = Math.abs(width - x);
-            height = Math.abs(height - y);
-        }
-    }
-    if (type === "path") {
-        prevPoint = style.strokeDasharray;
-        style.strokeDasharray = "none";
-        length = target.getTotalLength() || 0;
-        scaleX !== scaleY && _warn("Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled.");
-        length *= (scaleX + scaleY) / 2;
-        style.strokeDasharray = prevPoint;
-    } else if (type === "rect") length = width * 2 * scaleX + height * 2 * scaleY;
-    else if (type === "line") length = _getDistance(x, y, x + width, y + height, scaleX, scaleY);
-    else if (type === "polyline" || type === "polygon") {
-        points = target.getAttribute("points").match(_numExp) || [];
-        type === "polygon" && points.push(points[0], points[1]);
-        length = 0;
-        for(i = 2; i < points.length; i += 2)length += _getDistance(points[i - 2], points[i - 1], points[i], points[i + 1], scaleX, scaleY) || 0;
-    } else if (type === "circle" || type === "ellipse") {
-        rx = width / 2 * scaleX;
-        ry = height / 2 * scaleY;
-        length = Math.PI * (3 * (rx + ry) - _sqrt((3 * rx + ry) * (rx + 3 * ry)));
-    }
-    return length || 0;
-}, _getPosition = function _getPosition(target, length) {
-    target = _toArray(target)[0];
-    if (!target) return [
-        0,
-        0
-    ];
-    length || (length = _getLength(target) + 1);
-    var cs = _win.getComputedStyle(target), dash = cs.strokeDasharray || "", offset = _parseNum(cs.strokeDashoffset), i = dash.indexOf(",");
-    i < 0 && (i = dash.indexOf(" "));
-    dash = i < 0 ? length : _parseNum(dash.substr(0, i));
-    dash > length && (dash = length);
-    return [
-        -offset || 0,
-        dash - offset || 0
-    ];
-}, _initCore = function _initCore() {
-    if (_windowExists()) {
-        _doc = document;
-        _win = window;
-        _coreInitted = gsap = _getGSAP();
-        _toArray = gsap.utils.toArray;
-        _isEdge = ((_win.navigator || {
-        }).userAgent || "").indexOf("Edge") !== -1; //Microsoft Edge has a bug that causes it not to redraw the path correctly if the stroke-linecap is anything other than "butt" (like "round") and it doesn't match the stroke-linejoin. A way to trigger it is to change the stroke-miterlimit, so we'll only do that if/when we have to (to maximize performance)
-    }
-};
-var DrawSVGPlugin = {
-    version: "3.9.1",
-    name: "drawSVG",
-    register: function register(core) {
-        gsap = core;
-        _initCore();
-    },
-    init: function init(target, value, tween, index, targets) {
-        if (!target.getBBox) return false;
-        _coreInitted || _initCore();
-        var length = _getLength(target), start, end, cs;
-        this._style = target.style;
-        this._target = target;
-        if (value + "" === "true") value = "0 100%";
-        else if (!value) value = "0 0";
-        else if ((value + "").indexOf(" ") === -1) value = "0 " + value;
-        start = _getPosition(target, length);
-        end = _parse(value, length, start[0]);
-        this._length = _round(length);
-        this._dash = _round(start[1] - start[0]); //some browsers render artifacts if dash is 0, so we use a very small number in that case.
-        this._offset = _round(-start[0]);
-        this._dashPT = this.add(this, "_dash", this._dash, _round(end[1] - end[0]));
-        this._offsetPT = this.add(this, "_offset", this._offset, _round(-end[0]));
-        if (_isEdge) {
-            //to work around a bug in Microsoft Edge, animate the stroke-miterlimit by 0.0001 just to trigger the repaint (unnecessary if it's "round" and stroke-linejoin is also "round"). Imperceptible, relatively high-performance, and effective. Another option was to set the "d" <path> attribute to its current value on every tick, but that seems like it'd be much less performant.
-            cs = _win.getComputedStyle(target);
-            if (cs.strokeLinecap !== cs.strokeLinejoin) {
-                end = _parseNum(cs.strokeMiterlimit);
-                this.add(target.style, "strokeMiterlimit", end, end + 0.01);
-            }
-        }
-        this._live = _hasNonScalingStroke(target) || ~(value + "").indexOf("live");
-        this._nowrap = ~(value + "").indexOf("nowrap");
-        this._props.push("drawSVG");
-        return _bonusValidated;
-    },
-    render: function render(ratio, data) {
-        var pt = data._pt, style = data._style, length, lengthRatio, dash, offset;
-        if (pt) {
-            //when the element has vector-effect="non-scaling-stroke" and the SVG is resized (like on a window resize), it actually changes the length of the stroke! So we must sense that and make the proper adjustments.
-            if (data._live) {
-                length = _getLength(data._target);
-                if (length !== data._length) {
-                    lengthRatio = length / data._length;
-                    data._length = length;
-                    if (data._offsetPT) {
-                        data._offsetPT.s *= lengthRatio;
-                        data._offsetPT.c *= lengthRatio;
-                    }
-                    if (data._dashPT) {
-                        data._dashPT.s *= lengthRatio;
-                        data._dashPT.c *= lengthRatio;
-                    } else data._dash *= lengthRatio;
-                }
-            }
-            while(pt){
-                pt.r(ratio, pt.d);
-                pt = pt._next;
-            }
-            dash = data._dash || ratio && ratio !== 1 && 0.0001 || 0; // only let it be zero if it's at the start or end of the tween.
-            length = data._length - dash + 0.1;
-            offset = data._offset;
-            dash && offset && dash + Math.abs(offset % data._length) > data._length - 0.2 && (offset += offset < 0 ? 0.1 : -0.1) && (length += 0.1);
-            style.strokeDashoffset = dash ? offset : offset + 0.001;
-            style.strokeDasharray = length < 0.2 ? "none" : dash ? dash + "px," + (data._nowrap ? 999999 : length) + "px" : "0px, 999999px";
-        }
-    },
-    getLength: _getLength,
-    getPosition: _getPosition
-};
-_getGSAP() && gsap.registerPlugin(DrawSVGPlugin);
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
+},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 
 //# sourceMappingURL=index.18dbc454.js.map

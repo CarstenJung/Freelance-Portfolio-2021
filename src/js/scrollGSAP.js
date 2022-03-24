@@ -12,7 +12,7 @@ gsap.to(".burgerMenu", {
         trigger: "nav",
         start: "top",
         scrub: .3,
-        markers: true
+/*         markers: true */
     }
 });
 

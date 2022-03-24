@@ -605,7 +605,15 @@ body {
                     }
                 }
 
-                .scrollIndicator {}
+                .scrollIndicator {
+                    opacity: 0;
+                    display: none;
+
+                    .mobileScrollText {
+                        opacity: 0;
+                        display: none;
+                    }
+                }
             }
         }
 

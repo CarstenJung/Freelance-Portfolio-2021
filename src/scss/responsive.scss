@@ -342,7 +342,89 @@
 }
 
 /* MOBILE */
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
 
+    .burgerMenuWrapper {
+        position: absolute !important;
 
+        .burgerMenu {
+            padding-top: 37px !important;
+
+            svg {
+                height: 70px !important;
+            }
+        }
+    }
+
+    .animationBcg {
+        .startAnimationWrapper svg {
+            width: 45vw !important;
+        }
+    }
+
+    header {
+        nav {
+            .logoContainer {
+                img {
+                    height: 60px !important;
+                    margin: 2.7em 0 0 2em !important;
+                }
+
+                .logoLine {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+
+            .ctaBtn {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+
+    .section1 {
+        .socialsContainer {
+            display: none !important;
+        }
+
+        .heroWrapper {
+
+            .scrollIndicator {
+                opacity: 1 !important;
+                display: block !important;
+                width: 50%;
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .heroText {
+                left: 12% !important;
+
+                .line {
+                    display: none;
+                }
+
+                p {
+                    font-size: 2.3vw !important;
+                }
+
+                h2 {
+                    font-size: 3.4em !important;
+                    margin-left: 10px !important;
+                }
+
+                h1 {
+                    opacity: 0;
+                }
+            }
+
+            button {
+                left: 0px !important;
+                top: 0px !important;
+            }
+        }
+    }
 }

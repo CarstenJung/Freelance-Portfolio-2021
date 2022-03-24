@@ -5,6 +5,7 @@ import './burgerMenu'
 import './scrollGSAP'
 import './slider'
 import './smoothScroll'
+import './indicatorScrollMobile'
 
 
 
