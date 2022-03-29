@@ -1995,6 +1995,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     visibility: hidden;
   }
 
+  .section1 {
+    margin-bottom: 0px !important;
+  }
   .section1 .socialsContainer {
     display: none !important;
   }
@@ -2017,8 +2020,8 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     font-size: 2.5vw !important;
   }
   .section1 .heroWrapper .heroText h2 {
-    font-size: 3.4em !important;
-    margin-left: 10px !important;
+    font-size: 3.5em !important;
+    margin-left: 0px !important;
   }
   .section1 .heroWrapper .heroText h1 {
     opacity: 0;
@@ -2039,6 +2042,12 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     top: -2px !important;
   }
 
+  .section2 .headline {
+    margin-bottom: 70px;
+  }
+  .section2 .headline h1 {
+    font-size: 12vw !important;
+  }
   .section2 .serviceItemWrapper .line {
     width: 90% !important;
   }
@@ -2063,9 +2072,12 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     color: rgba(255, 255, 255, 0.679) !important;
   }
   .section2 .serviceItemWrapper .serviceItem .serviceItemDescription p .accent {
-    font-size: 2.6em !important;
+    font-size: 2em !important;
   }
 
+  .section3 .headline h1 {
+    font-size: 12vw !important;
+  }
   .section3 .portfolioGridWrapperMobile {
     grid-template-columns: repeat(1, 1fr) !important;
     visibility: visible !important;
@@ -2077,8 +2089,18 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     display: none !important;
   }
 
+  .section4 {
+    margin: -150px 0 700px 0 !important;
+  }
+  .section4 .testimonialsWrapper .subtitle {
+    font-size: 4vw !important;
+    margin-bottom: 0;
+  }
+  .section4 .testimonialsWrapper .headline {
+    font-size: 8vw !important;
+  }
   .section4 .testimonialsWrapper .testimonial {
-    top: 280px !important;
+    top: 300px !important;
   }
   .section4 .testimonialsWrapper .testimonial .logoCircle {
     width: 200px !important;
@@ -2092,23 +2114,38 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
   .section4 .testimonialsWrapper .testimonial .testimonialDescription {
     font-size: 4vw !important;
-    max-width: 100vw !important;
+    width: 300px !important;
   }
   .section4 .testimonialsWrapper .btnWrapper {
-    top: 550px !important;
+    top: 500px !important;
   }
 
+  .section5 .contactFormWrapper .subtitle {
+    font-size: 4vw !important;
+    margin-bottom: 5px;
+  }
+  .section5 .contactFormWrapper .headline {
+    font-size: 8vw !important;
+  }
   .section5 .contactFormWrapper .contactForm form {
     grid-template-areas: "name" "mail" "company" "radioBtn" "message" "policyText" "btn" !important;
     grid-template-columns: repeat(1, 1fr) !important;
     margin: auto;
     max-width: 90%;
   }
+  .section5 .contactFormWrapper .contactForm form .formInputMobile {
+    margin-left: 1em;
+    max-width: 90vw;
+  }
   .section5 .contactFormWrapper .contactForm form p {
     width: 95vw;
   }
   .section5 .contactFormWrapper .contactForm form legend {
-    font-size: 5.5vw !important;
+    font-size: 6vw !important;
+  }
+  .section5 .contactFormWrapper .contactForm form fieldset {
+    border: 1px solid #fff !important;
+    margin-top: 30px;
   }
   .section5 .contactFormWrapper .contactForm form fieldset label {
     font-size: 5vw !important;
@@ -2133,6 +2170,19 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
   .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper label {
     max-width: 80% !important;
+  }
+  .section5 .contactFormWrapper .contactForm #formBtn button {
+    position: relative;
+    top: 66px;
+  }
+  .section5 .contactFormWrapper .contactForm #formBtn button .submitCircle {
+    width: 90% !important;
+    border-radius: 3px !important;
+    pointer-events: none;
+  }
+  .section5 .contactFormWrapper .contactForm #formBtn button .buttonText {
+    left: -5px !important;
+    color: #1f1f1f !important;
   }
   .section5 .goBack i {
     opacity: 1 !important;

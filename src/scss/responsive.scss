@@ -388,6 +388,7 @@
     }
 
     .section1 {
+        margin-bottom: 0px !important;
 
         .socialsContainer {
             display: none !important;
@@ -417,8 +418,8 @@
                 }
 
                 h2 {
-                    font-size: 3.4em !important;
-                    margin-left: 10px !important;
+                    font-size: 3.5em !important;
+                    margin-left: 0px !important;
                 }
 
                 h1 {
@@ -447,6 +448,15 @@
     }
 
     .section2 {
+
+        .headline {
+            margin-bottom: 70px;
+
+            h1 {
+                font-size: 12vw !important;
+            }
+        }
+
         .serviceItemWrapper {
 
             .line {
@@ -477,7 +487,7 @@
                         color: rgba(255, 255, 255, 0.679) !important;
 
                         .accent {
-                            font-size: 2.6em !important;
+                            font-size: 2em !important;
                         }
                     }
 
@@ -487,6 +497,14 @@
     }
 
     .section3 {
+
+        .headline {
+            
+            h1 {
+                font-size: 12vw !important;
+            }
+        }
+
         .portfolioGridWrapperMobile {
             grid-template-columns: repeat(1, 1fr) !important;
             visibility: visible !important;
@@ -501,9 +519,22 @@
     }
 
     .section4 {
+        margin: -150px 0 700px 0 !important;
+
+
         .testimonialsWrapper {
+
+            .subtitle {
+                font-size: 4vw !important;
+                margin-bottom: 0;
+            }
+
+            .headline {   
+                font-size: 8vw !important;
+            }
+
             .testimonial {
-                top: 280px !important;
+                top: 300px !important;
 
                 .logoCircle {
                     width: 200px !important;
@@ -520,18 +551,27 @@
 
                 .testimonialDescription {
                     font-size: 4vw !important;
-                    max-width: 100vw !important;
+                    width: 300px !important;
                 }
             }
 
             .btnWrapper {
-                top: 550px !important;
+                top: 500px !important;
             }
         }
     }
 
     .section5 {
         .contactFormWrapper {
+
+            .subtitle {
+                font-size: 4vw !important;
+                margin-bottom: 5px;
+            }
+
+            .headline {   
+                font-size: 8vw !important;
+            }
 
             .contactForm {
                 form {
@@ -547,15 +587,23 @@
                     margin: auto;
                     max-width: 90%;
 
+                    .formInputMobile {
+                        margin-left: 1em;
+                        max-width: 90vw;
+                    }
+
                     p {
                         width: 95vw;
                     }
 
                     legend {
-                        font-size: 5.5vw !important;
+                        font-size: 6vw !important;
                     }
 
                     fieldset {
+                        border: 1px solid #fff !important;
+                        margin-top: 30px;
+
                         label {
                             font-size: 5vw !important;
                         }
@@ -586,6 +634,24 @@
 
                     label {
                         max-width: 80% !important;
+                    }
+                }
+
+                #formBtn {
+                    button {
+                        position: relative;
+                        top: 66px;
+
+                        .submitCircle {
+                            width: 90% !important;
+                            border-radius: 3px !important;
+                            pointer-events: none;
+                        }
+
+                        .buttonText {
+                            left: -5px !important;
+                            color: #1f1f1f !important;
+                        }
                     }
                 }
             }
