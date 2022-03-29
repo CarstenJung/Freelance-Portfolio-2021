@@ -7,3 +7,7 @@ document.querySelector('.goBack').addEventListener('click', () => {
 document.querySelector('.heroText a').addEventListener('click', () => {
     jump('#portfolio')
 })
+
+document.querySelector('.portfolioToContact').addEventListener('click', () => {
+    jump('#contact')
+})

@@ -6074,6 +6074,9 @@ document.querySelector('.goBack').addEventListener('click', ()=>{
 document.querySelector('.heroText a').addEventListener('click', ()=>{
     _jumpJsDefault.default('#portfolio');
 });
+document.querySelector('.portfolioToContact').addEventListener('click', ()=>{
+    _jumpJsDefault.default('#contact');
+});
 
 },{"jump.js":"4RgaE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4RgaE":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
