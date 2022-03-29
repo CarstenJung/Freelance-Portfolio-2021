@@ -362,6 +362,10 @@
         }
     }
 
+/*     fieldset {
+        display: block !important;
+    } */
+
     header {
         nav {
             .logoContainer {
@@ -384,6 +388,7 @@
     }
 
     .section1 {
+
         .socialsContainer {
             display: none !important;
         }
@@ -393,7 +398,7 @@
             .scrollIndicator {
                 opacity: 1 !important;
                 display: block !important;
-                width: 50%;
+                width: 40%;
                 position: absolute;
                 top: 75%;
                 left: 50%;
@@ -408,7 +413,7 @@
                 }
 
                 p {
-                    font-size: 2.3vw !important;
+                    font-size: 2.5vw !important;
                 }
 
                 h2 {
@@ -422,8 +427,215 @@
             }
 
             button {
-                left: 0px !important;
-                top: 0px !important;
+                left: 10px !important;
+                top: 20px !important;
+            }
+        }
+    }
+
+    .section2 {
+        .serviceItemWrapper {
+
+            .line {
+                width: 90% !important;
+            }
+
+            .serviceItem {
+                padding: 0 !important;
+                display: block !important;
+                margin-bottom: 20px;
+
+                .serviceCircle {
+                    display: none;
+                }
+
+                .serviceItemDescription {
+                    margin: auto;
+                    width: 80% !important;
+
+                    p {
+                        color: #fff;
+                        font-weight: 400;
+                        ;
+                    }
+
+                    p {
+                        font-size: 1.2em !important;
+                        color: rgba(255, 255, 255, 0.679) !important;
+
+                        .accent {
+                            font-size: 2.6em !important;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .section3 {
+        .portfolioGridWrapperMobile {
+            grid-template-columns: repeat(1, 1fr) !important;
+            visibility: visible !important;
+            height: 100% !important;
+            width: 90%;
+            margin: auto;
+        }
+
+        .portfolioGridWrapper {
+            display: none !important;
+        }
+    }
+
+    .section4 {
+        .testimonialsWrapper {
+            .testimonial {
+                top: 280px !important;
+
+                .logoCircle {
+                    width: 200px !important;
+                    height: 200px !important;
+
+                    img {
+                        width: 150px !important;
+                    }
+                }
+
+                .testimonialCompany {
+                    font-size: 6vw !important;
+                }
+
+                .testimonialDescription {
+                    font-size: 4vw !important;
+                    max-width: 100vw !important;
+                }
+            }
+
+            .btnWrapper {
+                top: 550px !important;
+            }
+        }
+    }
+
+    .section5 {
+        .contactFormWrapper {
+
+            .contactForm {
+                form {
+                    grid-template-areas:
+                        "name"
+                        "mail"
+                        "company"
+                        "radioBtn"
+                        "message"
+                        "policyText"
+                        "btn" !important;
+                    grid-template-columns: repeat(1, 1fr) !important;
+                    margin: auto;
+                    max-width: 90%;
+
+                    p {
+                        width: 95vw;
+                    }
+
+                    legend {
+                        font-size: 5.5vw !important;
+                    }
+
+                    fieldset {
+                        label {
+                            font-size: 5vw !important;
+                        }
+
+                        p {
+                            padding-top: 1em !important;
+                            max-width: 80vw;
+                        }
+                    }
+
+                    input[type=text],
+                    input[type=email] {
+                        /* width: 90% !important; */
+                        border-bottom: 1px solid #FFCD48 !important;
+                    }
+                }
+
+                #messageWrapper {
+                    grid-column-end: auto !important;
+                }
+
+                .policyCheckboxWrapper:first-child {
+                    max-width: 95vw;
+                }
+
+                .policyCheckboxWrapper {
+                    margin: 10px 0 30px 0 !important;
+
+                    label {
+                        max-width: 80% !important;
+                    }
+                }
+            }
+        }
+
+        .goBack {
+            i {
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    footer {
+        .footerWrapper {
+            .footerInnerContent {
+                display: none !important;
+            }
+
+            .footerMobile {
+                display: block !important;
+                text-decoration: none;
+                color: #fff;
+                text-align: center;
+
+                .contactItemsMobile {
+
+                    div {
+
+                        &:first-child {
+                            padding-top: 30px;
+                            padding-bottom: 10px;
+                        }
+
+                        a {
+                            color: #fff;
+                        }
+
+                        i {
+                            span {
+                                font-family: "Montserrat", sans-serif;
+                                font-weight: 400;
+                                padding-left: 1em;
+                            }
+                        }
+                    }
+                }
+
+                .footerSocialsMobile {
+                    margin-top: 20px;
+
+                    a {
+                        color: #fff;
+                        font-size: 1.8em;
+                        padding: .5em;
+                    }
+                }
+
+                .policyImprintMobile {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    opacity: .6;
+                }
             }
         }
     }

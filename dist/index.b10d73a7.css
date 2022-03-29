@@ -1625,6 +1625,14 @@ body .wrapper .footerWrapper {
   background: rgba(17, 17, 17, 0.555);
 }
 
+body .wrapper .footerWrapper .footerMobile {
+  display: none;
+}
+
+body .wrapper .footerWrapper .footerInnerContent {
+  display: block;
+}
+
 body .wrapper .footerWrapper .footerInnerContent {
   display: grid;
   align-items: center;
@@ -1957,6 +1965,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     width: 45vw !important;
   }
 
+  /*     fieldset {
+          display: block !important;
+      } */
   header nav .logoContainer img {
     height: 60px !important;
     margin: 2.7em 0 0 2em !important;
@@ -1976,7 +1987,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section1 .heroWrapper .scrollIndicator {
     opacity: 1 !important;
     display: block !important;
-    width: 50%;
+    width: 40%;
     position: absolute;
     top: 75%;
     left: 50%;
@@ -1989,7 +2000,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     display: none;
   }
   .section1 .heroWrapper .heroText p {
-    font-size: 2.3vw !important;
+    font-size: 2.5vw !important;
   }
   .section1 .heroWrapper .heroText h2 {
     font-size: 3.4em !important;
@@ -1999,8 +2010,143 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     opacity: 0;
   }
   .section1 .heroWrapper button {
-    left: 0px !important;
-    top: 0px !important;
+    left: 10px !important;
+    top: 20px !important;
+  }
+
+  .section2 .serviceItemWrapper .line {
+    width: 90% !important;
+  }
+  .section2 .serviceItemWrapper .serviceItem {
+    padding: 0 !important;
+    display: block !important;
+    margin-bottom: 20px;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle {
+    display: none;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceItemDescription {
+    margin: auto;
+    width: 80% !important;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceItemDescription p {
+    color: #fff;
+    font-weight: 400;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceItemDescription p {
+    font-size: 1.2em !important;
+    color: rgba(255, 255, 255, 0.679) !important;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceItemDescription p .accent {
+    font-size: 2.6em !important;
+  }
+
+  .section3 .portfolioGridWrapperMobile {
+    grid-template-columns: repeat(1, 1fr) !important;
+    visibility: visible !important;
+    height: 100% !important;
+    width: 90%;
+    margin: auto;
+  }
+  .section3 .portfolioGridWrapper {
+    display: none !important;
+  }
+
+  .section4 .testimonialsWrapper .testimonial {
+    top: 280px !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .logoCircle {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .logoCircle img {
+    width: 150px !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .testimonialCompany {
+    font-size: 6vw !important;
+  }
+  .section4 .testimonialsWrapper .testimonial .testimonialDescription {
+    font-size: 4vw !important;
+    max-width: 100vw !important;
+  }
+  .section4 .testimonialsWrapper .btnWrapper {
+    top: 550px !important;
+  }
+
+  .section5 .contactFormWrapper .contactForm form {
+    grid-template-areas: "name" "mail" "company" "radioBtn" "message" "policyText" "btn" !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    margin: auto;
+    max-width: 90%;
+  }
+  .section5 .contactFormWrapper .contactForm form p {
+    width: 95vw;
+  }
+  .section5 .contactFormWrapper .contactForm form legend {
+    font-size: 5.5vw !important;
+  }
+  .section5 .contactFormWrapper .contactForm form fieldset label {
+    font-size: 5vw !important;
+  }
+  .section5 .contactFormWrapper .contactForm form fieldset p {
+    padding-top: 1em !important;
+    max-width: 80vw;
+  }
+  .section5 .contactFormWrapper .contactForm form input[type=text],
+.section5 .contactFormWrapper .contactForm form input[type=email] {
+    /* width: 90% !important; */
+    border-bottom: 1px solid #FFCD48 !important;
+  }
+  .section5 .contactFormWrapper .contactForm #messageWrapper {
+    grid-column-end: auto !important;
+  }
+  .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper:first-child {
+    max-width: 95vw;
+  }
+  .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper {
+    margin: 10px 0 30px 0 !important;
+  }
+  .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper label {
+    max-width: 80% !important;
+  }
+  .section5 .goBack i {
+    opacity: 1 !important;
+  }
+
+  footer .footerWrapper .footerInnerContent {
+    display: none !important;
+  }
+  footer .footerWrapper .footerMobile {
+    display: block !important;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
+  footer .footerWrapper .footerMobile .contactItemsMobile div:first-child {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  footer .footerWrapper .footerMobile .contactItemsMobile div a {
+    color: #fff;
+  }
+  footer .footerWrapper .footerMobile .contactItemsMobile div i span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    padding-left: 1em;
+  }
+  footer .footerWrapper .footerMobile .footerSocialsMobile {
+    margin-top: 20px;
+  }
+  footer .footerWrapper .footerMobile .footerSocialsMobile a {
+    color: #fff;
+    font-size: 1.8em;
+    padding: 0.5em;
+  }
+  footer .footerWrapper .footerMobile .policyImprintMobile {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0.6;
   }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */

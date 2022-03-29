@@ -1599,6 +1599,13 @@ body {
         .footerWrapper {
             background: rgba(17, 17, 17, 0.555);
 
+            .footerMobile {
+                display: none;
+            }
+
+            .footerInnerContent {
+                display: block;
+            }
 
             .footerInnerContent {
                 display: grid;

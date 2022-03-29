@@ -6206,7 +6206,7 @@ var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
 _gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
 let scrollIndicator = _gsap.gsap.timeline({
-    delay: 10
+    delay: 9
 });
 scrollIndicator.set('#indicatorDot', {
     opacity: 0

@@ -3,7 +3,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-let scrollIndicator = gsap.timeline({delay: 10});
+let scrollIndicator = gsap.timeline({delay: 9});
 
 scrollIndicator.set('#indicatorDot', {opacity: 0}, '-=10')
 .fromTo('#indicatorFrame', {drawSVG: 0}, {drawSVG: 100, duration: 1.3})
