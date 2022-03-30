@@ -1,0 +1,59 @@
+:root {
+    --bcgColor: transparent linear-gradient(119deg, #111111 0%, #292929 100%) 0% 0% no-repeat padding-box;
+    --accentColor: #FFCD48;
+    --lightColor: rgb(255, 255, 255);
+    --darkColor: #1f1f1f;
+    --burgerMenu: #000;
+    --mainFont: "Montserrat", sans-serif;
+    --secondFont: 'Alata', sans-serif;
+}
+
+.imprint {
+    width: 100vw;
+    font-family: var(--mainFont);
+    color: var(--lightColor);
+
+    .imprintWrapper {
+        padding: 70px 0 150px 0;
+        max-width: 60%;
+        margin: auto;
+        font-size: 1.8vw;
+
+        .line {
+            height: 1px;
+            background: var(--accentColor);
+            opacity: .5;
+            margin-top: 50px;
+        }
+
+        h6 {
+            padding-top: 2em;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: .6em;
+            margin-top: 10px;
+            font-weight: 200;
+        }
+    }
+}
+
+/*MEDIA QUERY */
+@media (max-width: 767px) {
+    .imprintWrapper {
+        max-width: 80% !important;
+        font-size: 1.3em !important;
+
+        .line {}
+
+        h6 {
+            font-size: .8em;
+        }
+
+        p {
+            font-size: .7em !important;
+        }
+    }
+}

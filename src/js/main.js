@@ -1,6 +1,7 @@
 import './../scss/main.scss'
 import './../scss/responsive.scss'
-import './loadingScreen'
+/* TODO not active because it loads every time .. find a sultion .. maybe Cookies */
+/* import './loadingScreen' */
 import './burgerMenu'
 import './scrollGSAP'
 import './slider'

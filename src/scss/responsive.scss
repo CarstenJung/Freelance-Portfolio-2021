@@ -362,7 +362,7 @@
         }
     }
 
-/*     fieldset {
+    /*     fieldset {
         display: block !important;
     } */
 
@@ -499,7 +499,7 @@
     .section3 {
 
         .headline {
-            
+
             h1 {
                 font-size: 12vw !important;
             }
@@ -529,7 +529,7 @@
                 margin-bottom: 0;
             }
 
-            .headline {   
+            .headline {
                 font-size: 8vw !important;
             }
 
@@ -569,7 +569,7 @@
                 margin-bottom: 5px;
             }
 
-            .headline {   
+            .headline {
                 font-size: 8vw !important;
             }
 
@@ -714,6 +714,11 @@
                     justify-content: center;
                     gap: 20px;
                     opacity: .6;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
                 }
             }
         }

@@ -148,56 +148,60 @@
   }
 }
 
-.staggerAnimation {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 10;
-}
+/* .staggerAnimation {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
 
-.staggerAnimation .staggerItem {
-  background: #111111;
-  height: 100vh;
-  width: 16.6666667%;
-  float: right;
+    .staggerItem {
+        background: #111111;
+        height: 100vh;
+        width: 16.6666667%;
+        float: right;
+    }
 }
 
 .animationBcg {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  z-index: 10;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+
+    .startAnimationWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+
+        svg {
+            width: 15vw;
+            fill: transparent;
+            overflow: visible;
+            z-index: 11;
+
+            #CTop {
+                stroke: white;
+                stroke-width: 3px;
+            }
+
+            #CBottom {
+                stroke: white;
+                stroke-width: 3px;
+            }
+
+            #JTop {
+                stroke: #ffcd48;
+                stroke-width: 3px;
+            }
+        }
+    }
 }
 
-.animationBcg .startAnimationWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-}
-
-.animationBcg .startAnimationWrapper svg {
-  width: 15vw;
-  fill: transparent;
-  overflow: visible;
-  z-index: 11;
-}
-
-.animationBcg .startAnimationWrapper svg #CTop {
-  stroke: white;
-  stroke-width: 3px;
-}
-
-.animationBcg .startAnimationWrapper svg #CBottom {
-  stroke: white;
-  stroke-width: 3px;
-}
-
-.animationBcg .startAnimationWrapper svg #JTop {
-  stroke: #ffcd48;
-  stroke-width: 3px;
-}
+.isLoading {
+    display: none;
+} */
 
 /*HELPER CLASSES SLIDER*/
 
@@ -215,10 +219,6 @@
 
 .active {
   opacity: 1 !important;
-}
-
-.isLoading {
-  display: none;
 }
 
 /********************/
@@ -1677,6 +1677,11 @@ body .wrapper .footerWrapper .footerInnerContent .policyImprint {
   text-transform: uppercase;
 }
 
+body .wrapper .footerWrapper .footerInnerContent .policyImprint a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body .wrapper .footerWrapper .footerInnerContent .policyImprint p {
   display: inline-flex;
   flex-direction: column;
@@ -1980,8 +1985,8 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
 
   /*     fieldset {
-          display: block !important;
-      } */
+      display: block !important;
+  } */
   header nav .logoContainer img {
     height: 60px !important;
     margin: 2.7em 0 0 2em !important;
@@ -2222,6 +2227,66 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     justify-content: center;
     gap: 20px;
     opacity: 0.6;
+  }
+  footer .footerWrapper .footerMobile .policyImprintMobile a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+:root {
+  --bcgColor: transparent linear-gradient(119deg, #111111 0%, #292929 100%) 0% 0% no-repeat padding-box;
+  --accentColor: #FFCD48;
+  --lightColor: rgb(255, 255, 255);
+  --darkColor: #1f1f1f;
+  --burgerMenu: #000;
+  --mainFont: "Montserrat", sans-serif;
+  --secondFont: "Alata", sans-serif;
+}
+
+.imprint {
+  width: 100vw;
+  font-family: var(--mainFont);
+  color: var(--lightColor);
+}
+
+.imprint .imprintWrapper {
+  padding: 70px 0 150px 0;
+  max-width: 60%;
+  margin: auto;
+  font-size: 1.8vw;
+}
+
+.imprint .imprintWrapper .line {
+  height: 1px;
+  background: var(--accentColor);
+  opacity: 0.5;
+  margin-top: 50px;
+}
+
+.imprint .imprintWrapper h6 {
+  padding-top: 2em;
+  margin: 0;
+  font-weight: 500;
+}
+
+.imprint .imprintWrapper p {
+  font-size: 0.6em;
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+/*MEDIA QUERY */
+
+@media (max-width: 767px) {
+  .imprintWrapper {
+    max-width: 80% !important;
+    font-size: 1.3em !important;
+  }
+  .imprintWrapper h6 {
+    font-size: 0.8em;
+  }
+  .imprintWrapper p {
+    font-size: 0.7em !important;
   }
 }
 /*# sourceMappingURL=index.b10d73a7.css.map */
