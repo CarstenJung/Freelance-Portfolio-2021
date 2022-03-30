@@ -2243,49 +2243,77 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   --secondFont: "Alata", sans-serif;
 }
 
-.imprint {
+.imprint,
+.privacy {
   width: 100vw;
   font-family: var(--mainFont);
   color: var(--lightColor);
 }
 
-.imprint .imprintWrapper {
+.imprint .imprintWrapper,
+.imprint .privacyWrapper,
+.privacy .imprintWrapper,
+.privacy .privacyWrapper {
   padding: 70px 0 150px 0;
   max-width: 60%;
   margin: auto;
   font-size: 1.8vw;
 }
 
-.imprint .imprintWrapper .line {
+.imprint .imprintWrapper .line,
+.imprint .privacyWrapper .line,
+.privacy .imprintWrapper .line,
+.privacy .privacyWrapper .line {
   height: 1px;
   background: var(--accentColor);
   opacity: 0.5;
   margin-top: 50px;
 }
 
-.imprint .imprintWrapper h6 {
+.imprint .imprintWrapper h6,
+.imprint .privacyWrapper h6,
+.privacy .imprintWrapper h6,
+.privacy .privacyWrapper h6 {
   padding-top: 2em;
   margin: 0;
   font-weight: 500;
 }
 
-.imprint .imprintWrapper p {
+.imprint .imprintWrapper p,
+.imprint .privacyWrapper p,
+.privacy .imprintWrapper p,
+.privacy .privacyWrapper p {
   font-size: 0.6em;
   margin-top: 10px;
   font-weight: 200;
 }
 
+.privacy h1 {
+  font-size: 1.2em;
+}
+
+.privacy h3 {
+  margin-top: 150px;
+}
+
+.privacy p a {
+  color: var(--accentColor);
+}
+
 /*MEDIA QUERY */
 
 @media (max-width: 767px) {
-  .imprintWrapper {
+  .imprintWrapper,
+.privacyWrapper {
     max-width: 80% !important;
     font-size: 1.3em !important;
   }
-  .imprintWrapper h6 {
+  .imprintWrapper h6,
+.privacyWrapper h6 {
     font-size: 0.8em;
   }
-  .imprintWrapper p {
+  .imprintWrapper p,
+.privacyWrapper p {
     font-size: 0.7em !important;
   }
 }

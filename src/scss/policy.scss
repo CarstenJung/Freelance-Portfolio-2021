@@ -8,12 +8,14 @@
     --secondFont: 'Alata', sans-serif;
 }
 
-.imprint {
+.imprint,
+.privacy {
     width: 100vw;
     font-family: var(--mainFont);
     color: var(--lightColor);
 
-    .imprintWrapper {
+    .imprintWrapper,
+    .privacyWrapper {
         padding: 70px 0 150px 0;
         max-width: 60%;
         margin: auto;
@@ -40,9 +42,28 @@
     }
 }
 
+.privacy {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        margin-top: 150px;
+    }
+
+    p {
+        a {
+            color: var(--accentColor);
+        }
+    }
+}
+
+
 /*MEDIA QUERY */
 @media (max-width: 767px) {
-    .imprintWrapper {
+
+    .imprintWrapper,
+    .privacyWrapper {
         max-width: 80% !important;
         font-size: 1.3em !important;
 
