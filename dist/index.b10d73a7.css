@@ -1447,7 +1447,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm {
 
 body .wrapper .section5 .contactFormWrapper .contactForm form {
   display: grid;
-  grid-template-areas: "name company mail" "radioBtn message messageEnd" "empty1 policyText policyText" "empty3 btn empty4";
+  grid-template-areas: "name company mail" "radioBtn message messageEnd" "empty1 privacyText privacyText" "empty3 btn empty4";
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -1473,19 +1473,19 @@ body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
   grid-area: radioBtn;
 }
 
-body .wrapper .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper {
-  grid-area: policyText;
+body .wrapper .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper {
+  grid-area: privacyText;
   margin-top: -30px;
   color: var(--lightColor);
   max-width: 90%;
   font-size: 0.8em;
 }
 
-body .wrapper .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper input {
+body .wrapper .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper input {
   padding-bottom: 20px;
 }
 
-body .wrapper .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper label {
+body .wrapper .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper label {
   position: absolute;
   max-width: 35%;
   padding-left: 10px;
@@ -1668,7 +1668,7 @@ body .wrapper .footerWrapper .footerInnerContent .footerSocials a {
   float: right;
 }
 
-body .wrapper .footerWrapper .footerInnerContent .policyImprint {
+body .wrapper .footerWrapper .footerInnerContent .privacyImprint {
   grid-area: imprint;
   color: var(--lightColor);
   font-weight: lighter;
@@ -1677,12 +1677,12 @@ body .wrapper .footerWrapper .footerInnerContent .policyImprint {
   text-transform: uppercase;
 }
 
-body .wrapper .footerWrapper .footerInnerContent .policyImprint a {
+body .wrapper .footerWrapper .footerInnerContent .privacyImprint a {
   text-decoration: none;
   color: #fff;
 }
 
-body .wrapper .footerWrapper .footerInnerContent .policyImprint p {
+body .wrapper .footerWrapper .footerInnerContent .privacyImprint p {
   display: inline-flex;
   flex-direction: column;
   padding-right: 1em;
@@ -1897,7 +1897,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section5 .contactFormWrapper {
     max-width: 1000px !important;
   }
-  .section5 .contactFormWrapper .policyCheckboxWrapper {
+  .section5 .contactFormWrapper .privacyCheckboxWrapper {
     margin-top: -100px !important;
   }
   .section5 .contactFormWrapper fieldset legend {
@@ -1963,7 +1963,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section5 .contactFormWrapper {
     max-width: 90vw !important;
   }
-  .section5 .contactFormWrapper .policyCheckboxWrapper {
+  .section5 .contactFormWrapper .privacyCheckboxWrapper {
     margin-top: -10px !important;
     margin-bottom: 40px;
   }
@@ -2133,7 +2133,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     font-size: 8vw !important;
   }
   .section5 .contactFormWrapper .contactForm form {
-    grid-template-areas: "name" "mail" "company" "radioBtn" "message" "policyText" "btn" !important;
+    grid-template-areas: "name" "mail" "company" "radioBtn" "message" "privacyText" "btn" !important;
     grid-template-columns: repeat(1, 1fr) !important;
     margin: auto;
     max-width: 90%;
@@ -2167,13 +2167,13 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section5 .contactFormWrapper .contactForm #messageWrapper {
     grid-column-end: auto !important;
   }
-  .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper:first-child {
+  .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper:first-child {
     max-width: 95vw;
   }
-  .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper {
+  .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper {
     margin: 10px 0 30px 0 !important;
   }
-  .section5 .contactFormWrapper .contactForm .policyCheckboxWrapper label {
+  .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper label {
     max-width: 80% !important;
   }
   .section5 .contactFormWrapper .contactForm #formBtn button {
@@ -2222,13 +2222,13 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     font-size: 1.8em;
     padding: 0.5em;
   }
-  footer .footerWrapper .footerMobile .policyImprintMobile {
+  footer .footerWrapper .footerMobile .privacyImprintMobile {
     display: flex;
     justify-content: center;
     gap: 20px;
     opacity: 0.6;
   }
-  footer .footerWrapper .footerMobile .policyImprintMobile a {
+  footer .footerWrapper .footerMobile .privacyImprintMobile a {
     text-decoration: none;
     color: #fff;
   }

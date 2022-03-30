@@ -225,7 +225,7 @@
         .contactFormWrapper {
             max-width: 1000px !important;
 
-            .policyCheckboxWrapper {
+            .privacyCheckboxWrapper {
                 margin-top: -100px !important;
             }
 
@@ -333,7 +333,7 @@
         .contactFormWrapper {
             max-width: 90vw !important;
 
-            .policyCheckboxWrapper {
+            .privacyCheckboxWrapper {
                 margin-top: -10px !important;
                 margin-bottom: 40px;
             }
@@ -581,7 +581,7 @@
                         "company"
                         "radioBtn"
                         "message"
-                        "policyText"
+                        "privacyText"
                         "btn" !important;
                     grid-template-columns: repeat(1, 1fr) !important;
                     margin: auto;
@@ -625,11 +625,11 @@
                     grid-column-end: auto !important;
                 }
 
-                .policyCheckboxWrapper:first-child {
+                .privacyCheckboxWrapper:first-child {
                     max-width: 95vw;
                 }
 
-                .policyCheckboxWrapper {
+                .privacyCheckboxWrapper {
                     margin: 10px 0 30px 0 !important;
 
                     label {
@@ -709,7 +709,7 @@
                     }
                 }
 
-                .policyImprintMobile {
+                .privacyImprintMobile {
                     display: flex;
                     justify-content: center;
                     gap: 20px;

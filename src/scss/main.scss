@@ -1407,7 +1407,7 @@ body {
                         grid-template-areas:
                             "name company mail"
                             "radioBtn message messageEnd"
-                            "empty1 policyText policyText"
+                            "empty1 privacyText privacyText"
                             "empty3 btn empty4";
                         grid-template-columns: repeat(3, 1fr);
                     }
@@ -1434,8 +1434,8 @@ body {
                         grid-area: radioBtn;
                     }
 
-                    .policyCheckboxWrapper {
-                        grid-area: policyText;
+                    .privacyCheckboxWrapper {
+                        grid-area: privacyText;
                         margin-top: -30px;
                         color: var(--lightColor);
                         max-width: 90%;
@@ -1634,7 +1634,7 @@ body {
                     }
                 }
 
-                .policyImprint {
+                .privacyImprint {
                     grid-area: imprint;
                     color: var(--lightColor);
                     font-weight: lighter;
