@@ -119,6 +119,8 @@ menuProjectItems.repeat(-1);
 
       setTimeout(() => {
         const pathId = document.querySelector(".pathSVG");
+        const svgStrokeColor = document.querySelector('#burgerSVG');
+
         if (btn.classList.contains("active")) {
           pathId.style.transform = "translateY(0px)";
         } else {

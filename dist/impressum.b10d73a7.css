@@ -300,10 +300,7 @@ body .menuOverlay .menuSlideOne .menuFlexContainer ul span {
 body .menuOverlay .menuSlideTwo {
   width: 50%;
   height: 100%;
-  /* background: #1f1a0e; */
-  background-color: #DCD9D4;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
-  background-blend-mode: soft-light, screen;
+  background: #1f1a0e;
   position: relative;
 }
 
@@ -316,7 +313,7 @@ body .menuOverlay .menuSlideTwo .officeFlexContainer {
 }
 
 body .menuOverlay .menuSlideTwo .officeFlexContainer h1 {
-  color: var(--darkColor);
+  color: var(--lightColor);
   font-size: 1vw;
   transform: translatex(-100px);
   margin: -4vw 21vw 0 0;
@@ -1986,7 +1983,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     width: 100% !important;
     height: 60% !important;
     padding-top: 100px;
-    padding-left: 20px;
+    padding-left: 15px;
   }
   .menuOverlay .menuSlideOne img {
     height: 50px !important;
@@ -2004,7 +2001,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     height: 40% !important;
   }
   .menuOverlay .menuSlideTwo h1 {
-    padding: 20px 0 0 30px;
+    padding: 20px 0 0 35px;
   }
   .menuOverlay .menuSlideTwo img {
     max-width: 45vw !important;

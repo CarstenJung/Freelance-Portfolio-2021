@@ -628,6 +628,7 @@ menuProjectItems.repeat(-1);
             }
             setTimeout(()=>{
                 const pathId = document.querySelector(".pathSVG");
+                const svgStrokeColor = document.querySelector('#burgerSVG');
                 if (btn.classList.contains("active")) pathId.style.transform = "translateY(0px)";
                 else pathId.style.transform = "translateY(-4px) translateX(23px) scaleX(0.5)";
             }, 150);

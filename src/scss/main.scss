@@ -237,12 +237,7 @@ body {
         .menuSlideTwo {
             width: 50%;
             height: 100%;
-            /* background: #1f1a0e; */
-            background-color: #DCD9D4;
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
-                radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
-            background-blend-mode: soft-light,
-                screen;
+            background: #1f1a0e;
             position: relative;
 
             .officeFlexContainer {
@@ -253,7 +248,7 @@ body {
                 height: 100%;
 
                 h1 {
-                    color: var(--darkColor);
+                    color: var(--lightColor);
                     font-size: 1vw;
                     transform: translatex(-100px);
                     margin: -4vw 21vw 0 0;
