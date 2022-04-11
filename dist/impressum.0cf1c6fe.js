@@ -524,7 +524,7 @@ var _responsiveScss = require("./../scss/responsive.scss");
 var _policyScss = require("./../scss/policy.scss");
 var _burgerMenu = require("./burgerMenu");
 
-},{"./../scss/main.scss":"4Pg3x","./burgerMenu":"3Y3q2","./../scss/responsive.scss":"622Es","./../scss/policy.scss":"hPEzy"}],"4Pg3x":[function() {},{}],"3Y3q2":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./../scss/policy.scss":"hPEzy","./burgerMenu":"3Y3q2"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"hPEzy":[function() {},{}],"3Y3q2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -4410,6 +4410,6 @@ _gsapCoreJs._forEachName("x,y,z,top,right,bottom,left,width,height,fontSize,padd
 });
 _gsapCoreJs.gsap.registerPlugin(CSSPlugin);
 
-},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"622Es":[function() {},{}],"hPEzy":[function() {},{}]},["LCqh5","8bPK2"], "8bPK2", "parcelRequire3355")
+},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["LCqh5","8bPK2"], "8bPK2", "parcelRequire3355")
 
 //# sourceMappingURL=impressum.0cf1c6fe.js.map
