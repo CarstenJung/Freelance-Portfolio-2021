@@ -1601,7 +1601,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formMessage {
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
   border: none;
   color: var(--lightColor);
-  width: 200px;
+  width: 280px;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
@@ -1612,6 +1612,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
 
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
   font-size: 0.7vw;
+  font-weight: 200;
 }
 
 body .wrapper .section5 .goBack {
@@ -1810,6 +1811,15 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 
   .section3 .portfolioGridWrapper .flipContent .flipBack button {
     display: none !important;
+  }
+
+  body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
+    font-size: 1vw;
+  }
+
+  body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
+    font-size: 1.2vw;
+    line-height: 25px;
   }
 }
 /* TABLET */

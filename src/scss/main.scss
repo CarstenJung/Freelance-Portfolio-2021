@@ -1566,7 +1566,7 @@ body {
                     fieldset {
                         border: none;
                         color: var(--lightColor);
-                        width: 200px;
+                        width: 280px;
 
                         legend {
                             padding-top: 50px;
@@ -1576,6 +1576,7 @@ body {
 
                         label {
                             font-size: .7vw;
+                            font-weight: 200;
                         }
                     }
                 }
