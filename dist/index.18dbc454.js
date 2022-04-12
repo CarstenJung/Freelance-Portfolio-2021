@@ -521,13 +521,14 @@ function hmrAcceptRun(bundle, id) {
 },{}],"1SICI":[function(require,module,exports) {
 var _mainScss = require("./../scss/main.scss");
 var _responsiveScss = require("./../scss/responsive.scss");
-/* TODO not active because it loads every time .. find a sultion .. maybe Cookies */ /* import './loadingScreen' */ var _burgerMenu = require("./burgerMenu");
+var _loadingScreen = require("./loadingScreen");
+var _burgerMenu = require("./burgerMenu");
 var _scrollGSAP = require("./scrollGSAP");
 var _slider = require("./slider");
 var _smoothScroll = require("./smoothScroll");
 var _indicatorScrollMobile = require("./indicatorScrollMobile");
 
-},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./indicatorScrollMobile":"2V4oj"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"3Y3q2":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./indicatorScrollMobile":"2V4oj","./loadingScreen":"2lAB1"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"3Y3q2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
@@ -6185,6 +6186,62 @@ var DrawSVGPlugin = {
 };
 _getGSAP() && gsap.registerPlugin(DrawSVGPlugin);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2lAB1":[function(require,module,exports) {
+var _gsap = require("gsap");
+var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
+_gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
+function noScroll() {
+    window.scrollTo(0, 0);
+}
+var startAnimation = _gsap.gsap.timeline({
+    delay: 0.5,
+    onStart: ()=>{
+        window.addEventListener('scroll', noScroll);
+    }
+});
+if (sessionStorage.getItem("animationShowed", "true")) {
+    document.querySelector(".staggerAnimation").style.display = "none";
+    document.querySelector(".animationBcg").style.display = "none";
+} else startAnimation.fromTo("#CTop", {
+    drawSVG: "0%"
+}, {
+    drawSVG: "100%",
+    duration: 1
+}).fromTo("#CBottom", {
+    drawSVG: "0%"
+}, {
+    drawSVG: "100%",
+    duration: 1
+}).fromTo("#JTop", {
+    drawSVG: "0%"
+}, {
+    drawSVG: "100%",
+    duration: 1
+}).to("#CTop, #CBottom", {
+    fill: "#fff",
+    duration: 2
+}).to("#JTop", {
+    fill: "#ffcd48",
+    duration: 2.3,
+    onComplete: ()=>{
+        document.querySelector(".wrapper").classList.remove("isLoading");
+    }
+}, "-=2").to(".startAnimationWrapper", {
+    autoAlpha: 0,
+    duration: 2
+}).to(".staggerItem", {
+    rotationY: -90,
+    stagger: 0.1,
+    ease: "power1.out",
+    transformOrigin: "center center"
+}, "-=0.6").to(".staggerAnimation, .animationBcg", {
+    display: "none",
+    onComplete: ()=>{
+        sessionStorage.setItem("animationShowed", "true");
+        window.removeEventListener('scroll', noScroll);
+    }
+});
+
+},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 
 //# sourceMappingURL=index.18dbc454.js.map

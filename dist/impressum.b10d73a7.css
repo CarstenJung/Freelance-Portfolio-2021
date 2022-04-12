@@ -148,58 +148,58 @@
   }
 }
 
-/* .staggerAnimation {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
+.staggerAnimation {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
 
-    .staggerItem {
-        background: #111111;
-        height: 100vh;
-        width: 16.6666667%;
-        float: right;
-    }
+.staggerAnimation .staggerItem {
+  background: #111111;
+  height: 100vh;
+  width: 16.6666667%;
+  float: right;
 }
 
 .animationBcg {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    z-index: 10;
-
-    .startAnimationWrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
-
-        svg {
-            width: 15vw;
-            fill: transparent;
-            overflow: visible;
-            z-index: 11;
-
-            #CTop {
-                stroke: white;
-                stroke-width: 3px;
-            }
-
-            #CBottom {
-                stroke: white;
-                stroke-width: 3px;
-            }
-
-            #JTop {
-                stroke: #ffcd48;
-                stroke-width: 3px;
-            }
-        }
-    }
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
 }
 
-.isLoading {
+.animationBcg .startAnimationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.animationBcg .startAnimationWrapper svg {
+  width: 15vw;
+  fill: transparent;
+  overflow: visible;
+  z-index: 11;
+}
+
+.animationBcg .startAnimationWrapper svg #CTop {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.animationBcg .startAnimationWrapper svg #CBottom {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.animationBcg .startAnimationWrapper svg #JTop {
+  stroke: #ffcd48;
+  stroke-width: 3px;
+}
+
+/* .isLoading {
     display: none;
 } */
 
@@ -451,7 +451,7 @@ body .wrapper nav .ctaBtn button {
   color: var(--lightColor);
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 0.69vw;
+  font-size: 13.3px;
 }
 
 body .wrapper nav .ctaBtn .ctaLine {
