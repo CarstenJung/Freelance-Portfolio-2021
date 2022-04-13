@@ -627,6 +627,8 @@ body {
         .section2 {
             max-width: 1500px;
             margin: auto auto 250px auto;
+            position: relative;
+            z-index: 3;
 
             .headline {
 

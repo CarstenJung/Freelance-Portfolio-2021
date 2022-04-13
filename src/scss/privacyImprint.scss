@@ -14,6 +14,10 @@
     font-family: var(--mainFont);
     color: var(--lightColor);
 
+    .logoContainer {
+        position: fixed;
+    }
+
     .imprintWrapper,
     .privacyWrapper {
         padding: 70px 0 150px 0;
@@ -62,12 +66,17 @@
 /*MEDIA QUERY */
 @media (max-width: 767px) {
 
+    .imprint,
+    .privacy {
+        .logoContainer {
+            position: static;
+        }
+    }
+
     .imprintWrapper,
     .privacyWrapper {
         max-width: 80% !important;
         font-size: 1.3em !important;
-
-        .line {}
 
         h6 {
             font-size: .8em;

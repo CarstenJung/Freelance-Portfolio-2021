@@ -521,10 +521,10 @@ function hmrAcceptRun(bundle, id) {
 },{}],"8bPK2":[function(require,module,exports) {
 var _mainScss = require("./../scss/main.scss");
 var _responsiveScss = require("./../scss/responsive.scss");
-var _policyScss = require("./../scss/policy.scss");
+var _privacyImprintScss = require("./../scss/privacyImprint.scss");
 var _burgerMenu = require("./burgerMenu");
 
-},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./../scss/policy.scss":"hPEzy","./burgerMenu":"3Y3q2"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"hPEzy":[function() {},{}],"3Y3q2":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./../scss/privacyImprint.scss":"klGTM","./burgerMenu":"3Y3q2"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"klGTM":[function() {},{}],"3Y3q2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);

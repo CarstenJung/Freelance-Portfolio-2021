@@ -148,58 +148,58 @@
   }
 }
 
-/* .staggerAnimation {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
+.staggerAnimation {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
 
-    .staggerItem {
-        background: #111111;
-        height: 100vh;
-        width: 16.6666667%;
-        float: right;
-    }
+.staggerAnimation .staggerItem {
+  background: #111111;
+  height: 100vh;
+  width: 16.6666667%;
+  float: right;
 }
 
 .animationBcg {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    z-index: 10;
-
-    .startAnimationWrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
-
-        svg {
-            width: 15vw;
-            fill: transparent;
-            overflow: visible;
-            z-index: 11;
-
-            #CTop {
-                stroke: white;
-                stroke-width: 3px;
-            }
-
-            #CBottom {
-                stroke: white;
-                stroke-width: 3px;
-            }
-
-            #JTop {
-                stroke: #ffcd48;
-                stroke-width: 3px;
-            }
-        }
-    }
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
 }
 
-.isLoading {
+.animationBcg .startAnimationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.animationBcg .startAnimationWrapper svg {
+  width: 15vw;
+  fill: transparent;
+  overflow: visible;
+  z-index: 11;
+}
+
+.animationBcg .startAnimationWrapper svg #CTop {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.animationBcg .startAnimationWrapper svg #CBottom {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.animationBcg .startAnimationWrapper svg #JTop {
+  stroke: #ffcd48;
+  stroke-width: 3px;
+}
+
+/* .isLoading {
     display: none;
 } */
 
@@ -451,7 +451,7 @@ body .wrapper nav .ctaBtn button {
   color: var(--lightColor);
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 0.69vw;
+  font-size: 13.3px;
 }
 
 body .wrapper nav .ctaBtn .ctaLine {
@@ -665,6 +665,8 @@ body .wrapper .section1 .heroWrapper .scrollIndicator .mobileScrollText {
 body .wrapper .section2 {
   max-width: 1500px;
   margin: auto auto 250px auto;
+  position: relative;
+  z-index: 3;
 }
 
 body .wrapper .section2 .headline h1 {
@@ -754,7 +756,7 @@ body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceItemDescription
   color: var(--lightColor);
   font-size: 1em;
   width: 60%;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceItemDescription span {
@@ -1493,7 +1495,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper
 
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn {
   grid-area: btn;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button {
@@ -1601,7 +1603,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm #formMessage {
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset {
   border: none;
   color: var(--lightColor);
-  width: 200px;
+  width: 280px;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
@@ -1612,6 +1614,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
 
 body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
   font-size: 0.7vw;
+  font-weight: 200;
 }
 
 body .wrapper .section5 .goBack {
@@ -1811,6 +1814,15 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section3 .portfolioGridWrapper .flipContent .flipBack button {
     display: none !important;
   }
+
+  body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
+    font-size: 1vw;
+  }
+
+  body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
+    font-size: 1.2vw;
+    line-height: 25px;
+  }
 }
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -1970,6 +1982,43 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 }
 /* MOBILE */
 @media (max-width: 767px) {
+  .menuOverlay {
+    flex-direction: column;
+  }
+  .menuOverlay .menuSlideOne h1, .menuOverlay .menuSlideTwo h1 {
+    font-size: 4vw !important;
+    position: relative;
+    left: -30px;
+    top: 10px;
+  }
+  .menuOverlay .menuSlideOne {
+    width: 100% !important;
+    height: 60% !important;
+    padding-top: 100px;
+    padding-left: 15px;
+  }
+  .menuOverlay .menuSlideOne img {
+    height: 50px !important;
+    margin: 0 !important;
+    top: 45px;
+    left: 20px;
+  }
+  .menuOverlay .menuSlideOne ul {
+    position: relative;
+    left: -30px;
+    font-size: 8vw !important;
+  }
+  .menuOverlay .menuSlideTwo {
+    width: 100% !important;
+    height: 40% !important;
+  }
+  .menuOverlay .menuSlideTwo h1 {
+    padding: 20px 0 0 35px;
+  }
+  .menuOverlay .menuSlideTwo img {
+    max-width: 45vw !important;
+  }
+
   .burgerMenuWrapper {
     position: absolute !important;
   }
@@ -2250,6 +2299,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   color: var(--lightColor);
 }
 
+.imprint .logoContainer,
+.privacy .logoContainer {
+  position: fixed;
+}
+
 .imprint .imprintWrapper,
 .imprint .privacyWrapper,
 .privacy .imprintWrapper,
@@ -2303,6 +2357,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 /*MEDIA QUERY */
 
 @media (max-width: 767px) {
+  .imprint .logoContainer,
+.privacy .logoContainer {
+    position: static;
+  }
+
   .imprintWrapper,
 .privacyWrapper {
     max-width: 80% !important;

@@ -665,6 +665,8 @@ body .wrapper .section1 .heroWrapper .scrollIndicator .mobileScrollText {
 body .wrapper .section2 {
   max-width: 1500px;
   margin: auto auto 250px auto;
+  position: relative;
+  z-index: 3;
 }
 
 body .wrapper .section2 .headline h1 {
@@ -2297,6 +2299,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   color: var(--lightColor);
 }
 
+.imprint .logoContainer,
+.privacy .logoContainer {
+  position: fixed;
+}
+
 .imprint .imprintWrapper,
 .imprint .privacyWrapper,
 .privacy .imprintWrapper,
@@ -2350,6 +2357,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 /*MEDIA QUERY */
 
 @media (max-width: 767px) {
+  .imprint .logoContainer,
+.privacy .logoContainer {
+    position: static;
+  }
+
   .imprintWrapper,
 .privacyWrapper {
     max-width: 80% !important;
