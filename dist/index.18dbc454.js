@@ -4732,7 +4732,8 @@ setTimeout(()=>{
     scrollTrigger: {
         trigger: ".section5",
         start: "top",
-        markers: false,
+        end: "bottom 80%",
+        markers: true,
         scrub: 0.1
     }
 });
