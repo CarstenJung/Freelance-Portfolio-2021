@@ -148,6 +148,44 @@
   }
 }
 
+.cookieConsent {
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  color: #fff;
+  border-top: 0.1px solid var(--accentColor);
+}
+
+.cookieConsent img {
+  float: right;
+  position: relative;
+  width: 5%;
+  bottom: 40px;
+  right: 10px;
+}
+
+.cookieConsent p {
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+  left: 30px;
+}
+
+.cookieConsent p button {
+  background: var(--accentColor);
+  position: relative;
+  left: 50px;
+  bottom: 1.5px;
+  width: 70px;
+  border: none;
+  color: var(--darkColor);
+  font-weight: bold;
+}
+
 .staggerAnimation {
   position: absolute;
   width: 100%;
@@ -198,10 +236,6 @@
   stroke: #ffcd48;
   stroke-width: 3px;
 }
-
-/* .isLoading {
-    display: none;
-} */
 
 /*HELPER CLASSES SLIDER*/
 

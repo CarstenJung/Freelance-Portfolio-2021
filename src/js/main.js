@@ -6,6 +6,7 @@ import './scrollGSAP'
 import './slider'
 import './smoothScroll'
 import './indicatorScrollMobile'
+import './cookieConsent'
 
 
 

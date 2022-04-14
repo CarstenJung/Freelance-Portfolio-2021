@@ -15,21 +15,6 @@ gsap.to(".burgerMenu", {
   },
 });
 
-/* SERVICE SECTION */
-/* gsap.fromTo(".serviceItemDescription p", { 
-    opacity: 0, 
-},
-  { opacity: 1,
-    scrollTrigger: {
-      trigger: ".section1",
-      start: "bottom 20%",
-      end: "bottom -80%",
-      scrub: 0.3,
-      markers: true
-    },
-  }
-); */
-
 /* GO BACK BTN */
   gsap.to(".goBack", {
     opacity: 1,
@@ -41,3 +26,14 @@ gsap.to(".burgerMenu", {
     },
   });
 }, 7000);
+
+/*HIDE COOKIE CONSENT*/
+gsap.to(".cookieConsent", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top",
+    markers: true,
+    scrub: .1,
+  },
+});

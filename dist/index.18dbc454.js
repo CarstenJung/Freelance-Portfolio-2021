@@ -527,8 +527,9 @@ var _scrollGSAP = require("./scrollGSAP");
 var _slider = require("./slider");
 var _smoothScroll = require("./smoothScroll");
 var _indicatorScrollMobile = require("./indicatorScrollMobile");
+var _cookieConsent = require("./cookieConsent");
 
-},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./loadingScreen":"2lAB1","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./indicatorScrollMobile":"2V4oj"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"2lAB1":[function(require,module,exports) {
+},{"./../scss/main.scss":"4Pg3x","./../scss/responsive.scss":"622Es","./loadingScreen":"2lAB1","./burgerMenu":"3Y3q2","./scrollGSAP":"Bjehw","./slider":"aMYz0","./smoothScroll":"ax0jI","./indicatorScrollMobile":"2V4oj","./cookieConsent":"9y9j1"}],"4Pg3x":[function() {},{}],"622Es":[function() {},{}],"2lAB1":[function(require,module,exports) {
 var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
 _gsap.gsap.registerPlugin(_drawSVGPlugin.DrawSVGPlugin);
@@ -4716,19 +4717,7 @@ setTimeout(()=>{
             scrub: 0.3
         }
     });
-    /* SERVICE SECTION */ /* gsap.fromTo(".serviceItemDescription p", { 
-    opacity: 0, 
-},
-  { opacity: 1,
-    scrollTrigger: {
-      trigger: ".section1",
-      start: "bottom 20%",
-      end: "bottom -80%",
-      scrub: 0.3,
-      markers: true
-    },
-  }
-); */ /* GO BACK BTN */ _gsapDefault.default.to(".goBack", {
+    /* GO BACK BTN */ _gsapDefault.default.to(".goBack", {
         opacity: 1,
         delay: 1,
         duration: 3,
@@ -4738,6 +4727,15 @@ setTimeout(()=>{
         }
     });
 }, 7000);
+/*HIDE COOKIE CONSENT*/ _gsapDefault.default.to(".cookieConsent", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".section5",
+        start: "top",
+        markers: true,
+        scrub: 0.1
+    }
+});
 
 },{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7wnFk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -6254,6 +6252,20 @@ scrollIndicator.set('#indicatorDot', {
     repeat: -1
 }, '+=.8') /* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */ ;
 
-},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
+},{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"9y9j1":[function(require,module,exports) {
+const storageType = localStorage;
+const consentPropertyName = 'cookieConsent';
+const couldShowPopup = ()=>!storageType.getItem(consentPropertyName)
+;
+const saveToStorage = ()=>storageType.setItem(consentPropertyName, true)
+;
+window.onload = ()=>{
+    if (couldShowPopup()) {
+        const consent = confirm('This website uses cookies to enhance your experience. By continuing, you agree to the use of cookies.');
+        if (consent) saveToStorage();
+    }
+};
+
+},{}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 
 //# sourceMappingURL=index.18dbc454.js.map
