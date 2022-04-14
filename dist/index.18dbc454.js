@@ -4727,7 +4727,7 @@ setTimeout(()=>{
         }
     });
 }, 7000);
-/*HIDE COOKIE CONSENT*/ _gsapDefault.default.to(".cookieConsent", {
+/* HIDE COOKIE CONSENT */ _gsapDefault.default.to(".cookieConsent", {
     opacity: 0,
     scrollTrigger: {
         trigger: ".textarea",

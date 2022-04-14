@@ -27,7 +27,7 @@ gsap.to(".burgerMenu", {
   });
 }, 7000);
 
-/*HIDE COOKIE CONSENT*/
+/* HIDE COOKIE CONSENT */
 gsap.to(".cookieConsent", {
   opacity: 0,
   scrollTrigger: {
