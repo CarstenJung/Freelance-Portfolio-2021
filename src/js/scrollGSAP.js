@@ -31,7 +31,7 @@ gsap.to(".burgerMenu", {
 gsap.to(".cookieConsent", {
   opacity: 0,
   scrollTrigger: {
-    trigger: ".textarea",
+    trigger: "textarea",
     start: "top",
     markers: true,
     scrub: .1,
