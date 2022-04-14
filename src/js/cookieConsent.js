@@ -1,4 +1,4 @@
-const storageType = localStorage;
+/* const storageType = localStorage;
 const consentPropertyName = 'cookieConsent';
 
 const couldShowPopup = () => !storageType.getItem(consentPropertyName);
@@ -14,3 +14,4 @@ window.onload = () => {
     }
 }
 
+ */

@@ -6253,18 +6253,6 @@ scrollIndicator.set('#indicatorDot', {
 }, '+=.8') /* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */ ;
 
 },{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"9y9j1":[function(require,module,exports) {
-const storageType = localStorage;
-const consentPropertyName = 'cookieConsent';
-const couldShowPopup = ()=>!storageType.getItem(consentPropertyName)
-;
-const saveToStorage = ()=>storageType.setItem(consentPropertyName, true)
-;
-window.onload = ()=>{
-    if (couldShowPopup()) {
-        const consent = confirm('This website uses cookies to enhance your experience. By continuing, you agree to the use of cookies.');
-        if (consent) saveToStorage();
-    }
-};
 
 },{}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 
