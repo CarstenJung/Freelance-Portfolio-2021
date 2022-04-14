@@ -14,7 +14,7 @@ var startAnimation = gsap.timeline({
   }
 });
 
-if (sessionStorage.getItem("animationShowed", "true")) {
+if (localStorage.getItem("animationShowed", "true")) {
   document.querySelector(".staggerAnimation").style.display = "none";
   document.querySelector(".animationBcg").style.display = "none";
 } else {
@@ -48,7 +48,7 @@ if (sessionStorage.getItem("animationShowed", "true")) {
     .to(".staggerAnimation, .animationBcg", {
       display: "none",
       onComplete: () => {
-        sessionStorage.setItem("animationShowed", "true");
+        localStorage.setItem("animationShowed", "true");
         window.removeEventListener('scroll', noScroll)
       },
     });

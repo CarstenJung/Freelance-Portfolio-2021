@@ -542,7 +542,7 @@ var startAnimation = _gsap.gsap.timeline({
         window.addEventListener('scroll', noScroll);
     }
 });
-if (sessionStorage.getItem("animationShowed", "true")) {
+if (localStorage.getItem("animationShowed", "true")) {
     document.querySelector(".staggerAnimation").style.display = "none";
     document.querySelector(".animationBcg").style.display = "none";
 } else startAnimation.fromTo("#CTop", {
@@ -580,7 +580,7 @@ if (sessionStorage.getItem("animationShowed", "true")) {
 }, "-=0.6").to(".staggerAnimation, .animationBcg", {
     display: "none",
     onComplete: ()=>{
-        sessionStorage.setItem("animationShowed", "true");
+        localStorage.setItem("animationShowed", "true");
         window.removeEventListener('scroll', noScroll);
     }
 });
@@ -6254,7 +6254,32 @@ scrollIndicator.set('#indicatorDot', {
 }, '+=.8') /* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */ ;
 
 },{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"9y9j1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _gsap = require("gsap");
+var _gsapDefault = parcelHelpers.interopDefault(_gsap);
+_gsapDefault.default.fromTo('.cookieConsent', {
+    opacity: 0
+}, {
+    opacity: 1,
+    duration: 3
+});
+const storageType = localStorage;
+const consentPropertyName = 'cookieConsent';
+const couldShowPopup = ()=>!storageType.getItem(consentPropertyName)
+;
+const saveToStorage = ()=>storageType.setItem(consentPropertyName, true)
+;
+window.onload = ()=>{
+    if (couldShowPopup()) {
+        const cookieConsent = document.querySelector('.cookieConsent');
+        cookieConsent.style.display = 'block';
+        cookieConsent.addEventListener('click', ()=>{
+            saveToStorage();
+            cookieConsent.style.display = 'none';
+        });
+    } else document.querySelector('.cookieConsent').style.display = 'none';
+};
 
-},{}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
+},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cdybL","1SICI"], "1SICI", "parcelRequire3355")
 
 //# sourceMappingURL=index.18dbc454.js.map
