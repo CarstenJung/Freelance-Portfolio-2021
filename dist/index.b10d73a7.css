@@ -183,7 +183,7 @@
   width: 70px;
   border: none;
   color: var(--darkColor);
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .staggerAnimation {
