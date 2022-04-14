@@ -34,7 +34,6 @@ gsap.to(".cookieConsent", {
     trigger: ".section5",
     start: "top",
     end: "bottom 80%",
-    markers: true,
     scrub: .1,
   },
 });
