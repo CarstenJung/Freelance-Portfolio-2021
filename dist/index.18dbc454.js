@@ -4730,7 +4730,7 @@ setTimeout(()=>{
 /*HIDE COOKIE CONSENT*/ _gsapDefault.default.to(".cookieConsent", {
     opacity: 0,
     scrollTrigger: {
-        trigger: ".section5",
+        trigger: ".textarea",
         start: "top",
         markers: true,
         scrub: 0.1
