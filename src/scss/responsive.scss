@@ -186,6 +186,10 @@
 
                 .serviceCircle {
                     img {
+                        transform: scale(.8);
+                    }
+
+                    .serviceImgsmaller {
                         transform: scale(.7);
                     }
                 }
