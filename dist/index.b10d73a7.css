@@ -1910,6 +1910,12 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section2 .serviceItemWrapper .serviceItem {
     padding: 1em 2em;
   }
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
+    height: 80px !important;
+  }
+  .section2 .serviceItemWrapper .serviceItem .serviceCircle .serviceImgsmaller {
+    height: 65px !important;
+  }
   .section2 .serviceItemWrapper .serviceItemDescription {
     font-weight: 300 !important;
   }

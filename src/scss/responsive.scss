@@ -183,6 +183,17 @@
 
             .serviceItem {
                 padding: 1em 2em;
+
+                .serviceCircle {
+
+                    img {
+                        height: 80px !important;
+                    }
+
+                    .serviceImgsmaller {
+                        height: 65px !important;
+                    }
+                }
             }
 
             .serviceItemDescription {
@@ -198,7 +209,7 @@
 
     .section3 {
         max-width: 1200px !important;
-        
+
         .portfolioGridWrapperMobile {
             display: grid !important;
             width: 78%;
