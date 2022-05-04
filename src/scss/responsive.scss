@@ -119,8 +119,12 @@
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
 
-    .cookieConsent img {
-        bottom: 15px !important;
+    .cookieConsent {
+        height: 60px !important;
+        
+        img {
+            bottom: 25px !important;
+        }
     }
 
     nav {

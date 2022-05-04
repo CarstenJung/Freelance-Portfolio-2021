@@ -1866,8 +1866,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 }
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
+  .cookieConsent {
+    height: 60px !important;
+  }
   .cookieConsent img {
-    bottom: 15px !important;
+    bottom: 25px !important;
   }
 
   nav .ctaBtn button {
