@@ -1491,18 +1491,19 @@ body .wrapper .section5 .contactFormWrapper .contactForm form {
 body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper {
   width: 150px;
   display: flex;
-  padding: 0.5em 1em;
+  padding: 0.2em 0.8em;
   border: 1px solid var(--accentColor);
   margin: 10px 0 0 10px;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper img {
-  width: 28%;
+  height: 70%;
+  margin: auto;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper #calendry {
-  text-decoration: none;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
@@ -1553,7 +1554,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper
 
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn {
   grid-area: btn;
-  margin-top: 100px;
+  margin-top: 75px;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn button {

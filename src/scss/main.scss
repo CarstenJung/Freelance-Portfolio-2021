@@ -1451,17 +1451,18 @@ body {
                         .calendryWrapper {
                             width: 150px;
                             display: flex;
-                            padding: .5em 1em;
+                            padding: .2em .8em;
                             border: 1px solid var(--accentColor);
                             margin: 10px 0 0 10px;
                             border-radius: 10px;
+                            text-decoration: none;
 
                             img {
-                                width: 28%;
+                                height: 70%;
+                                margin: auto;
                             }
 
                             #calendry {
-                                text-decoration: none;
                                 color: #fff;
                                 font-weight: 700;
                                 text-transform: uppercase;
@@ -1514,7 +1515,7 @@ body {
 
                     #formBtn {
                         grid-area: btn;
-                        margin-top: 100px;
+                        margin-top: 75px;
 
                         button {
                             position: relative;
