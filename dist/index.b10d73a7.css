@@ -1488,6 +1488,28 @@ body .wrapper .section5 .contactFormWrapper .contactForm form {
   grid-template-columns: repeat(3, 1fr);
 }
 
+body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper {
+  width: 150px;
+  display: flex;
+  padding: 0.5em 1em;
+  border: 1px solid var(--accentColor);
+  margin: 10px 0 0 10px;
+  border-radius: 10px;
+}
+
+body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper img {
+  width: 28%;
+}
+
+body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper #calendry {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 1em;
+  letter-spacing: 0.05em;
+}
+
 body .wrapper .section5 .contactFormWrapper .contactForm #formName {
   grid-area: name;
 }

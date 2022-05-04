@@ -101,11 +101,11 @@
     border-top: .1px solid var(--accentColor);
 
     img {
-       float: right;
-       position: relative;
-       width: 5%;
-       bottom: 60px;
-       right: 10px;
+        float: right;
+        position: relative;
+        width: 5%;
+        bottom: 60px;
+        right: 10px;
     }
 
     p {
@@ -1447,6 +1447,28 @@ body {
                             "empty1 privacyText privacyText"
                             "empty3 btn empty4";
                         grid-template-columns: repeat(3, 1fr);
+
+                        .calendryWrapper {
+                            width: 150px;
+                            display: flex;
+                            padding: .5em 1em;
+                            border: 1px solid var(--accentColor);
+                            margin: 10px 0 0 10px;
+                            border-radius: 10px;
+
+                            img {
+                                width: 28%;
+                            }
+
+                            #calendry {
+                                text-decoration: none;
+                                color: #fff;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                padding-left: 1em;
+                                letter-spacing: .05em;
+                            }
+                        }
                     }
 
                     #formName {
