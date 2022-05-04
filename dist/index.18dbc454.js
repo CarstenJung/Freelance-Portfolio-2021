@@ -4580,31 +4580,33 @@ menuProjectItems.to("#menuProjectsItem1", {
     opacity: 0,
     display: "none",
     duration: 3
-}).to("#menuProjectsItem3", {
+})/* .to("#menuProjectsItem3", {
     opacity: 1,
     display: "block",
-    duration: 3
-}).to("#menuProjectsItem3", {
+    duration: 3,
+  })
+  .to("#menuProjectsItem3", {
     opacity: 0,
     display: "none",
+    duration: 3,
+  }) */ .to("#menuProjectsItem4", {
+    opacity: 1,
+    display: "block",
     duration: 3
 }).to("#menuProjectsItem4", {
-    opacity: 1,
-    display: "block",
-    duration: 3
-}).to("#menuProjectsItem4", {
     opacity: 0,
     display: "none",
     duration: 3
-}).to("#menuProjectsItem5", {
+})/*   .to("#menuProjectsItem5", {
     opacity: 1,
     display: "block",
-    duration: 3
-}).to("#menuProjectsItem5", {
+    duration: 3,
+  })
+  .to("#menuProjectsItem5", {
     opacity: 0,
     display: "none",
-    duration: 3
-}).to("#menuProjectsItem6", {
+    duration: 3,
+  }) */ .to("#menuProjectsItem6", {
     opacity: 1,
     display: "block",
     duration: 3
@@ -4731,8 +4733,7 @@ setTimeout(()=>{
     opacity: 0,
     scrollTrigger: {
         trigger: ".section5",
-        start: "top",
-        end: "bottom 80%",
+        end: "bottom 800px",
         scrub: 0.1
     }
 });

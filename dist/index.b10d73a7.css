@@ -164,7 +164,7 @@
   float: right;
   position: relative;
   width: 5%;
-  bottom: 40px;
+  bottom: 60px;
   right: 10px;
 }
 
@@ -807,7 +807,7 @@ body .wrapper .section2 .serviceItemWrapper .serviceItem .serviceItemDescription
 }
 
 body .wrapper .section3 {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: auto;
   position: relative;
 }
@@ -827,7 +827,7 @@ body .wrapper .section3 .headline h1 {
 
 body .wrapper .section3 .portfolioGridWrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.2em;
 }
 
@@ -1210,7 +1210,7 @@ body .wrapper .section4 .testimonialsWrapper .headline {
 
 body .wrapper .section4 .testimonialsWrapper .testimonial {
   position: absolute;
-  top: 370px;
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -1262,7 +1262,7 @@ body .wrapper .section4 .testimonialsWrapper .btnWrapper {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 520px;
+  top: 550px;
   right: 12px;
 }
 
@@ -1526,6 +1526,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm .privacyCheckboxWrapper
   position: absolute;
   max-width: 35%;
   padding-left: 10px;
+  margin-top: 30px;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm #formBtn {

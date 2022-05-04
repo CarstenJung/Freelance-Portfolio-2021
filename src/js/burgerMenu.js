@@ -24,7 +24,7 @@ menuProjectItems
     display: "none",
     duration: 3,
   })
-  .to("#menuProjectsItem3", {
+  /* .to("#menuProjectsItem3", {
     opacity: 1,
     display: "block",
     duration: 3,
@@ -33,7 +33,7 @@ menuProjectItems
     opacity: 0,
     display: "none",
     duration: 3,
-  })
+  }) */
   .to("#menuProjectsItem4", {
     opacity: 1,
     display: "block",
@@ -44,7 +44,7 @@ menuProjectItems
     display: "none",
     duration: 3,
   })
-  .to("#menuProjectsItem5", {
+/*   .to("#menuProjectsItem5", {
     opacity: 1,
     display: "block",
     duration: 3,
@@ -53,7 +53,7 @@ menuProjectItems
     opacity: 0,
     display: "none",
     duration: 3,
-  })
+  }) */
   .to("#menuProjectsItem6", {
     opacity: 1,
     display: "block",

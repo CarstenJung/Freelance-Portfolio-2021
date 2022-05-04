@@ -32,8 +32,7 @@ gsap.to(".cookieConsent", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".section5",
-    start: "top",
-    end: "bottom 80%",
+    end: "bottom 800px",
     scrub: .1,
   },
 });

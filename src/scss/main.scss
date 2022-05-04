@@ -104,7 +104,7 @@
        float: right;
        position: relative;
        width: 5%;
-       bottom: 40px;
+       bottom: 60px;
        right: 10px;
     }
 
@@ -773,7 +773,7 @@ body {
         }
 
         .section3 {
-            max-width: 1400px;
+            max-width: 1000px;
             margin: auto;
             position: relative;
 
@@ -792,7 +792,7 @@ body {
 
             .portfolioGridWrapper {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: .2em;
 
                 .flipContent {
@@ -1200,7 +1200,7 @@ body {
 
                 .testimonial {
                     position: absolute;
-                    top: 370px;
+                    top: 350px;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     opacity: 0;
@@ -1252,7 +1252,7 @@ body {
                     justify-content: center;
                     align-items: center;
                     position: relative;
-                    top: 520px;
+                    top: 550px;
                     right: 12px;
 
                     .left,
@@ -1486,6 +1486,7 @@ body {
                             position: absolute;
                             max-width: 35%;
                             padding-left: 10px;
+                            margin-top: 30px;
                         }
                     }
 
