@@ -185,13 +185,8 @@
                 padding: 1em 2em;
 
                 .serviceCircle {
-
                     img {
-                        height: 80px !important;
-                    }
-
-                    .serviceImgsmaller {
-                        height: 65px !important;
+                        transform: scale(.7);
                     }
                 }
             }
