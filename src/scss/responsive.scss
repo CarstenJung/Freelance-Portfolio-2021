@@ -58,6 +58,10 @@
 /* LAPTOP */
 @media (min-width: 1200px) and (max-width: 1440px) {
 
+    .cookieConsent img {
+        bottom: 40px !important;
+    }
+
     .heroText {
         top: 50px !important;
 
@@ -114,6 +118,10 @@
 
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
+
+    .cookieConsent img {
+        bottom: 0px !important;
+    }
 
     nav {
         .ctaBtn {
@@ -356,7 +364,8 @@
     .menuOverlay {
         flex-direction: column;
 
-        .menuSlideOne, .menuSlideTwo {
+        .menuSlideOne,
+        .menuSlideTwo {
             h1 {
                 font-size: 4vw !important;
                 position: relative;
@@ -397,7 +406,7 @@
                 max-width: 45vw !important;
             }
         }
-    } 
+    }
 
     .burgerMenuWrapper {
         position: absolute !important;
