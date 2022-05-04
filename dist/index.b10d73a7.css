@@ -1125,7 +1125,7 @@ body .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack.newProject 
 
 body .wrapper .section3 .portfolioGridWrapperMobile {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.2em;
   visibility: hidden;
   height: 0px;
