@@ -1869,6 +1869,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .cookieConsent {
     height: 60px !important;
   }
+  .cookieConsent button {
+    font-size: 1em !important;
+  }
   .cookieConsent img {
     bottom: 25px !important;
   }
