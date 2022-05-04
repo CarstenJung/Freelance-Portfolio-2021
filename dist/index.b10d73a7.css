@@ -184,6 +184,7 @@
   border: none;
   color: var(--darkColor);
   font-weight: 900;
+  font-size: 0.8em;
   cursor: pointer;
 }
 
