@@ -1867,7 +1867,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
   .cookieConsent img {
-    bottom: 0px !important;
+    bottom: 15px !important;
   }
 
   nav .ctaBtn button {
