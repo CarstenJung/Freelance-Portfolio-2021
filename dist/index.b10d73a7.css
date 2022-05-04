@@ -1127,8 +1127,7 @@ body .wrapper .section3 .portfolioGridWrapperMobile {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.2em;
-  visibility: hidden;
-  height: 0px;
+  display: none;
 }
 
 body .wrapper .section3 .portfolioGridWrapperMobile .flipContentMobile {
@@ -1919,13 +1918,10 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
 
   .section3 {
-    /*  .headlineMobile h1 {
-        font-size: 1.1em;
-    } */
+    max-width: 1200px !important;
   }
   .section3 .portfolioGridWrapperMobile {
-    visibility: visible !important;
-    height: 100% !important;
+    display: grid !important;
     width: 78%;
     margin: auto;
   }

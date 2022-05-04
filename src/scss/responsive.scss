@@ -197,9 +197,10 @@
     }
 
     .section3 {
+        max-width: 1200px !important;
+        
         .portfolioGridWrapperMobile {
-            visibility: visible !important;
-            height: 100% !important;
+            display: grid !important;
             width: 78%;
             margin: auto;
         }
@@ -207,10 +208,6 @@
         .portfolioGridWrapper {
             display: none !important;
         }
-
-        /*  .headlineMobile h1 {
-            font-size: 1.1em;
-        } */
 
         .nextProjectMobile h1 {
             font-size: 1em !important;
