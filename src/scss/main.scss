@@ -1451,9 +1451,9 @@ body {
                         .calendryWrapper {
                             width: 150px;
                             display: flex;
-                            padding: .2em .8em;
+                            padding: 0em .9em;
                             border: 1px solid var(--accentColor);
-                            margin: 10px 0 0 10px;
+                            margin: 10px 0 0 15px;
                             border-radius: 10px;
                             text-decoration: none;
 
@@ -1468,6 +1468,7 @@ body {
                                 text-transform: uppercase;
                                 padding-left: 1em;
                                 letter-spacing: .05em;
+                                margin: auto 0;
                             }
                         }
                     }

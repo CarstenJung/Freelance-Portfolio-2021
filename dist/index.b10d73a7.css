@@ -1491,9 +1491,9 @@ body .wrapper .section5 .contactFormWrapper .contactForm form {
 body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper {
   width: 150px;
   display: flex;
-  padding: 0.2em 0.8em;
+  padding: 0em 0.9em;
   border: 1px solid var(--accentColor);
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 15px;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -1509,6 +1509,7 @@ body .wrapper .section5 .contactFormWrapper .contactForm form .calendryWrapper #
   text-transform: uppercase;
   padding-left: 1em;
   letter-spacing: 0.05em;
+  margin: auto 0;
 }
 
 body .wrapper .section5 .contactFormWrapper .contactForm #formName {
