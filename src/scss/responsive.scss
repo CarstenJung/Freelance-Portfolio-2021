@@ -4,6 +4,10 @@
 @media not all and (min-resolution:.001dpcm) {
     @supports (-webkit-appearance:none) {
 
+        .cookieConsent {
+            transform: translateZ(3em);
+        }
+
         body .wrapper nav .ctaBtn button {
             top: 4.3em;
             right: 11.9em;
@@ -437,7 +441,7 @@
 
     .cookieConsent {
         height: 140px !important;
-        
+
 
         img {
             float: none !important;
