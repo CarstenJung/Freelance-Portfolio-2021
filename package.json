@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/CarstenJung/Portfolio-2022-CJ-Development#readme",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.5.0",
     "@parcel/transformer-sass": "^2.1.0",
+    "@parcel/transformer-webmanifest": "^2.5.0",
     "autoprefixer": "^10.4.2",
     "parcel": "^2.1.0",
     "postcss": "^8.4.7"

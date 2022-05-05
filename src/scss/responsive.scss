@@ -114,6 +114,10 @@
         line-height: 25px;
     }
 
+    .calendlyWrapper {
+        margin-top: 20px !important;
+    }
+
 }
 
 /* TABLET */
@@ -129,6 +133,10 @@
         img {
             bottom: 25px !important;
         }
+    }
+
+    .calendlyWrapper {
+        margin-top: 20px !important;
     }
 
     nav {
@@ -182,8 +190,14 @@
 
 
     .section2 {
-        .serviceItemWrapper {
 
+        .headline {
+            h1 {
+                font-size: 4vw !important;
+            }
+        }
+
+        .serviceItemWrapper {
 
             .serviceItem {
                 padding: 1em 2em;
@@ -213,6 +227,12 @@
     .section3 {
         max-width: 1200px !important;
 
+        .headline {
+            h1 {
+                font-size: 4vw !important;
+            }
+        }
+
         .portfolioGridWrapperMobile {
             display: grid !important;
             width: 78%;
@@ -230,6 +250,11 @@
 
     .section4 {
         .testimonialsWrapper {
+
+            .headline {
+                font-size: 4vw !important;
+            }
+
             .testimonial {
                 top: 330px !important;
 
@@ -256,6 +281,10 @@
     .section5 {
         .contactFormWrapper {
             max-width: 1000px !important;
+
+            .headline {
+                font-size: 4vw !important;
+            }
 
             .privacyCheckboxWrapper {
                 margin-top: -100px !important;
@@ -321,6 +350,12 @@
     .section2 {
         margin-bottom: 200px !important;
 
+        .headline {
+            h1 {
+                font-size: 3.5em !important;
+            }
+        }
+
         .serviceItemWrapper {
             .serviceItem {
                 .serviceCircle {
@@ -341,6 +376,13 @@
     }
 
     .section3 {
+        .headline {
+            h1 {
+                font-size: 3.5em !important;
+            }
+        }
+
+
         .portfolioGridWrapperMobile {
             width: 100%;
         }
@@ -348,6 +390,10 @@
 
     .section4 {
         .testimonialsWrapper {
+            .headline {
+                font-size: 3.5em !important;
+            }
+
             .testimonial {
                 .logoCircle {
                     width: 300px !important;
@@ -374,6 +420,10 @@
         .contactFormWrapper {
             max-width: 90vw !important;
 
+            .headline {
+                font-size: 3.5em !important;
+            }
+
             .privacyCheckboxWrapper {
                 margin-top: -10px !important;
                 margin-bottom: 40px;
@@ -384,6 +434,31 @@
 
 /* MOBILE */
 @media (max-width: 767px) {
+
+    .cookieConsent {
+        height: 140px !important;
+        
+
+        img {
+            float: none !important;
+            display: block;
+            margin: auto;
+            top: -50px;
+            width: 20% !important;
+        }
+
+        p {
+            left: 0 !important;
+            bottom: 60px !important;
+
+            button {
+                position: static !important;
+                margin-top: 15px;
+                font-size: 1em !important;
+                font-weight: 700 !important;
+            }
+        }
+    }
 
     .menuOverlay {
         flex-direction: column;
@@ -449,10 +524,6 @@
             width: 45vw !important;
         }
     }
-
-    /*     fieldset {
-        display: block !important;
-    } */
 
     header {
         nav {
@@ -541,7 +612,7 @@
             margin-bottom: 70px;
 
             h1 {
-                font-size: 12vw !important;
+                font-size: 10vw !important;
             }
         }
 
@@ -554,7 +625,7 @@
             .serviceItem {
                 padding: 0 !important;
                 display: block !important;
-                margin-bottom: 20px;
+                margin: 40px 0 40px 0;
 
                 .serviceCircle {
                     display: none;
@@ -565,17 +636,13 @@
                     width: 80% !important;
 
                     p {
-                        color: #fff;
-                        font-weight: 400;
-                        ;
-                    }
-
-                    p {
                         font-size: 1.2em !important;
                         color: rgba(255, 255, 255, 0.679) !important;
+                        color: #fff;
+                        font-weight: 400;
 
                         .accent {
-                            font-size: 2em !important;
+                            font-size: 1.5em !important;
                         }
                     }
 
@@ -589,7 +656,7 @@
         .headline {
 
             h1 {
-                font-size: 12vw !important;
+                font-size: 10vw !important;
             }
         }
 
@@ -611,17 +678,12 @@
 
         .testimonialsWrapper {
 
-            .subtitle {
-                font-size: 4vw !important;
-                margin-bottom: 0;
-            }
-
             .headline {
-                font-size: 8vw !important;
+                font-size: 10vw !important;
             }
 
             .testimonial {
-                top: 300px !important;
+                top: 280px !important;
 
                 .logoCircle {
                     width: 200px !important;
@@ -643,21 +705,15 @@
             }
 
             .btnWrapper {
-                top: 500px !important;
+                top: 480px !important;
             }
         }
     }
 
     .section5 {
         .contactFormWrapper {
-
-            .subtitle {
-                font-size: 4vw !important;
-                margin-bottom: 5px;
-            }
-
             .headline {
-                font-size: 8vw !important;
+                font-size: 10vw !important;
             }
 
             .contactForm {

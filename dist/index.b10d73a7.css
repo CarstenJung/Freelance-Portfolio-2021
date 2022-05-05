@@ -1887,6 +1887,10 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     font-size: 1.2vw;
     line-height: 25px;
   }
+
+  .calendlyWrapper {
+    margin-top: 20px !important;
+  }
 }
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -1898,6 +1902,10 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   }
   .cookieConsent img {
     bottom: 25px !important;
+  }
+
+  .calendlyWrapper {
+    margin-top: 20px !important;
   }
 
   nav .ctaBtn button {
@@ -1935,6 +1943,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     bottom: 8em !important;
   }
 
+  .section2 .headline h1 {
+    font-size: 4vw !important;
+  }
   .section2 .serviceItemWrapper .serviceItem {
     padding: 1em 2em;
   }
@@ -1954,6 +1965,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section3 {
     max-width: 1200px !important;
   }
+  .section3 .headline h1 {
+    font-size: 4vw !important;
+  }
   .section3 .portfolioGridWrapperMobile {
     display: grid !important;
     width: 78%;
@@ -1966,6 +1980,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     font-size: 1em !important;
   }
 
+  .section4 .testimonialsWrapper .headline {
+    font-size: 4vw !important;
+  }
   .section4 .testimonialsWrapper .testimonial {
     top: 330px !important;
   }
@@ -1985,6 +2002,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 
   .section5 .contactFormWrapper {
     max-width: 1000px !important;
+  }
+  .section5 .contactFormWrapper .headline {
+    font-size: 4vw !important;
   }
   .section5 .contactFormWrapper .privacyCheckboxWrapper {
     margin-top: -100px !important;
@@ -2025,6 +2045,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section2 {
     margin-bottom: 200px !important;
   }
+  .section2 .headline h1 {
+    font-size: 3.5em !important;
+  }
   .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
     height: 100px !important;
     width: 100px !important;
@@ -2036,10 +2059,16 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     padding-right: 3em;
   }
 
+  .section3 .headline h1 {
+    font-size: 3.5em !important;
+  }
   .section3 .portfolioGridWrapperMobile {
     width: 100%;
   }
 
+  .section4 .testimonialsWrapper .headline {
+    font-size: 3.5em !important;
+  }
   .section4 .testimonialsWrapper .testimonial .logoCircle {
     width: 300px !important;
     height: 300px !important;
@@ -2058,6 +2087,9 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section5 .contactFormWrapper {
     max-width: 90vw !important;
   }
+  .section5 .contactFormWrapper .headline {
+    font-size: 3.5em !important;
+  }
   .section5 .contactFormWrapper .privacyCheckboxWrapper {
     margin-top: -10px !important;
     margin-bottom: 40px;
@@ -2065,6 +2097,27 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
 }
 /* MOBILE */
 @media (max-width: 767px) {
+  .cookieConsent {
+    height: 140px !important;
+  }
+  .cookieConsent img {
+    float: none !important;
+    display: block;
+    margin: auto;
+    top: -50px;
+    width: 20% !important;
+  }
+  .cookieConsent p {
+    left: 0 !important;
+    bottom: 60px !important;
+  }
+  .cookieConsent p button {
+    position: static !important;
+    margin-top: 15px;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+  }
+
   .menuOverlay {
     flex-direction: column;
   }
@@ -2117,9 +2170,6 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     width: 45vw !important;
   }
 
-  /*     fieldset {
-      display: block !important;
-  } */
   header nav .logoContainer img {
     height: 60px !important;
     margin: 2.7em 0 0 2em !important;
@@ -2184,7 +2234,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     margin-bottom: 70px;
   }
   .section2 .headline h1 {
-    font-size: 12vw !important;
+    font-size: 10vw !important;
   }
   .section2 .serviceItemWrapper .line {
     width: 90% !important;
@@ -2192,7 +2242,7 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section2 .serviceItemWrapper .serviceItem {
     padding: 0 !important;
     display: block !important;
-    margin-bottom: 20px;
+    margin: 40px 0 40px 0;
   }
   .section2 .serviceItemWrapper .serviceItem .serviceCircle {
     display: none;
@@ -2202,19 +2252,17 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     width: 80% !important;
   }
   .section2 .serviceItemWrapper .serviceItem .serviceItemDescription p {
+    font-size: 1.2em !important;
+    color: rgba(255, 255, 255, 0.679) !important;
     color: #fff;
     font-weight: 400;
   }
-  .section2 .serviceItemWrapper .serviceItem .serviceItemDescription p {
-    font-size: 1.2em !important;
-    color: rgba(255, 255, 255, 0.679) !important;
-  }
   .section2 .serviceItemWrapper .serviceItem .serviceItemDescription p .accent {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
   }
 
   .section3 .headline h1 {
-    font-size: 12vw !important;
+    font-size: 10vw !important;
   }
   .section3 .portfolioGridWrapperMobile {
     grid-template-columns: repeat(1, 1fr) !important;
@@ -2229,15 +2277,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
   .section4 {
     margin: -150px 0 700px 0 !important;
   }
-  .section4 .testimonialsWrapper .subtitle {
-    font-size: 4vw !important;
-    margin-bottom: 0;
-  }
   .section4 .testimonialsWrapper .headline {
-    font-size: 8vw !important;
+    font-size: 10vw !important;
   }
   .section4 .testimonialsWrapper .testimonial {
-    top: 300px !important;
+    top: 280px !important;
   }
   .section4 .testimonialsWrapper .testimonial .logoCircle {
     width: 200px !important;
@@ -2254,15 +2298,11 @@ body .wrapper .footerWrapper .footerInnerContent .contactItems .fa-at {
     width: 300px !important;
   }
   .section4 .testimonialsWrapper .btnWrapper {
-    top: 500px !important;
+    top: 480px !important;
   }
 
-  .section5 .contactFormWrapper .subtitle {
-    font-size: 4vw !important;
-    margin-bottom: 5px;
-  }
   .section5 .contactFormWrapper .headline {
-    font-size: 8vw !important;
+    font-size: 10vw !important;
   }
   .section5 .contactFormWrapper .contactForm form {
     grid-template-areas: "name" "mail" "company" "radioBtn" "message" "privacyText" "btn" !important;
