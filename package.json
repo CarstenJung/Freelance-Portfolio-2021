@@ -27,10 +27,5 @@
   "dependencies": {
     "gsap": "npm:@gsap/shockingly@^3.9.1",
     "jump.js": "^1.0.2"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": true
-    }
   }
 }
