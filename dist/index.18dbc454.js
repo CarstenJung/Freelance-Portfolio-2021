@@ -3309,7 +3309,7 @@ document.addEventListener("DOMContentLoaded", function() {
         opacity: 0,
         repeat: -1
     }, "+=.8");
-}) /* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */ ;
+});
 
 },{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"9y9j1":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

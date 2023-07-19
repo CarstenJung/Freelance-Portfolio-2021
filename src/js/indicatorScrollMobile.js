@@ -13,4 +13,4 @@ scrollIndicator.set('#indicatorDot', {opacity: 0}, '-=10')
 
 })
 
-/* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */
+
