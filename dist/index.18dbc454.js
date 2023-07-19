@@ -588,56 +588,58 @@ var _cookieConsent = require("./cookieConsent");
 var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
 (0, _gsap.gsap).registerPlugin((0, _drawSVGPlugin.DrawSVGPlugin));
-function noScroll() {
-    window.scrollTo(0, 0);
-}
-var startAnimation = (0, _gsap.gsap).timeline({
-    delay: 0.5,
-    onStart: ()=>{
-        window.addEventListener("scroll", noScroll);
+document.addEventListener("DOMContentLoaded", function() {
+    function noScroll() {
+        window.scrollTo(0, 0);
     }
-});
-if (localStorage.getItem("animationShowed", "true")) {
-    document.querySelector(".staggerAnimation").style.display = "none";
-    document.querySelector(".animationBcg").style.display = "none";
-} else startAnimation.fromTo("#CTop", {
-    drawSVG: "0%"
-}, {
-    drawSVG: "100%",
-    duration: 1
-}).fromTo("#CBottom", {
-    drawSVG: "0%"
-}, {
-    drawSVG: "100%",
-    duration: 1
-}).fromTo("#JTop", {
-    drawSVG: "0%"
-}, {
-    drawSVG: "100%",
-    duration: 1
-}).to("#CTop, #CBottom", {
-    fill: "#fff",
-    duration: 2
-}).to("#JTop", {
-    fill: "#ffcd48",
-    duration: 2.3,
-    onComplete: ()=>{
-        document.querySelector(".wrapper").classList.remove("isLoading");
-    }
-}, "-=2").to(".startAnimationWrapper", {
-    autoAlpha: 0,
-    duration: 2
-}).to(".staggerItem", {
-    rotationY: -90,
-    stagger: 0.1,
-    ease: "power1.out",
-    transformOrigin: "center center"
-}, "-=0.6").to(".staggerAnimation, .animationBcg", {
-    display: "none",
-    onComplete: ()=>{
-        localStorage.setItem("animationShowed", "true");
-        window.removeEventListener("scroll", noScroll);
-    }
+    var startAnimation = (0, _gsap.gsap).timeline({
+        delay: 0.5,
+        onStart: ()=>{
+            window.addEventListener("scroll", noScroll);
+        }
+    });
+    if (localStorage.getItem("animationShowed", "true")) {
+        document.querySelector(".staggerAnimation").style.display = "none";
+        document.querySelector(".animationBcg").style.display = "none";
+    } else startAnimation.fromTo("#CTop", {
+        drawSVG: "0%"
+    }, {
+        drawSVG: "100%",
+        duration: 1
+    }).fromTo("#CBottom", {
+        drawSVG: "0%"
+    }, {
+        drawSVG: "100%",
+        duration: 1
+    }).fromTo("#JTop", {
+        drawSVG: "0%"
+    }, {
+        drawSVG: "100%",
+        duration: 1
+    }).to("#CTop, #CBottom", {
+        fill: "#fff",
+        duration: 2
+    }).to("#JTop", {
+        fill: "#ffcd48",
+        duration: 2.3,
+        onComplete: ()=>{
+            document.querySelector(".wrapper").classList.remove("isLoading");
+        }
+    }, "-=2").to(".startAnimationWrapper", {
+        autoAlpha: 0,
+        duration: 2
+    }).to(".staggerItem", {
+        rotationY: -90,
+        stagger: 0.1,
+        ease: "power1.out",
+        transformOrigin: "center center"
+    }, "-=0.6").to(".staggerAnimation, .animationBcg", {
+        display: "none",
+        onComplete: ()=>{
+            localStorage.setItem("animationShowed", "true");
+            window.removeEventListener("scroll", noScroll);
+        }
+    });
 });
 
 },{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"htWnw":[function(require,module,exports) {
@@ -3287,25 +3289,27 @@ exports.default = singleton;
 var _gsap = require("gsap");
 var _drawSVGPlugin = require("gsap/DrawSVGPlugin");
 (0, _gsap.gsap).registerPlugin((0, _drawSVGPlugin.DrawSVGPlugin));
-let scrollIndicator = (0, _gsap.gsap).timeline({
-    delay: 9
-});
-scrollIndicator.set("#indicatorDot", {
-    opacity: 0
-}, "-=10").fromTo("#indicatorFrame", {
-    drawSVG: 0
-}, {
-    drawSVG: 100,
-    duration: 1.3
-}).fromTo("#indicatorDot", {
-    y: 0,
-    opacity: 1
-}, {
-    y: 10,
-    duration: 2,
-    opacity: 0,
-    repeat: -1
-}, "+=.8") /* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */ ;
+document.addEventListener("DOMContentLoaded", function() {
+    let scrollIndicator = (0, _gsap.gsap).timeline({
+        delay: 9
+    });
+    scrollIndicator.set("#indicatorDot", {
+        opacity: 0
+    }, "-=10").fromTo("#indicatorFrame", {
+        drawSVG: 0
+    }, {
+        drawSVG: 100,
+        duration: 1.3
+    }).fromTo("#indicatorDot", {
+        y: 0,
+        opacity: 1
+    }, {
+        y: 10,
+        duration: 2,
+        opacity: 0,
+        repeat: -1
+    }, "+=.8");
+}) /* .fromTo('#indicatorWheel', {drawSVG: 100}, {drawSVG: 0, duration: 5, repeat: -1}) */ ;
 
 },{"gsap":"fPSuC","gsap/DrawSVGPlugin":"htWnw"}],"9y9j1":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

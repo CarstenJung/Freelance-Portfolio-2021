@@ -3,8 +3,8 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-
-function noScroll() {
+document.addEventListener("DOMContentLoaded", function() {
+  function noScroll() {
   window.scrollTo(0, 0)
 }
 
@@ -53,3 +53,7 @@ if (localStorage.getItem("animationShowed", "true")) {
       },
     });
 }
+
+});
+
+
