@@ -740,6 +740,7 @@ body {
             .headline {
                 margin-bottom: 80px;
                 -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
 
                 h1 {
                     font-size: 3vw;
