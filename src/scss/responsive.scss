@@ -427,8 +427,9 @@ body {
         width: 100%;
         height: 40%;
 
-        h1 {
-          padding: 20px 0 0 35px;
+        .officeFlexContainer h1 {
+          padding: 40px 0 0 0;
+          font-size: 4vw;
         }
 
         .officeFlexContainer .menuProjectsSlider {
@@ -633,22 +634,19 @@ body {
     }
 
     .wrapper .section5 {
+
       .contactFormWrapper {
         .headline {
           font-size: 10vw;
         }
 
         .contactForm {
+          #formBtn {
+            margin: 0;
+          }
+
           form {
-            grid-template-areas:
-              "name"
-              "mail"
-              "company"
-              "radioBtn"
-              "message"
-              "privacyText"
-              "btn";
-            grid-template-columns: repeat(1, 1fr);
+            display: block;
             margin: auto;
             max-width: 90%;
 
@@ -706,6 +704,7 @@ body {
                 width: 90%;
                 border-radius: 3px;
                 pointer-events: none;
+                margin-bottom: 20px;
               }
 
               .buttonText {
@@ -724,9 +723,9 @@ body {
       }
 
       .contactFormWrapper .contactForm form .calendlyWrapper {
-        margin: 20px 0px;
-        position: relative;
-        top: 60px;
+        margin: 170px 0 0 0;
+        padding: 0.4em 1em;
+        width: 175px;
       }
     }
 
