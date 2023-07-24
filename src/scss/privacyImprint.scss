@@ -73,17 +73,17 @@
         }
     }
 
-    .imprintWrapper,
-    .privacyWrapper {
-        max-width: 80% !important;
-        font-size: 1.3em !important;
+    .imprint .imprintWrapper,
+    .privacy .privacyWrapper {
+        max-width: 80%;
+        font-size: 1.3em;
 
         h6 {
             font-size: .8em;
         }
 
         p {
-            font-size: .7em !important;
+            font-size: .7em;
         }
     }
 }

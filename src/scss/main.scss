@@ -193,7 +193,7 @@
 }
 
 .active {
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 /********************/
@@ -728,48 +728,6 @@ body {
                         }
                     }
                 }
-
-                /* &>div {
-                    height: 400px;
-                    margin: auto;
-                }
-
-                .serviceCircle {
-                    width: 7vw;
-                    height: 7vw;
-                    border-radius: 50%;
-                    display: flex;
-                    margin: auto;
-
-                    img {
-                        width: 60%;
-                        margin: auto;
-                    }
-                }
-
-                .serviceItemHeadline {
-                    font-weight: bold;
-                    color: var(--lightColor);
-                    font-family: 'Alata',
-                        sans-serif;
-                    font-size: 1.1vw;
-                    text-align: center;
-
-                    span {
-                        color: var(--accentColor);
-                    }
-                }
-
-                .serviceItemDescription {
-                    color: var(--lightColor);
-                    font-size: 0.8vw;
-                    position: absolute;
-                    margin-top: -10px;
-
-                    p {
-                        width: 13vw;
-                    }
-                } */
             }
         }
 
@@ -887,10 +845,6 @@ body {
 
                         .pf-biggerLogo {
                             max-width: 35%;
-                        }
-
-                        .textAdjustment {
-                            top: -3px !important;
                         }
 
                         .kieningerMarginImg {

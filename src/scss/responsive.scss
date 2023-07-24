@@ -1,879 +1,791 @@
 /* MEDIA QUERYS */
-/* BROWSER SPECIFIC */
-/*SAFARI*/
-@media not all and (min-resolution:.001dpcm) {
-    @supports (-webkit-appearance:none) {
-
-        .cookieConsent {
-            transform: translateZ(3em);
-        }
-
-        body .wrapper nav .ctaBtn button {
-            top: 4.3em;
-            right: 11.9em;
-        }
-
-        .burgerMenuWrapper,
-        .menuOverlay {
-            transform: translate3d(0, 0, 0) translateZ(1000px);
-        }
-
-        .staggerAnimation,
-        .animationBcg {
-            transform: translate3d(0, 0, 0) translateZ(1001px);
-        }
-
-        .menuOverlay {}
-
-        .section1 {
-            .heroWrapper {
-                .buttonText {
-                    top: -2px !important;
-                    right: 138px !important;
-                }
-
-                .heroText button:hover .submitCircle {
-                    width: 58% !important;
-                }
-            }
-        }
-
-        .section2 {
-            .serviceItemWrapper {
-                .serviceItem {
-                    .serviceCircle {
-                        padding: 0 !important;
-
-                        img {
-                            height: 100% !important;
-                            width: 55% !important;
-                        }
-
-                        .serviceImgsmaller {
-                            width: 50% !important;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 /* LAPTOP */
-@media (min-width: 1200px) and (max-width: 1440px) {
-
+body {
+  @media (min-width: 1200px) and (max-width: 1440px) {
     .cookieConsent img {
-        bottom: 40px !important;
+      bottom: 40px;
     }
 
-    .heroText {
-        top: 50px !important;
+    .wrapper .section1 .heroWrapper .heroText {
+      top: 50px;
 
-        h1 {
-            font-weight: 400 !important;
-        }
+      h1 {
+        font-weight: 400;
+      }
     }
 
     .menuFlexContainer,
     .officeFlexContainer {
-        margin-top: 2vw;
+      margin-top: 2vw;
     }
 
-    .serviceCircle img {
-        height: 80px !important;
+    .wrapper .section2 .serviceItemWrapper .serviceItem .serviceCircle img {
+      height: 80px;
     }
 
-    .testimonial .logoCircle {
-        width: 18vw !important;
-        height: 18vw !important;
-    }
+    .wrapper .section4 .testimonialsWrapper .testimonial {
+      top: 340px;
 
-    .testimonialsWrapper .testimonial {
-        top: 340px !important;
-    }
+      .testimonialDescription {
+        font-size: 1.3vw;
+      }
 
-    .testimonial .testimonialCompany {
-        font-size: 2.5vw !important;
-    }
+      .testimonialCompany {
+        font-size: 2.5vw;
+      }
 
-    .testimonial .testimonialDescription {
-        font-size: 1.3vw !important;
+      .logoCircle {
+        width: 18vw;
+        height: 18vw;
+      }
     }
 
     .portfolioGridWrapper {
-        max-width: 85%;
-        margin: auto;
+      max-width: 85%;
+      margin: auto;
     }
 
-    .section3 .portfolioGridWrapper .flipContent .flipBack button {
-        display: none !important;
+    .wrapper .section3 .portfolioGridWrapper .flipContent .flipBack button {
+      display: none;
     }
 
-    body .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
-        font-size: 1vw;
+    .wrapper .section5 .contactFormWrapper .contactForm fieldset label {
+      font-size: 1vw;
     }
 
-    body .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
-        font-size: 1.2vw;
-        line-height: 25px;
+    .wrapper .section5 .contactFormWrapper .contactForm fieldset legend {
+      font-size: 1.2vw;
+      line-height: 25px;
     }
 
-    .calendlyWrapper {
-        margin-top: 20px !important;
+    .wrapper .section5 .contactFormWrapper .contactForm form .calendlyWrapper {
+      margin-top: 20px;
     }
+  }
 
-}
-
-/* TABLET */
-@media (min-width: 768px) and (max-width: 1199px) {
-
+  /* TABLET */
+  @media (min-width: 768px) and (max-width: 1199px) {
     .cookieConsent {
-        height: 60px !important;
+      height: 60px;
 
+      button {
+        font-size: 0.9em;
+      }
+
+      img {
+        bottom: 25px;
+      }
+    }
+
+    .wrapper nav {
+      .ctaBtn {
         button {
-            font-size: .9em !important;
+          font-size: 13px;
+          right: 11.8em;
+          top: 4em;
         }
 
-        img {
-            bottom: 25px !important;
+        .ctaLine {
+          width: 5.5em;
         }
-    }
-
-    .calendlyWrapper {
-        margin-top: 20px !important;
-    }
-
-    nav {
-        .ctaBtn {
-            button {
-                font-size: 13px !important;
-                right: 11.8em !important;
-                top: 4em !important;
-            }
-
-            .ctaLine {
-                width: 5.5em !important;
-            }
-        }
+      }
     }
 
     .wrapper {
-        overflow: hidden;
+      overflow: hidden;
     }
 
-    .section1 {
-        .heroWrapper {
-            position: relative;
-            left: 5%;
-            bottom: 3%;
+    .wrapper .section1 {
+      .heroWrapper {
+        position: relative;
+        left: 5%;
+        bottom: 3%;
 
-            .heroText {
-                p {
-                    font-size: 1vw !important;
-                }
+        .heroText {
+          p {
+            font-size: 1vw;
+          }
 
-                h2 {
-                    font-size: 1.7em !important;
-                }
+          h2 {
+            font-size: 1.7em;
+          }
 
-                h1 {
-                    font-size: 1.2vw !important;
-                    font-weight: 400 !important;
-                }
+          h1 {
+            font-size: 1.2vw;
+            font-weight: 400;
+          }
 
-                .buttonText {
-                    right: 137px !important;
-                }
+          button .buttonText {
+            right: 137px;
+          }
+        }
+      }
+
+      .socialsContainer {
+        bottom: 8em;
+      }
+    }
+
+    .wrapper .section2 {
+      .headline {
+        h1 {
+          font-size: 4vw;
+        }
+      }
+
+      .serviceItemWrapper {
+        .serviceItem {
+          padding: 1em 2em;
+
+          .serviceItemDescription {
+            font-weight: 300;
+
+            span {
+              color: #fff;
             }
-        }
+          }
 
-        .socialsContainer {
-            bottom: 8em !important;
+          .serviceCircle {
+            img {
+              transform: scale(0.8);
+            }
+
+            .serviceImgsmaller {
+              transform: scale(0.7);
+            }
+          }
         }
+      }
     }
 
+    .wrapper .section3 {
+      max-width: 1200px;
 
-    .section2 {
+      .headline {
+        h1 {
+          font-size: 4vw;
+        }
+      }
 
+      .portfolioGridWrapperMobile {
+        display: grid;
+        width: 78%;
+        margin: auto;
+      }
+
+      .portfolioGridWrapper {
+        display: none;
+      }
+
+      .portfolioGridWrapperMobile
+        .flipContentMobile
+        .flipFrontMobile
+        .headlineMobile
+        h1 {
+        font-size: 1em;
+      }
+    }
+
+    .wrapper .section4 {
+      .testimonialsWrapper {
         .headline {
-            h1 {
-                font-size: 4vw !important;
-            }
+          font-size: 4vw;
         }
 
-        .serviceItemWrapper {
+        .testimonial {
+          top: 330px;
 
-            .serviceItem {
-                padding: 1em 2em;
-
-                .serviceCircle {
-                    img {
-                        transform: scale(.8);
-                    }
-
-                    .serviceImgsmaller {
-                        transform: scale(.7);
-                    }
-                }
-            }
-
-            .serviceItemDescription {
-                font-weight: 300 !important;
-
-                span {
-                    color: #fff;
-                }
-            }
-        }
-
-    }
-
-    .section3 {
-        max-width: 1200px !important;
-
-        .headline {
-            h1 {
-                font-size: 4vw !important;
-            }
-        }
-
-        .portfolioGridWrapperMobile {
-            display: grid !important;
-            width: 78%;
-            margin: auto;
-        }
-
-        .portfolioGridWrapper {
-            display: none !important;
-        }
-
-        .nextProjectMobile h1 {
-            font-size: 1em !important;
-        }
-    }
-
-    .section4 {
-        .testimonialsWrapper {
-
-            .headline {
-                font-size: 4vw !important;
-            }
-
-            .testimonial {
-                top: 330px !important;
-
-                .logoCircle {
-                    height: 23vw !important;
-                    width: 23vw !important;
-
-                    img {
-                        width: 20vw !important;
-                    }
-                }
-
-                .testimonialCompany {
-                    font-size: 2.8vw !important;
-                }
-
-                .testimonialDescription {
-                    font-size: 1.5vw !important;
-                }
-            }
-        }
-    }
-
-    .section5 {
-        .contactFormWrapper {
-            max-width: 1000px !important;
-
-            .headline {
-                font-size: 4vw !important;
-            }
-
-            .privacyCheckboxWrapper {
-                margin-top: -100px !important;
-            }
-
-            fieldset {
-                legend {
-                    font-size: 2.3vw !important;
-                }
-
-                label {
-                    font-size: 1.3vw !important;
-                }
-            }
-        }
-
-
-        .calendlyWrapper {
-            padding: .4em 1em !important;
+          .logoCircle {
+            height: 23vw;
+            width: 23vw;
 
             img {
-                width: 28% !important;
+              width: 20vw;
             }
+          }
+
+          .testimonialCompany {
+            font-size: 2.8vw;
+          }
+
+          .testimonialDescription {
+            font-size: 1.5vw;
+          }
         }
+      }
     }
 
-}
-
-/* TABLET PORTRAIT */
-@media (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
-
-    .animationBcg {
-        .startAnimationWrapper {
-            svg {
-                width: 300px;
-            }
-        }
-    }
-
-    .section1 {
-        margin-bottom: 100px !important;
-        height: 60vh !important;
-
-        .heroWrapper {
-            .heroText {
-                p {
-                    font-size: 1.5vw !important;
-                }
-
-                h2 {
-                    font-size: 2.2em !important;
-                }
-
-                h1 {
-                    font-size: 1.5vw !important;
-                }
-            }
-        }
-
-
-    }
-
-    .section2 {
-        margin-bottom: 200px !important;
+    .wrapper .section5 {
+      .contactFormWrapper {
+        max-width: 1000px;
 
         .headline {
-            h1 {
-                font-size: 3.5em !important;
-            }
+          font-size: 4vw;
         }
 
-        .serviceItemWrapper {
-            .serviceItem {
-                .serviceCircle {
-                    img {
-                        height: 100px !important;
-                        width: 100px !important;
-                        padding-right: 3em;
-                    }
-
-                    .serviceImgsmaller {
-                        height: 90px !important;
-                        width: 90px !important;
-                        padding-right: 3em;
-                    }
-                }
-            }
-        }
-    }
-
-    .section3 {
-        .headline {
-            h1 {
-                font-size: 3.5em !important;
-            }
+        .contactForm .privacyCheckboxWrapper {
+          margin-top: -100px;
         }
 
+        .contactForm fieldset {
+          legend {
+            font-size: 2.3vw;
+          }
 
-        .portfolioGridWrapperMobile {
-            width: 100%;
+          label {
+            font-size: 1.3vw;
+          }
         }
-    }
+      }
 
-    .section4 {
-        .testimonialsWrapper {
-            .headline {
-                font-size: 3.5em !important;
-            }
-
-            .testimonial {
-                .logoCircle {
-                    width: 300px !important;
-                    height: 300px !important;
-                }
-
-                .testimonialCompany {
-                    font-size: 2.3em !important;
-                }
-
-                .testimonialDescription {
-                    font-size: 2.3vw !important;
-                    width: 1000px !important;
-                }
-            }
-
-            .btnWrapper {
-                top: 570px !important;
-            }
-        }
-    }
-
-    .section5 {
-        .contactFormWrapper {
-            max-width: 90vw !important;
-
-            .headline {
-                font-size: 3.5em !important;
-            }
-
-            .privacyCheckboxWrapper {
-                margin-top: -10px !important;
-                margin-bottom: 40px;
-            }
-        }
-    }
-}
-
-/* MOBILE */
-@media (max-width: 767px) {
-
-    .cookieConsent {
-        height: 140px !important;
-
+      .contactFormWrapper .contactForm form .calendlyWrapper {
+        padding: 0.4em 1em;
+        margin-top: 20px;
 
         img {
-            float: none !important;
-            display: block;
-            margin: auto;
-            top: -50px;
-            width: 20% !important;
+          width: 28%;
         }
+      }
+    }
+  }
 
-        p {
-            left: 0 !important;
-            bottom: 60px !important;
+  /* TABLET PORTRAIT */
+  @media (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+    .animationBcg {
+      .startAnimationWrapper {
+        svg {
+          width: 300px;
+        }
+      }
+    }
 
-            button {
-                position: static !important;
-                margin-top: 15px;
-                font-size: 1em !important;
-                font-weight: 700 !important;
+    .wrapper .section1 {
+      margin-bottom: 100px;
+      height: 60vh;
+
+      .heroWrapper {
+        .heroText {
+          p {
+            font-size: 1.5vw;
+          }
+
+          h2 {
+            font-size: 2.2em;
+          }
+
+          h1 {
+            font-size: 1.5vw;
+          }
+        }
+      }
+    }
+
+    .wrapper .section2 {
+      margin-bottom: 200px;
+
+      .headline {
+        h1 {
+          font-size: 3.5em;
+        }
+      }
+
+      .serviceItemWrapper {
+        .serviceItem {
+          .serviceCircle {
+            img {
+              height: 100px;
+              width: 100px;
+              padding-right: 3em;
             }
+
+            .serviceImgsmaller {
+              height: 90px;
+              width: 90px;
+              padding-right: 3em;
+            }
+          }
         }
+      }
+    }
+
+    .wrapper .section3 {
+      .headline {
+        h1 {
+          font-size: 3.5em;
+        }
+      }
+
+      .portfolioGridWrapperMobile {
+        width: 100%;
+      }
+    }
+
+    .wrapper .section4 {
+      .testimonialsWrapper {
+        .headline {
+          font-size: 3.5em;
+        }
+
+        .testimonial {
+          .logoCircle {
+            width: 300px;
+            height: 300px;
+          }
+
+          .testimonialCompany {
+            font-size: 2.3em;
+          }
+
+          .testimonialDescription {
+            font-size: 2.3vw;
+            width: 1000px;
+          }
+        }
+
+        .btnWrapper {
+          top: 570px;
+        }
+      }
+    }
+
+    .wrapper .section5 {
+      .contactFormWrapper {
+        max-width: 90vw;
+
+        .headline {
+          font-size: 3.5em;
+        }
+
+        .contactForm .privacyCheckboxWrapper {
+          margin-top: -10px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 767px) {
+    .cookieConsent {
+      height: 140px;
+
+      img {
+        float: none;
+        display: block;
+        margin: auto;
+        top: -50px;
+        width: 20%;
+      }
+
+      p {
+        left: 0;
+        bottom: 60px;
+
+        button {
+          position: static;
+          margin-top: 15px;
+          font-size: 1em;
+          font-weight: 700;
+        }
+      }
     }
 
     .menuOverlay {
-        flex-direction: column;
+      flex-direction: column;
 
-        .menuSlideOne,
-        .menuSlideTwo {
-            h1 {
-                font-size: 4vw !important;
-                position: relative;
-                left: -30px;
-                top: 10px;
-            }
+      .menuSlideOne,
+      .menuSlideTwo {
+        .menuFlexContainer h1 {
+          font-size: 4vw;
+          position: relative;
+          left: -30px;
+          top: 10px;
+        }
+      }
+
+      .menuSlideOne {
+        width: 100%;
+        height: 60%;
+        padding-top: 100px;
+        padding-left: 15px;
+
+        img {
+          height: 50px;
+          margin: 0;
+          top: 45px;
+          left: 20px;
         }
 
-        .menuSlideOne {
-            width: 100% !important;
-            height: 60% !important;
-            padding-top: 100px;
-            padding-left: 15px;
+        .menuFlexContainer ul {
+          position: relative;
+          left: -30px;
+          font-size: 8vw;
+        }
+      }
 
-            img {
-                height: 50px !important;
-                margin: 0 !important;
-                top: 45px;
-                left: 20px;
-            }
+      .menuSlideTwo {
+        width: 100%;
+        height: 40%;
 
-            ul {
-                position: relative;
-                left: -30px;
-                font-size: 8vw !important;
-            }
+        h1 {
+          padding: 20px 0 0 35px;
         }
 
-        .menuSlideTwo {
-            width: 100% !important;
-            height: 40% !important;
-
-            h1 {
-                padding: 20px 0 0 35px;
-            }
-
-            img {
-                max-width: 45vw !important;
-            }
+        .officeFlexContainer .menuProjectsSlider {
+          max-width: 45vw;
         }
+      }
     }
 
     .burgerMenuWrapper {
-        position: absolute !important;
+      position: absolute;
 
-        .burgerMenu {
-            padding-top: 37px !important;
+      .burgerMenu {
+        padding-top: 37px;
 
-            svg {
-                height: 70px !important;
-            }
+        svg {
+          height: 70px;
         }
+      }
     }
 
     .animationBcg {
-        .startAnimationWrapper svg {
-            width: 45vw !important;
-        }
+      .startAnimationWrapper svg {
+        width: 45vw;
+      }
     }
 
-    header {
-        nav {
-            .logoContainer {
-                img {
-                    height: 60px !important;
-                    margin: 2.7em 0 0 2em !important;
-                }
+    .wrapper header {
+      nav {
+        .logoContainer {
+          img {
+            height: 60px;
+            margin: 2.7em 0 0 2em;
+          }
 
-                .logoLine {
-                    display: none;
-                    visibility: hidden;
-                }
-            }
-
-            .ctaBtn {
-                display: none;
-                visibility: hidden;
-            }
+          .logoLine {
+            display: none;
+            visibility: hidden;
+          }
         }
+
+        .ctaBtn {
+          display: none;
+          visibility: hidden;
+        }
+      }
     }
 
-    .section1 {
-        margin-bottom: 0px !important;
+    .wrapper .section1 {
+      margin-bottom: 0px;
 
-        .socialsContainer {
-            display: none !important;
+      .socialsContainer {
+        display: none;
+      }
+
+      .heroWrapper {
+        .scrollIndicator {
+          opacity: 1;
+          display: block;
+          width: 40%;
+          position: absolute;
+          top: 75%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
 
-        .heroWrapper {
+        .heroText {
+          left: 12%;
 
-            .scrollIndicator {
-                opacity: 1 !important;
-                display: block !important;
-                width: 40%;
-                position: absolute;
-                top: 75%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+          .line {
+            display: none;
+          }
 
-            .heroText {
-                left: 12% !important;
+          p {
+            font-size: 2.5vw;
+          }
 
-                .line {
-                    display: none;
-                }
+          h2 {
+            font-size: 3.5em;
+            margin-left: 0px;
+          }
 
-                p {
-                    font-size: 2.5vw !important;
-                }
-
-                h2 {
-                    font-size: 3.5em !important;
-                    margin-left: 0px !important;
-                }
-
-                h1 {
-                    opacity: 0;
-                }
-            }
-
-            button {
-                left: 0px !important;
-                top: 15px !important;
-
-                .submitCircle {
-                    width: 62% !important;
-                    border-radius: 3px !important;
-                    pointer-events: none;
-                }
-
-                .buttonText {
-                    color: #1f1f1f !important;
-                    font-size: 18px !important;
-                    left: -17px !important;
-                    top: -2px !important;
-                }
-            }
+          h1 {
+            opacity: 0;
+          }
         }
+
+        .heroText button {
+          left: 0px;
+          top: 15px;
+
+          .submitCircle {
+            width: 62%;
+            border-radius: 3px;
+            pointer-events: none;
+          }
+
+          .buttonText {
+            color: #1f1f1f;
+            font-size: 18px;
+            left: -17px;
+            top: -2px;
+          }
+        }
+      }
     }
 
-    .section2 {
+    .wrapper .section2 {
+      .headline {
+        margin-bottom: 70px;
 
-        .headline {
-            margin-bottom: 70px;
+        h1 {
+          font-size: 10vw;
+        }
+      }
 
-            h1 {
-                font-size: 10vw !important;
-            }
+      .serviceItemWrapper {
+        .line {
+          width: 90%;
         }
 
-        .serviceItemWrapper {
+        .serviceItem {
+          padding: 0;
+          display: block;
+          margin: 40px 0 40px 0;
 
-            .line {
-                width: 90% !important;
-            }
+          .serviceCircle {
+            display: none;
+          }
 
-            .serviceItem {
-                padding: 0 !important;
-                display: block !important;
-                margin: 40px 0 40px 0;
-
-                .serviceCircle {
-                    display: none;
-                }
-
-                .serviceItemDescription {
-                    margin: auto;
-                    width: 80% !important;
-
-                    p {
-                        font-size: 1.2em !important;
-                        color: rgba(255, 255, 255, 0.679) !important;
-                        color: #fff;
-                        font-weight: 400;
-
-                        .accent {
-                            font-size: 1.5em !important;
-                        }
-                    }
-
-                }
-            }
-        }
-    }
-
-    .section3 {
-
-        .headline {
-
-            h1 {
-                font-size: 10vw !important;
-            }
-        }
-
-        .portfolioGridWrapperMobile {
-            grid-template-columns: repeat(1, 1fr) !important;
-            display: block !important;
-            width: 90%;
+          .serviceItemDescription {
             margin: auto;
-        }
+            width: 80%;
 
-        .portfolioGridWrapper {
-            display: none !important;
+            p {
+              font-size: 1.2em;
+              color: rgba(255, 255, 255, 0.679);
+              color: #fff;
+              font-weight: 400;
+
+              .accent {
+                font-size: 1.5em;
+              }
+            }
+          }
         }
+      }
     }
 
-    .section4 {
-        margin: -150px 0 700px 0 !important;
-
-
-        .testimonialsWrapper {
-
-            .headline {
-                font-size: 10vw !important;
-            }
-
-            .testimonial {
-                top: 280px !important;
-
-                .logoCircle {
-                    width: 200px !important;
-                    height: 200px !important;
-
-                    img {
-                        width: 150px !important;
-                    }
-                }
-
-                .testimonialCompany {
-                    font-size: 6vw !important;
-                }
-
-                .testimonialDescription {
-                    font-size: 4vw !important;
-                    width: 300px !important;
-                }
-            }
-
-            .btnWrapper {
-                top: 480px !important;
-            }
+    .wrapper .section3 {
+      .headline {
+        h1 {
+          font-size: 10vw;
         }
+      }
+
+      .portfolioGridWrapperMobile {
+        grid-template-columns: repeat(1, 1fr);
+        display: grid;
+        width: 90%;
+        margin: auto;
+      }
+
+      .portfolioGridWrapper {
+        display: none;
+      }
     }
 
-    .section5 {
-        .contactFormWrapper {
-            .headline {
-                font-size: 10vw !important;
-            }
+    .wrapper .section4 {
+      margin: -150px 0 700px 0;
 
-            .contactForm {
-                form {
-                    grid-template-areas:
-                        "name"
-                        "mail"
-                        "company"
-                        "radioBtn"
-                        "message"
-                        "privacyText"
-                        "btn" !important;
-                    grid-template-columns: repeat(1, 1fr) !important;
-                    margin: auto;
-                    max-width: 90%;
-
-                    .formInputMobile {
-                        margin-left: 1em;
-                        max-width: 90vw;
-                    }
-
-                    p {
-                        width: 95vw;
-                    }
-
-                    legend {
-                        font-size: 6vw !important;
-                    }
-
-                    fieldset {
-                        border: 1px solid #fff !important;
-                        margin-top: 30px;
-
-                        label {
-                            font-size: 5vw !important;
-                        }
-
-                        p {
-                            padding-top: 1em !important;
-                            max-width: 80vw;
-                        }
-                    }
-
-                    input[type=text],
-                    input[type=email] {
-                        /* width: 90% !important; */
-                        border-bottom: 1px solid #FFCD48 !important;
-                    }
-                }
-
-                #messageWrapper {
-                    grid-column-end: auto !important;
-                }
-
-                .privacyCheckboxWrapper:first-child {
-                    max-width: 95vw;
-                }
-
-                .privacyCheckboxWrapper {
-                    margin: 10px 0 30px 0 !important;
-
-                    label {
-                        max-width: 80% !important;
-                    }
-                }
-
-                #formBtn {
-                    button {
-                        position: relative;
-                        top: 66px;
-
-                        .submitCircle {
-                            width: 90% !important;
-                            border-radius: 3px !important;
-                            pointer-events: none;
-                        }
-
-                        .buttonText {
-                            left: -5px !important;
-                            color: #1f1f1f !important;
-                        }
-                    }
-                }
-            }
+      .testimonialsWrapper {
+        .headline {
+          font-size: 10vw;
         }
 
-        .goBack {
-            i {
-                opacity: 1 !important;
+        .testimonial {
+          top: 280px;
+
+          .logoCircle {
+            width: 200px;
+            height: 200px;
+
+            img {
+              width: 150px;
             }
+          }
+
+          .testimonialCompany {
+            font-size: 6vw;
+          }
+
+          .testimonialDescription {
+            font-size: 4vw;
+            width: 300px;
+          }
         }
 
-        .calendlyWrapper {
-            margin: 20px 0px !important;
-            position: relative;
-            top: 60px;
+        .btnWrapper {
+          top: 480px;
         }
+      }
     }
 
-    footer {
-        .footerWrapper {
-            .footerInnerContent {
-                display: none !important;
+    .wrapper .section5 {
+      .contactFormWrapper {
+        .headline {
+          font-size: 10vw;
+        }
+
+        .contactForm {
+          form {
+            grid-template-areas:
+              "name"
+              "mail"
+              "company"
+              "radioBtn"
+              "message"
+              "privacyText"
+              "btn";
+            grid-template-columns: repeat(1, 1fr);
+            margin: auto;
+            max-width: 90%;
+
+            .formInputMobile {
+              margin-left: 1em;
+              max-width: 90vw;
             }
 
-            .footerMobile {
-                display: block !important;
-                text-decoration: none;
+            p {
+              width: 95vw;
+            }
+
+            legend {
+              font-size: 6vw;
+            }
+
+            fieldset {
+              border: 1px solid #fff;
+              margin-top: 30px;
+
+              label {
+                font-size: 5vw;
+              }
+
+              p {
+                padding-top: 1em;
+                max-width: 80vw;
+              }
+            }
+
+            input[type="text"],
+            input[type="email"] {
+              border-bottom: 1px solid #ffcd48;
+            }
+          }
+
+          .privacyCheckboxWrapper:first-child {
+            max-width: 95vw;
+          }
+
+          .privacyCheckboxWrapper {
+            margin: 10px 0 30px 0;
+
+            label {
+              max-width: 80%;
+            }
+          }
+
+          #formBtn {
+            button {
+              position: relative;
+              top: 66px;
+
+              .submitCircle {
+                width: 90%;
+                border-radius: 3px;
+                pointer-events: none;
+              }
+
+              .buttonText {
+                left: -5px;
+                color: #1f1f1f;
+              }
+            }
+          }
+        }
+      }
+
+      .goBack {
+        i {
+          opacity: 1;
+        }
+      }
+
+      .contactFormWrapper .contactForm form .calendlyWrapper {
+        margin: 20px 0px;
+        position: relative;
+        top: 60px;
+      }
+    }
+
+    .wrapper footer {
+      .footerWrapper {
+        .footerInnerContent {
+          display: none;
+        }
+
+        .footerMobile {
+          display: block;
+          text-decoration: none;
+          color: #fff;
+          text-align: center;
+
+          .contactItemsMobile {
+            div {
+              &:first-child {
+                padding-top: 30px;
+                padding-bottom: 10px;
+              }
+
+              a {
                 color: #fff;
-                text-align: center;
+              }
 
-                .contactItemsMobile {
-
-                    div {
-
-                        &:first-child {
-                            padding-top: 30px;
-                            padding-bottom: 10px;
-                        }
-
-                        a {
-                            color: #fff;
-                        }
-
-                        i {
-                            span {
-                                font-family: "Montserrat", sans-serif;
-                                font-weight: 400;
-                                padding-left: 1em;
-                            }
-                        }
-                    }
+              i {
+                span {
+                  font-family: "Montserrat", sans-serif;
+                  font-weight: 400;
+                  padding-left: 1em;
                 }
-
-                .footerSocialsMobile {
-                    margin-top: 20px;
-
-                    a {
-                        color: #fff;
-                        font-size: 1.8em;
-                        padding: .5em;
-                    }
-                }
-
-                .privacyImprintMobile {
-                    display: flex;
-                    justify-content: center;
-                    gap: 20px;
-                    opacity: .6;
-
-                    a {
-                        text-decoration: none;
-                        color: #fff;
-                    }
-                }
+              }
             }
+          }
+
+          .footerSocialsMobile {
+            margin-top: 20px;
+
+            a {
+              color: #fff;
+              font-size: 1.8em;
+              padding: 0.5em;
+            }
+          }
+
+          .privacyImprintMobile {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0.6;
+
+            a {
+              text-decoration: none;
+              color: #fff;
+            }
+          }
         }
+      }
     }
+  }
 }
